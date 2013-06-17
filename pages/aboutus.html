@@ -1,0 +1,159 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"> 
+<html>
+<head>
+ <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /> 
+ <link href="../css/common/common.css" type="text/css" rel="stylesheet"></link>
+<style type="text/css">
+	.contents{width: 980px;height: auto;margin: 0 auto;position: relative;}
+	.contents .about-us-link{width:175px;background: gray;height: 100px;position: absolute;background: url(../images/aboutus/left_about_title.jpg);background-position: left top;background-repeat: no-repeat;margin-top:10px; }
+	.contents .about-us-link ul{margin-top:69px;list-style: none;}
+	.contents .about-us-link ul li{font-size: 12px;font-weight: bold;width: 100%;text-align: center;line-height: 3em;background: url('../images/common/card-top-bg.png');background-repeat: repeat-x;background-position: right center;cursor: pointer;display: block;}
+	.contents .about-us-link ul li:hover{width: 105%;background:url('../images/index/bg_hdft.png');background-repeat: repeat-x;background-position: right center;color: white;}
+	.contents .about-us-link ul li.cur-link{width: 105%;background:url('../images/index/bg_hdft.png');background-repeat: repeat-x;background-position: right center;color: white;}
+	.contents .about-us-link ul li a{color: black;display: block;;width: 100%;height: 100%;}
+	.contents .about-us-link ul li a:hover{color: white;}
+	.contents .about-us-link ul li.cur-link a{color:white;}
+	.contents .right-content{float: right;width: 750px; height: auto;}
+	.contents .right-content .cur-path{text-align: right;font-size: 12px;line-height: 2em;border-bottom: 1px lightgray dashed;}
+	.contents .right-content .introduce{text-align: justify;font-size: 14px;margin-top: 10px;}
+	.contents .right-content .introduce p{text-indent: 2em;}
+	.contents .right-content .introduce .right-items{width: 186px;height: 400px;float: right;text-align: center;}
+
+	.contents .right-content .introduce .main-intro{width: 558px;height:235px;float: left;border: 1px lightgray solid;margin-top: 6px;}
+	.contents .right-content .introduce  .wuliu{float: left;height: 150px;border:1px lightgray solid;width: 748px;margin-top: 10px;}
+	.contents .right-content .introduce .item-title{background: url(../images/common/card-top-bg0.png);border-bottom: 1px lightgray solid;}
+	.contents .right-content .introduce .right-items .item{height: 152px;border: 1px lightgray solid;text-align: center;}
+	.contents .right-content .introduce .right-items .item .item-title{text-align: right;}
+	.contents .right-content .introduce .right-items .item1{height: 112px;border: 1px lightgray solid;margin-top: 9px;text-align: center;}
+	.contents .right-content .introduce .right-items .item1 .item-title{text-align: right;}
+	.contents .right-content .introduce  a{color: #333333;}
+	.contents .right-content .introduce  a:hover{color: red}
+	.contents .right-content .introduce .wuliu{text-align: center;}
+	.contents .right-content .introduce .wuliu img{padding:3px;}
+	.contents .right-content .introduce .wuliu .wuliu-box{width: 149px;float: left;margin-top:10px }
+	.contents .right-content .introduce .wuliu .wuliu-box a:hover img{background:red;}
+</style>
+<script type="text/javascript" src="../js/common/jquery-1.9.1.min.js"></script>
+<script type="text/javascript" src="../js/common/navScroll.js"></script>
+<script type="text/javascript" src="../js/common/topNav.js"></script>		
+</head>
+<body>
+	<!--头部-->
+	<div class="header">
+		<div class="top">
+			<div class="topfun">
+				<span><a href="javascript:void(0);" onclick="setHome(this,window.location);">设为首页</a><span>&nbsp;|&nbsp;</span></span>
+				<span><a href="javascript:void(0);" onclick="addFavorite(window.location,document.title);">加入收藏夹</a><span>&nbsp;|&nbsp;</span></span>
+				<span><a href="tencent://message/?uin=526767863&Menu=yes"><img src="../images/common/qq.png" style="vertical-align:text-top;;" alt="" />联系我们</a><span>&nbsp;|&nbsp;</span></span>
+			</div>
+		</div>
+		<div class="container">
+			<a href="#" class="logo-link"><img src="../images/common/logo.gif" /></a>
+			<span class="server-link"><a href="http://global.perfect99.com/">香港镜像服务器</a></span>
+			<span class="hotline">客户服务热线：4008701828</span>
+			<div class="search-form">
+				<button id="search-button">&nbsp;</button>
+				<input  id="search-input"/>
+			</div>
+		</div>
+		<div class="nav">
+			<ul class="nav-list">
+				<li class="item"><a href="index.html" class="nav-link">首页</a></li>
+				<li class="current"><a href="aboutus.html" class="nav-link">关于完美</a></li>
+				<li class="item"><a href="products.html" class="nav-link">完美产品</a></li>
+				<li class="item"><a href="news.html" class="nav-link">新闻动态</a></li>
+				<li class="item"><a href="seminar.html" class="nav-link">完美专题</a></li>
+				<li class="item"><a href="connectus.html" class="nav-link">联系我们</a></li>
+			</ul>
+  			<div class="scrollObj"></div>
+		</div>
+	</div>
+	<div class="contents">
+		<div class="about-us-link">
+			<ul>
+				<li ><a href="aboutus_company.html">公司简介</a></li>
+				<li ><a href="aboutus_yangzhou.html">扬州完美</a></li>
+				<li><a href="aboutus_leaders.html">领导风采</a></li>
+				<li><a href="aboutus_huibao.html">回报社会</a></li>
+				<li><a href="aboutus_rongyu.html">企业荣誉</a></li>
+				<li><a href="aboutus_research.html">研发生产</a></li>
+				<li><a href="http://www.perfect99.com/htm/wl/index.htm" target="_blank">物流中心</a></li>
+			</ul>
+			<a href="aboutus_rongyu.html"><img src="../images/aboutus/aboutus_honor.jpg" alt=""  style="width:175px;;"/></a>
+		</div>
+		<div class="right-content">
+			<div class="introduce">
+				<embed type="application/x-shockwave-flash" src="../images/aboutus/aboutus_zsyz.swf" wmode="transparent" style="width:560px;float:left;padding:0;height:159px;overflow:hidden;margin-top:-2px;"/>
+
+				<div class="right-items">
+					<div class="item"><div class="item-title">&nbsp;&nbsp;领导风采</div>
+						<a href="aboutus_leaders.html"><img src="../images/aboutus/lingdaofengcai.jpg" alt="" /></a>
+					</div>
+					<div class="item1"><div class="item-title">&nbsp;&nbsp;回报社会</div>
+						<a href="aboutus_huibao.html"><img src="../images/aboutus/huibaoshehui.jpg" alt="" /></a>
+						<a href="aboutus_huibao.html" style="float:left">了解更多>></a>
+					</div>
+					<div class="item1"><div class="item-title">&nbsp;&nbsp;研发盛产</div>
+						<a href="aboutus_research.html"><img src="../images/aboutus/yanfashengchan.jpg" alt="" /></a>
+					</div>
+				</div>
+				<div class="main-intro">
+					<div class="item-title">&nbsp;&nbsp;公司简介</div>
+					<p style="width:300px;font-size:12px;float:right;line-height:1.5em;margin-top:10px;padding-right:10px"><a href="aboutus_company.html">完美（中国）有限公司（以下简称“完美公司”）是马来西亚完美资源有限公司于1994年在广东省中山市投资设立的侨资企业，2006年12月1日经国家商务部批准开展直销业务，销售保健食品、化妆品和保洁用品。完美公司董事长马来西亚丹斯里皇室拿督古润金太平绅士、副董事长许国伟及总裁胡瑞连分别是出生在马来西亚和新加坡的第二、第三代华裔。早在创业伊始，他们就立下“为消费者提供优质产品的理念没有改变；为完美经销商提供事业发展机会的理念也没有改变……</a>
+											<br/>					<br/>
+					<a href="aboutus_company.html" style="float:right;">>>查看全文</a>
+					</p>
+				</div>
+				<div class="wuliu">
+					<div class="item-title" style="text-align:left;">&nbsp;&nbsp;物流中心</div>
+					<div class="wuliu-box">
+						<a href="http://www.perfect99.com/htm/wl/index.htm" target="_blank"><img src="../images/aboutus/wl1.jpg" alt="" /></a>
+						<a href="http://www.perfect99.com/htm/wl/index.htm" target="_blank">物流中心</a>
+					</div>
+					<div class="wuliu-box">
+						<a href="http://www.perfect99.com/htm/wl/index.htm" target="_blank"><img src="../images/aboutus/wl2.jpg" alt="" /></a>
+						<a href="http://www.perfect99.com/htm/wl/index.htm" target="_blank">出货区域</a>
+					</div>
+					<div class="wuliu-box">
+						<a href="http://www.perfect99.com/htm/wl/index.htm" target="_blank"><img src="../images/aboutus/wl3.jpg" alt="" /></a>
+						<a href="http://www.perfect99.com/htm/wl/index.htm" target="_blank">输送带</a>
+					</div>
+					<div class="wuliu-box">
+						<a href="http://www.perfect99.com/htm/wl/index.htm" target="_blank"><img src="../images/aboutus/wl4.jpg" alt="" /></a>
+						<a href="http://www.perfect99.com/htm/wl/index.htm" target="_blank">自动机械手</a>
+					</div>
+					<div class="wuliu-box">
+						<a href="http://www.perfect99.com/htm/wl/index.htm" target="_blank"><img src="../images/aboutus/wl5.jpg" alt="" /></a>
+						<a href="http://www.perfect99.com/htm/wl/index.htm" target="_blank">高架叉车</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div style="clear:both;height:50px;"> </div>
+	<div class="footer">
+		<div class="footer-top">
+			<a href="#" class="footer-link">公司简介</a>
+			<a href="#" class="footer-link">回报社会</a>
+			<a href="#" class="footer-link">扬州完美</a>
+			<a href="mailto:perfect@perfect99.com" class="footer-link">建议信箱</a>
+			<a href="webmaster@perfect99.com" class="footer-link">网站报障</a>
+			<a href="http://www.perfect99.com/WebPage/MessClass.aspx" class="footer-link">完美留言簿</a>
+			<a href="http://www.perfect99.com/Webvideo/default.html" class="footer-link" target="_blank">视频中心</a><sup style="color:white;">new</sup>
+			<a href="#" class="footer-link">站点地图</a>
+			<a href="#" class="footer-link">交通示意图</a>
+		</div>
+		<div class="footer-bottom">
+			<span>© 1994 - 2013 完美（中国）有限公司版权所有，未经许可不得转载或链接。</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="http://www.miibeian.gov.cn/"><span>粤ICP备11037219号</span></a>
+		</div>
+	</div>
+<script type="text/javascript">
+$(document).ready(function(){
+	$(".header>.nav>.nav-list>.item").ScrollNav({
+	     scrollObj:".header>.nav>.scrollObj", //滑动的对象
+	     speed:"fast" //速度
+	});
+});
+</script>
+</body>
+</html>

@@ -1,0 +1,264 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"> 
+<html>
+<head>
+ <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /> 
+ <link href="../css/common/common.css" type="text/css" rel="stylesheet"></link>
+<style type="text/css">
+	.contents{width: 980px;height: auto;margin: 0 auto;margin-top: 10px;}
+	.contents .item-title{background: url(../images/news/card-top-bg3.png);border-bottom: 1px lightgray solid;height: 32px;background-position: left center;line-height: 32px;font-weight: bold;}
+	.contents .item-title a{font-size:12px;color:gray;font-weight:normal;}
+	.contents .item-title a:hover{color: red;}
+	.contents .left-rank{width: 203px;height: 790px;border: 1px lightgray solid;float: left;}
+	.contents .left-rank .item-title{height: 32px;background:url(../images/news/card-top-bg.png);line-height: 32px;border-bottom: 1px lightgray solid;}
+	.contents .left-rank .news-list{list-style: none;margin-top: 0px;background: url(../images/news/news-rank.jpg);padding-top: 8px;}
+	.contents .left-rank .news-list li{display: block;width: 170px;overflow: hidden;-o-text-overflow:ellipsis; text-overflow:ellipsis; white-space:nowrap;color: #333;font-size: 12px;height: 30px;cborder-bottom: 1px lightgray solid;line-height: 30px;padding-left: 30px;}
+	.contents .left-rank .news-list li a{color: #333;line-height: 30px;}
+	.contents .left-rank .news-list li a:hover{color: red;}
+
+	.contents #imgBox{width: 420px;height:238px;float: left;margin-left: 10px;}
+	.contents #imgBox img{width: 420px;height:238px;}
+
+	.contents .right-top-news{width:335px;height: 238px;float: left;margin-left: 10px;}
+	.contents .right-top-news .right-top-news-list{list-style: none;}
+	.contents .right-top-news .right-top-news-list li{overflow: hidden;-o-text-overflow:ellipsis; text-overflow:ellipsis; white-space:nowrap;display: block;width: 335px;}
+	.contents .right-top-news .right-top-news-list li a{color: #333;font-size: 12px;}
+	.contents .right-top-news .right-top-news-list li a:hover{color: red;}
+
+	.contents .right-top-news  .right-top-news-list{list-style-position:inside; list-style: none;position: relative;}
+	.contents .right-top-news  .right-top-news-list li{ position: relative;background: url(../images/index/dot_newslist_black.gif) ;background-repeat: no-repeat;background-position: 10px center;line-height: 23px;display: block;float: left;width: 100%;font-size: 12px;}
+	.contents .right-top-news  .right-top-news-list li:hover{background-color: lightgray;}
+	.contents .right-top-news  .right-top-news-list li a{width: 220px;display:block;-o-text-overflow:ellipsis; text-overflow:ellipsis; white-space:nowrap;overflow:hidden; margin-left: 20px;color:#333333;font-size: 12px;float: left;}
+	.contents .right-top-news  .right-top-news-list li .news-time{float: right;margin-right: 10px;color: #969696;}
+	.contents .right-top-news  .right-top-news-list li a:hover{color: red;text-decoration: underline;}
+
+	.contents .gaoceng-news{width: 505px;height: 215px;border: 1px lightgray solid;float: left;margin-left: 10px;margin-top: 10px;}
+	.contents  .video-news{width: 246px;height: 215px;float: left;margin-left: 10px;margin-top: 10px;border: 1px lightgray solid;}
+
+	.contents  .fengongsi-news{width: 246px;height: 314px;float: left;margin-left: 10px;margin-top: 10px;border: 1px lightgray solid;}
+	.contents  .meiti-news{width: 246px;height: 314px;float: left;margin-left: 10px;margin-top: 10px;border: 1px lightgray solid;}
+	.contents  .zuixin-news{width: 247px;height: 314px;float: left;margin-left: 10px;margin-top: 10px;border: 1px lightgray solid;}
+	.contents  .item-title a {color: gray;}
+	.contents  .item-title a:hover{color:red;}
+	.contents .small-news-list{list-style: none;margin-top: 10px;}
+	.contents .small-news-list li{ position: relative;background: url(../images/index/dot_newslist_black.gif) ;background-repeat: no-repeat;background-position: 10px center;line-height: 25px;display: block;float: left;width: 90;font-size: 12px;margin-left: 8px;}
+	.contents .small-news-list li a{width: 210px;display:block;-o-text-overflow:ellipsis; text-overflow:ellipsis; white-space:nowrap;overflow:hidden; margin-left: 20px;color:#333333;font-size: 12px;float: left;}
+	.contents .small-news-list li a:hover{color:red;}
+
+	.contents .medium-news-list{list-style: none;margin-top: 10px;float: right;width: 315px;}
+	.contents .medium-news-list{list-style: none;margin-top: 10px;}
+	.contents .medium-news-list li{ position: relative;background: url(../images/index/dot_newslist_black.gif) ;background-repeat: no-repeat;background-position: 10px center;line-height: 25px;display: block;float: left;width: 90;font-size: 12px;margin-left: 8px;width: 95%;}
+	.contents .medium-news-list li a{width: 200px;display:block;-o-text-overflow:ellipsis; text-overflow:ellipsis; white-space:nowrap;overflow:hidden; margin-left: 20px;color:#333333;font-size: 12px;float: left;}
+	.contents .medium-news-list li a:hover{color: red;}
+	.contents .medium-news-list li .news-time{float: right;color: gray;}
+</style>
+<script type="text/javascript" src="../js/common/jquery-1.9.1.min.js"></script>
+<script type="text/javascript" src="../js/common/navScroll.js"></script>	
+<script type="text/javascript" src="../js/common/jquery.KinSlideshow-1.1.js"></script>
+</head>
+<body>
+	<!--头部-->
+	<div class="header">
+		<div class="top">
+			<div class="topfun">
+				<span><a href="javascript:void(0);" onclick="setHome(this,window.location);">设为首页</a><span>&nbsp;|&nbsp;</span></span>
+				<span><a href="javascript:void(0);" onclick="addFavorite(window.location,document.title);">加入收藏夹</a><span>&nbsp;|&nbsp;</span></span>
+				<span><a href="tencent://message/?uin=526767863&Menu=yes"><img src="../images/common/qq.png" style="vertical-align:text-top;;" alt="" />联系我们</a><span>&nbsp;|&nbsp;</span></span>
+			</div>
+		</div>
+		<div class="container">
+			<a href="#" class="logo-link"><img src="../images/common/logo.gif" /></a>
+			<span class="server-link"><a href="http://global.perfect99.com/">香港镜像服务器</a></span>
+			<span class="hotline">客户服务热线：4008701828</span>
+			<div class="search-form">
+				<button id="search-button">&nbsp;</button>
+				<input  id="search-input"/>
+			</div>
+		</div>
+		<div class="nav">
+			<ul class="nav-list">
+				<li class="item"><a href="index.html" class="nav-link">首页</a></li>
+				<li class="item"><a href="aboutus.html" class="nav-link">关于完美</a></li>
+				<li class="item"><a href="products.html" class="nav-link">完美产品</a></li>
+				<li class="current"><a href="news.html" class="nav-link">新闻动态</a></li>
+				<li class="item"><a href="seminar.html" class="nav-link">完美专题</a></li>
+				<li class="item"><a href="connectus.html" class="nav-link">联系我们</a></li>
+			</ul>
+  			<div class="scrollObj"></div>
+		</div>
+	</div>
+	<div class="contents">
+		<div class="left-rank">
+			<div class="item-title"><strong style="margin-left:35px;font-size:12px;">新闻排行</strong></div>
+			<ul class="news-list">
+				<li><a target="_blank"href="http://www.perfect99.com/WebPage/News12212.html">云南省德宏州盈江县盈康日用品经营部开业盛典</a></li>
+				<li><a target="_blank"href="http://www.perfect99.com/WebPage/News12183.html">完美营养餐问答</a></li>
+				<li><a target="_blank"href="http://www.perfect99.com/WebPage/News12182.html">肽藻营养粉问答</a></li>
+				<li><a target="_blank"href="http://www.perfect99.com/WebPage/News12181.html">沙蒜软胶囊问答</a></li>
+				<li><a target="_blank"href="http://www.perfect99.com/WebPage/News12180.html">人参滴丸问答</a></li>
+				<li><a target="_blank"href="http://www.perfect99.com/WebPage/News12179.html">芦荟矿物晶问答</a></li>
+				<li><a target="_blank"href="http://www.perfect99.com/WebPage/News12178.html">活力多健肠口服液问答</a></li>
+				<li><a target="_blank"href="http://www.perfect99.com/WebPage/News12177.html">完美高纤乐问答</a></li>
+				<li><a target="_blank"href="http://www.perfect99.com/WebPage/News12176.html">完美高纤餐问答</a></li>
+				<li><a target="_blank"href="http://www.perfect99.com/WebPage/News12160.html">盛世扬帆，完美启航</a></li>
+				<li><a target="_blank"href="http://www.perfect99.com/WebPage/News12140.html">献血捐款 慈善救灾</a></li>
+				<li><a target="_blank"href="http://www.perfect99.com/WebPage/News12094.html">与完美同行，天天向上</a></li>
+				<li><a target="_blank"href="http://www.perfect99.com/WebPage/News12072.html">大旱无情 完美有爱</a></li>
+				<li><a target="_blank"href="http://www.perfect99.com/WebPage/News12050.html">一方有难，八方支援</a></li>
+				<li><a target="_blank"href="http://www.perfect99.com/WebPage/News11944.html">昆明市西山区文健百货商行举办开业庆典暨</a></li>
+				<li><a target="_blank"href="http://www.perfect99.com/WebPage/News11929.html">康鑫源专卖店举行盛大的开业典礼</a></li>
+				<li><a target="_blank"href="http://www.perfect99.com/WebPage/News11870.html">建水县健桥日用品经营部举办开业庆典暨献血活动</a></li>
+				<li><a target="_blank"href="http://www.perfect99.com/WebPage/News11857.html">新春佳节，我们相约玛丽艳</a></li>
+				<li><a target="_blank"href="http://www.perfect99.com/WebPage/News11856.html">甘肃分公司召开2013年河西地区业务大会</a></li>
+				<li><a target="_blank"href="http://www.perfect99.com/WebPage/News11855.html">水纯净保全家健康  颜如玉现玛丽艳魅力</a></li>
+				<li><a target="_blank"href="http://www.perfect99.com/WebPage/News11854.html">金蛇狂舞闹新春，健康美丽齐上阵</a></li>
+				<li><a target="_blank"href="http://www.perfect99.com/WebPage/News11853.html">湖北分公司第五届咨询委员会第一次会议顺利召开</a></li>
+				<li><a target="_blank"href="http://www.perfect99.com/WebPage/News11852.html">健康常相伴，快乐到永远</a></li>
+				<li><a target="_blank"href="http://www.perfect99.com/WebPage/News11851.html">官员提拔前先公示财产成焦点</a></li>
+			</ul>
+		</div>
+		<div class="imgBox" id="imgBox">
+			  <a href="http://www.perfect99.com/WebPage/News12229.html" target="_blank"><img src="../images/news/new1.jpg" alt="● 完美助力中马两国青年高端文化教育" /></a>
+			  <a href="http://www.perfect99.com/WebPage/News12218.html" target="_blank"><img src="../images/news/new2.jpg" alt="● 完美助学雅安希望行" /></a>
+			  <a href="http://www.perfect99.com/WebPage/News12150.html" target="_blank"><img src="../images/news/new3.jpg" alt="● 完美公司向中国华文教育基金会捐赠1..." /></a>
+			  <a href="http://www.perfect99.com/WebPage/News12139.html" target="_blank"><img src="../images/news/new4.jpg" alt="● 完美推进循证医学，强化企业责任" /></a>
+			  <a href="http://www.perfect99.com/WebPage/News12120.html" target="_blank"><img src="../images/news/new5.jpg" alt="● 国务院侨办副主任马儒沛莅临完美参观..." /></a>
+			  <a href="http://www.perfect99.com/WebPage/News12116.html" target="_blank"><img src="../images/news/new6.jpg" alt="● 完美·助学@雅安希望行──芦山中学正式.." /></a>
+		</div>
+		<div class="right-top-news">
+			<ul class="right-top-news-list">
+				<li class="news-item"><a href="http://www.perfect99.com/WebPage/News12266.html" title="2013年完美泰国研讨会出游通知">2013年完美泰国研讨会出游通知</a><span class="news-time"></span></li>
+
+				<li class="news-item"><a href="http://www.perfect99.com/WebPage/News12262.html" title="完美参加打击保健食品“四非”专项行动宣贯会">完美参加打击保健食品“四非”专项行动宣贯会</a><span class="news-time"></span></li>
+
+				<li class="news-item"><a href="http://www.perfect99.com/WebPage/News12265.html" title="胡总裁莅临河南指导工作会议圆满召开">胡总裁莅临河南指导工作会议圆满召开</a><span class="news-time">2013-06-07</span></li>
+
+				<li class="news-item"><a href="http://www.perfect99.com/WebPage/News12232.html" title="完美公司荣耀参展春季中国（中山）国际茶博会">完美公司荣耀参展春季中国（中山）国际茶博会</a><span class="news-time">2013-05-31</span></li>
+
+				<li class="news-item">
+					<a href="http://www.perfect99.com/WebPage/News12199.html" title="“古董事长出席纪念孙中山回乡101年座谈会">古董事长出席纪念孙中山回乡101年座谈会</a><span class="news-time">2013-05-23</span>
+				</li>
+
+				<li class="news-item">
+					<a href="http://www.perfect99.com/WebPage/News12165.html" title="“湖北仙桃市领导莅临完美考察，加强政企合作">湖北仙桃市领导莅临完美考察，加强政企合作</a><span class="news-time">2013-05-17</span>
+				</li>
+				<li class="news-item">
+					<a href="http://www.perfect99.com/WebPage/News12142.html" title="“云浮、东莞市党政代表团莅临完美考察">云浮、东莞市党政代表团莅临完美考察</a><span class="news-time">2013-05-03</span>
+				</li>
+				<li class="news-item">
+					<a href="http://www.perfect99.com/WebPage/News12081.html" title="“古董事长一行拜访新华社及公安部有关领导">古董事长一行拜访新华社及公安部有关领导</a><span class="news-time">2013-04-27</span>
+				</li>
+
+				<li class="news-item">
+					<a href="http://www.perfect99.com/WebPage/News12059.html" title="“同胞心心相连，共建完美家园”——完美人积极参与完美救助专项基金">同胞心心相连，共建完美家园”——完美人积极参与完美救助专项基金</a><span class="news-time">2013-04-27</span>
+				</li>
+
+				<li class="news-item"><a href="http://www.perfect99.com/WebPage/News12058.html" title="“完美登陆中国之声" >完美登陆中国之声</a><span class="news-time">2013-04-27</span>
+				</li>
+			</ul>
+		</div>
+
+		<div class="gaoceng-news">
+			<div class="item-title"><span style="font-size:12px;margin-left:15px;float:left;">高层动态</span><span style="float:right;"><a href="http://www.perfect99.com/WebPage/NewsList.aspx?bid=1&sid=2" >更多>></a></span></div>
+			<img src="../images/news/gaoceng.jpg" alt="" width="150" height="110" style="border:5px #F3F1EE solid;margin-top:33px;margin-left:25px;float:left;"/>
+			<ul class="medium-news-list">
+				<li><a href="" title="胡总裁莅临河南指导工作会议圆满召开">胡总裁莅临河南指导工作会议圆满召开</a><span class="news-time">2013-06-07</span></li>
+				<li><a href="" title="完美助力中马两国青年高端文化教育">完美助力中马两国青年高端文化教育</a><span class="news-time">2013-05-31</span></li>
+				<li><a href="" title="完美助学雅安希望行">完美助学雅安希望行</a><span class="news-time">2013-05-30</span></li>
+				<li><a href="" title="古董事长出席纪念孙中山回乡101年座谈会">古董事长出席纪念孙中山回乡101年座谈会</a><span class="news-time">2013-05-28</span></li>
+				<li><a href="" title="完美公司向中国华文教育基金会捐赠1000万元，同时通过国侨办向雅安灾后重建捐款500万元">完美公司向中国华文教育基金会捐赠1000万元，同时通过国侨办向雅安灾后重建捐款500万元</a><span class="news-time">2013-05-21</span></li>
+				<li><a href="" title="云浮、东莞市党政代表团莅临完美考察">云浮、东莞市党政代表团莅临完美考察</a><span class="news-time">2013-05-17</span></li>
+			</ul>
+		</div> 
+
+		<div class="video-news">
+			<div class="item-title"><span style="font-size:12px;margin-left:15px;float:left;">视频新闻</span><span style="float:right;"><a href="http://www.perfect99.com/WebVideo/default.html" >更多>></a></span></div>
+			<center><a href="http://www.perfect99.com/WebPage/News11280.html" target="_blank"><img style="width:200px;margin-top:15px;" src="../images/news/video-img.jpg" alt="" /></a></center>
+		</div>
+
+		<div class="fengongsi-news">
+			<div class="item-title"><span style="font-size:12px;margin-left:15px;float:left;">分公司报道</span><span style="float:right;"><a href="http://www.perfect99.com/WebPage/NewsList.aspx?bid=1&sid=13" >更多>></a></span></div>
+			<ul class="small-news-list">
+				<li><a href="http://www.perfect99.com/WebPage/News12284.html" title="超越梦想一起飞">超越梦想一起飞</a></li>
+				<li><a href="http://www.perfect99.com/WebPage/News12283.html" title="健康生活你我共有，健康理念你我共享">健康生活你我共有，健康理念你我共享</a></li>
+				<li><a href="http://www.perfect99.com/WebPage/News12282.html" title="新品绽放，快乐出发">新品绽放，快乐出发</a></li>
+				<li><a href="http://www.perfect99.com/WebPage/News12281.html" title="爱心照亮山区孩子读书路">爱心照亮山区孩子读书路</a></li>
+				<li><a href="http://www.perfect99.com/WebPage/News12280.html" title="完美“低碳环保”在行动">完美“低碳环保”在行动</a></li>
+				<li><a href="http://www.perfect99.com/WebPage/News12279.html" title="关爱脑瘫儿童，完美在行动">关爱脑瘫儿童，完美在行动</a></li>
+				<li><a href="http://www.perfect99.com/WebPage/News12278.html" title="小滴丸大健康，创奇迹铸辉煌">小滴丸大健康，创奇迹铸辉煌</a></li>
+				<li><a href="http://www.perfect99.com/WebPage/News12277.html" title="甘肃分公司迎接全省非公有制企业团工委书记现场学习观摩">甘肃分公司迎接全省非公有制企业团工委书记现场学习观摩</a></li>
+				<li><a href="http://www.perfect99.com/WebPage/News12276.html" title="品健康之美，鉴美容之魅">品健康之美，鉴美容之魅</a></li>
+				<li><a href="http://www.perfect99.com/WebPage/News12275.html" title="甘肃分公司成功举办首届玛丽艳形象培训">甘肃分公司成功举办首届玛丽艳形象培训</a></li>
+			</ul>
+		</div>
+
+		<div class="meiti-news">
+			<div class="item-title"><span style="font-size:12px;margin-left:15px;float:left;">媒体报告</span><span style="float:right;"><a href="http://www.perfect99.com/WebPage/NewsList.aspx?bid=1&sid=3">更多>></span></a></div>
+				<ul class="small-news-list">
+					<li><a href="http://www.perfect99.com/WebPage/News12264.html" title="江苏扬州人大常委会视察侨港资企业">江苏扬州人大常委会视察侨港资企业</a></li>
+					<li><a href="http://www.perfect99.com/WebPage/News12261.html" title="原平建成一所烛光小学">原平建成一所烛光小学</a></li>
+					<li><a href="http://www.perfect99.com/WebPage/News12260.html" title="侨胞古润金：“送给灾区孩子最好的礼物是教育”">侨胞古润金：“送给灾区孩子最好的礼物是教育”</a></li>
+					<li><a href="http://www.perfect99.com/WebPage/News12259.html" title="完美公司援建雅安灾区最大规模抗震希望学校">完美公司援建雅安灾区最大规模抗震希望学校</a></li>
+					<li><a href="http://www.perfect99.com/WebPage/News12258.html" title="爱心企业捐建山西“完美烛光小学”照亮山区孩子读书路">爱心企业捐建山西“完美烛光小学”照亮山区孩子读书路</a></li>
+					<li><a href="http://www.perfect99.com/WebPage/News12248.html" title="侨商古润金向雅安捐千万元建永久性抗震学校:送给灾区孩子最好的礼物是教育">侨商古润金向雅安捐千万元建永久性抗震学校:送给灾区孩子最好的礼物是教育</a></li>
+					<li><a href="http://www.perfect99.com/WebPage/News12246.html" title="5月31日上午10点，万州区罗田镇马头完小的几百名学生收到了六一节的特殊礼物">5月31日上午10点，万州区罗田镇马头完小的几百名学生收到了六一节的特殊礼物</a></li>
+					<li><a href="http://www.perfect99.com/WebPage/News12245.html" title="面积最小镇区创经济“岐迹”">面积最小镇区创经济“岐迹”</a></li>
+					<li><a href="http://www.perfect99.com/WebPage/News12244.html" title="市人大视察侨港资企业发展情况 扬州侨港资企业有738家">市人大视察侨港资企业发展情况 扬州侨港资企业有738家</a></li>
+					<li><a href="http://www.perfect99.com/WebPage/News12243.html" title="2012年全国轻工行业先进集体(广东省)">2012年全国轻工行业先进集体(广东省)</a></li>
+				</ul>
+		</div>
+
+		<div class="zuixin-news">
+			<div class="item-title"><span style="font-size:12px;margin-left:15px;float:left;">最新通告</span><span style="float:right;"><a href="http://www.perfect99.com/WebPage/NewsList.aspx?bid=1&sid=4" >更多>></span></a></div>
+			<ul class="small-news-list">
+				<li><a href="http://www.perfect99.com/WebPage/News12219.html" title="隆重推出营养配方油优惠活动">隆重推出营养配方油优惠活动</a></li>
+				<li><a href="http://www.perfect99.com/WebPage/News12200.html" title="端午节的放假安排">端午节的放假安排</a></li>
+				<li><a href="http://www.perfect99.com/WebPage/News12143.html" title="关于金伟连牌净水机订购事宜">关于金伟连牌净水机订购事宜</a></li>
+				<li><a href="http://www.perfect99.com/WebPage/News12121.html" title="通报违规专卖店（二）">通报违规专卖店（二）</a></li>
+				<li><a href="http://www.perfect99.com/WebPage/News12095.html" title="通报违规专卖店">通报违规专卖店</a></li>
+				<li><a href="http://www.perfect99.com/WebPage/News12062.html" title="购美白精华露优惠换购活肤眼霜">购美白精华露优惠换购活肤眼霜</a></li>
+				<li><a href="http://www.perfect99.com/WebPage/News12052.html" title="隆重推出玛丽艳BB霜">隆重推出玛丽艳BB霜</a></li>
+				<li><a href="http://www.perfect99.com/WebPage/News12047.html" title="隆重推出2013年完美南非拉格诺葡萄酒奖励计划！">隆重推出2013年完美南非拉格诺葡萄酒奖励计划！</a></li>
+				<li><a href="http://www.perfect99.com/WebPage/News12026.html" title="通报违规专卖店">通报违规专卖店</a></li>
+				<li><a href="http://www.perfect99.com/WebPage/News12024.html" title="劳动节放假三天">劳动节放假三天</a></li>
+			</ul>
+		</div>
+	</div>
+	<div style="clear:both;height:50px;"></div>
+	<div class="footer">
+		<div class="footer-top">
+			<a href="#" class="footer-link">公司简介</a>
+			<a href="#" class="footer-link">回报社会</a>
+			<a href="#" class="footer-link">扬州完美</a>
+			<a href="mailto:perfect@perfect99.com" class="footer-link">建议信箱</a>
+			<a href="webmaster@perfect99.com" class="footer-link">网站报障</a>
+			<a href="http://www.perfect99.com/WebPage/MessClass.aspx" class="footer-link">完美留言簿</a>
+			<a href="http://www.perfect99.com/Webvideo/default.html" class="footer-link" target="_blank">视频中心</a><sup style="color:white;">new</sup>
+			<a href="#" class="footer-link">站点地图</a>
+			<a href="#" class="footer-link">交通示意图</a>
+		</div>
+		<div class="footer-bottom">
+			<span>© 1994 - 2013 完美（中国）有限公司版权所有，未经许可不得转载或链接。</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="http://www.miibeian.gov.cn/"><span>粤ICP备11037219号</span></a>
+		</div>
+	</div>
+<script type="text/javascript">
+$(document).ready(function(){
+	$(".header>.nav>.nav-list>.item").ScrollNav({
+	     scrollObj:".header>.nav>.scrollObj", //滑动的对象
+	     speed:"fast" //速度
+	});
+	$("#imgBox").KinSlideshow({
+		moveStyle:"down", 		//设置切换方向为向下 [默认向左切换]
+		intervalTime:5,   		//设置间隔时间为8秒  [默认为5秒]
+		mouseEvent:"mouseover",	//设置鼠标事件为“鼠标滑过切换”  [默认鼠标点击时切换]
+		isHasTitleFont:true,
+		titleFont:{TitleFont_size:14,TitleFont_color:"#FFFFFF",TitleFont_family:"Verdana",TitleFont_weight:"bold"}, 
+		isHasTitleBar:true,	
+		titleBar:{titleBar_height:21,titleBar_bgColor:"#000",titleBar_alpha:0.5},
+		isHasBtn:true,
+		btn:{btn_bgColor:"#333",btn_bgHoverColor:"#FF1100",btn_fontColor:"#ffffff",btn_fontHoverColor:"#ffffff",btn_fontFamily:"Verdana", btn_borderColor:"#999999",btn_borderHoverColor:"#FF6600",btn_borderWidth:0,btn_bgAlpha:0.8} 
+	});
+});
+
+</script>
+</body>
+</html>

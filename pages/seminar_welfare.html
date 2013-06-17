@@ -1,0 +1,187 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"> 
+<html>
+<head>
+ <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /> 
+ <link href="../css/common/common.css" type="text/css" rel="stylesheet"></link>
+<style type="text/css">
+        .contents{width: 980px;height: 630px;margin: 0 auto;}
+        .contents .contents_left{width:220px;height:190px;float: left;}
+
+        .contents_left_lmdh{width:160px;height: 200px;margin-left:15px; }
+        .contents_left_lmdh ul{display: block;text-indent: 20px;}
+        .contents_left_lmdh ul li{font-family:Verdana, Arial, Helvetica, sans-serif;word-spacing:25px;font-style:normal;font-size: 12px;font-weight:bold;list-style-type: none;line-height:30px;}
+        .contents_left_lmdh ul li a{color:black;letter-spacing: 3px;}
+        .contents .contents_right{width: 760px;height: 560px;float:left;}
+        .contents_right_Path{width:760px;height: 28px;font-size:12px;text-align: right;overflow:hidden;}
+        .contents_right_Path a{color:black; }
+        .contents_right_Mian{width: 760px;height: 540px;margin-top: 20px;}
+        .contents_right_Mian_one{width: 758px;height: 170px;margin-top:0px;}
+        .contents_right_Mian_tow{width: 758px;height: 240px;margin-top:15px;}
+        .contents_right_Mian_one_title{width: 760px;height: 25px;border:#DFDDE0 1px solid;}
+        .contents_right_Mian_one_mian{width: :760px;}
+        .contents_right_Mian_one_mian table{width:735px;margin-left: 16px;margin-top: 16px;}
+        .contents_right_Mian_one_mian table td{width:174px;font-size: 12px}
+        .contents_right_Mian_tow table td{width:250px;height:25px;font-size: 12px;}
+        .contents_right_Mian_tow table td a{color:black;}
+
+        .contents .about-us-link{width:175px;background: gray;height: 100px;position: absolute;background: url(../images/seminar/Special_lefttitle.jpg);background-position: left top;background-repeat: no-repeat;}
+        .contents .about-us-link ul{margin-top:69px;list-style: none;}
+        .contents .about-us-link ul li{font-size: 12px;font-weight: bold;width: 100%;text-align: center;line-height: 3em;background: url('../images/common/card-top-bg.png');background-repeat: repeat-x;background-position: right center;cursor: pointer;}
+        .contents .about-us-link ul li:hover{width: 105%;background:url('../images/index/bg_hdft.png');background-repeat: repeat-x;background-position: right center;color: white;}
+        .contents .about-us-link ul li.cur-link{width: 105%;background:url('../images/index/bg_hdft.png');background-repeat: repeat-x;background-position: right center;color: white;}
+        .contents .about-us-link ul li.cur-link a{color: white;}
+        .contents .about-us-link ul li a{color: black;display: block;;width: 100%;height: 100%;}
+        .contents .about-us-link ul li a:hover{color: white;}
+        .contents .contents_right .cur-path{text-align: right;font-size: 12px;line-height: 2em;border-bottom: 1px lightgray dashed;}
+        .contents .contents_right .cur-path a{color: black;}
+        .contents_right a img{border-top: 3px white  solid;}
+        .contents_right a{color:black}
+        .contents_right a:hover{color:red}
+        .contents_right a:hover img{border-top: 3px red solid;}
+</style>
+<script type="text/javascript" src="../js/common/jquery-1.9.1.min.js"></script>
+<script type="text/javascript" src="../js/common/navScroll.js"></script>
+<script type="text/javascript" src="../js/common/topNav.js"></script> 	
+</head>
+<body>
+	<!--头部-->
+	<div class="header">
+		<div class="top">
+			<div class="topfun">
+				<span><a href="javascript:void(0);" onclick="setHome(this,window.location);">设为首页</a><span>&nbsp;|&nbsp;</span></span>
+				<span><a href="javascript:void(0);" onclick="addFavorite(window.location,document.title);">加入收藏夹</a><span>&nbsp;|&nbsp;</span></span>
+        <span><a href="tencent://message/?uin=526767863&Menu=yes"><img src="../images/common/qq.png" style="vertical-align:text-top;;" alt="" />联系我们</a><span>&nbsp;|&nbsp;</span></span>
+			</div>
+		</div>
+		<div class="container">
+			<a href="#" class="logo-link"><img src="../images/common/logo.gif" /></a>
+			<span class="server-link"><a href="http://global.perfect99.com/">香港镜像服务器</a></span>
+			<span class="hotline">客户服务热线：4008701828</span>
+			<div class="search-form">
+				<button id="search-button">&nbsp;</button>
+				<input  id="search-input"/>
+			</div>
+		</div>
+		<div class="nav">
+			<ul class="nav-list">	
+				<li class="item"><a href="index.html" class="nav-link">首页</a></li>
+				<li class="item"><a href="aboutus.html" class="nav-link">关于完美</a></li>
+				<li class="item"><a href="products.html" class="nav-link">完美产品</a></li>
+				<li class="item"><a href="news.html" class="nav-link">新闻动态</a></li>
+				<li class="current"><a href="seminar.html" class="nav-link">完美专题</a></li>
+				<li class="item"><a href="connectus.html" class="nav-link">联系我们</a></li>
+			</ul>
+  			<div class="scrollObj"></div>
+		</div>
+	</div>
+	<div class="contents">
+                <div style="margin-top:15px;">
+                  <div class="contents_left">
+                          <div class="about-us-link">
+                                <ul>
+                                        <li class="cur-link"><a href="seminar_welfare.html" >公益专题</a></li>
+                                        <li><a href="seminar_business.html">业务专题</a></li>
+                                        <li><a href="seminar_product.html">产品专题</a></li>
+                                </ul>
+                          </div>
+	             </div>
+	                <div class="contents_right">
+                                    <p class="cur-path"><a href="index.html">首页</a>&nbsp;&nbsp;>&nbsp;&nbsp;完美专题&nbsp;&nbsp;>&nbsp;&nbsp;<font color="#898989">公益专题</font></p>
+                                    <div class="contents_right_Mian">
+                                    	 <div class="contents_right_Mian_one">
+                                    	 	<div class="contents_right_Mian_one_title"><img src="../images/seminar/welfare_tubiao.png"><font size="2" color="#AC171B"  face="华文行楷" ><b>2012年</b></font>&nbsp;&nbsp;|&nbsp;&nbsp;<font size="2">1个专题新建或更新</font>
+                                        </div>
+                                    	 	<div class="contents_right_Mian_one_mian">
+                    						<table>
+                 							<tr>
+                 								<td><a href="http://www.perfect99.com/Htm/ZT_2012_xianxue/"><img src="../images/seminar/gongyi_one.jpg"/></a></td>
+                 							</tr>
+                 							<tr>
+                   								<td><a href="http://www.perfect99.com/Htm/ZT_2012_xianxue/">第九届完美百城千店万人...</a></td>   	
+                 							</tr>	
+                    						</table>
+                                    	 	</div>
+                                    	 </div>
+
+                                    	 <div class="contents_right_Mian_tow">
+                                    	 	<div class="contents_right_Mian_one_title"><img src="../images/seminar/welfare_tubiao.png"><font size="2" color="#AC171B"  face="华文行楷" ><b>更早专题</b></font>&nbsp;&nbsp;|&nbsp;&nbsp;<font size="2">24个专题新建或更新</font>
+                                        </div>
+                                    	 	<div class="contents_right_Mian_one_mian">
+                    						<table>
+                 							<tr>
+                                                          <td><a href="http://www.perfect99.com/Htm/ZT_2011_xianxue"   target="_blank">·&nbsp;&nbsp;&nbsp;第八届完美百城千店万人献血活... </a></td>
+                                                          <td><a href="http://www.perfect99.com/Htm/ZT_20101115DtHb/index.asp" target="_blank">·&nbsp;&nbsp;&nbsp;低碳环保 完美生活 </a></td>
+                                                          <td><a href="http://www.perfect99.com/Htm/ZT_2010527XianXue/index.asp" target="_blank">·&nbsp;&nbsp;&nbsp;第七届百城千店万人献血活动 </a></td>
+                                                    </tr>
+                 							<tr>
+                                                          <td><a href="http://www.perfect99.com/htm/ZT_2010315WRX/index.asp"  target="_blank">·&nbsp;&nbsp;&nbsp;2010年完美慈善万人行 </a></td>
+                                                          <td><a href="http://www.perfect99.com/htm/2009xianxue/default.asp"  target="_blank">·&nbsp;&nbsp;&nbsp;第六届完美百城千店万人献血活... </a></td>
+                                                          <td><a href="http://www.perfect99.com/htm/2008xuexian/index.asp"  target="_blank">·&nbsp;&nbsp;&nbsp;第五届完美百城千店万人献血活... </a></td>
+                                                    </tr>	
+                                                    <tr>
+                                                          <td><a href="http://www.perfect99.com/htm/20080520_wmya/index.asp"  target="_blank">·&nbsp;&nbsp;&nbsp;“同胞心心相连，共建‘完美家园’... </a></td>
+                                                          <td><a href="http://www.perfect99.com/htm/ABA_juanzheng/index.asp"  target="_blank">·&nbsp;&nbsp;&nbsp;完美·ABA“母亲水窖”捐赠仪式暨... </a></td>
+                                                          <td><a href="http://www.perfect99.com/htm/200849zhenzai/index.asp"  target="_blank">·&nbsp;&nbsp;&nbsp;完美08系列赈灾活动 </a></td>
+                                                    </tr>
+                                                    <tr>
+                                                           <td><a href="http://hope.perfect99.com/index.asp" target="_blank">·&nbsp;&nbsp;&nbsp;完美希望 和谐中华 </a></td>
+                                                          <td><a href="http://www.perfect99.com/htm/XWGC_wanhui/default.asp"  target="_blank">·&nbsp;&nbsp;&nbsp;广东省实施希望工程十五周年专... </a></td>
+                                                          <td><a href="http://www.perfect99.com/htm/MothersSJ/default.asp"  target="_blank">·&nbsp;&nbsp;&nbsp;母亲水窖七周年活动  </a></td>
+                                                    </tr>
+                                                    <tr>
+                                                          <td><a href="http://www.perfect99.com/htm/20070714_xianxue_CL/index.asp"  target="_blank">·&nbsp;&nbsp;&nbsp;第四届完美百城千店万人献血活... </a></td>
+                                                          <td><a href="http://www.perfect99.com/htm/20070612_yanan/index.asp"  target="_blank">·&nbsp;&nbsp;&nbsp;感恩延安行 完美中国心 </a></td>
+                                                          <td><a href="http://www.perfect99.com/htm/20070427mothersday/index.asp"  target="_blank">·&nbsp;&nbsp;&nbsp;关爱环保 关注西部 </a></td>
+                                                    </tr>
+                                                    <tr>
+                                                          <td><a href="http://www.perfect99.com/htm/200734wrx/default.asp"  target="_blank">·&nbsp;&nbsp;&nbsp;中山慈善万人行 </a></td>
+                                                          <td><a href=""  target="_blank">·&nbsp;&nbsp;&nbsp;公益中国 完美中国 </a></td>
+                                                          <td><a href="http://www.perfect99.com/htm/GY_China/index.asp"  target="_blank">·&nbsp;&nbsp;&nbsp;母亲水窖六周年活动 </a></td>
+                                                    </tr>
+                                                    <tr>
+                                                         <td><a href="http://www.perfect99.com/htm/chishan/index.asp" target="_blank">·&nbsp;&nbsp;&nbsp;善行天下 爱在完美 </a></td>
+                                                          <td><a href="http://www.perfect99.com/htm/HP_sch/default.html"  target="_blank">·&nbsp;&nbsp;&nbsp;完美希望工程专题</a></td>
+                                                          <td><a href="http://www.perfect99.com/htm/mother/index_text.htm"  target="_blank">·&nbsp;&nbsp;&nbsp;母亲水窖五周年活动 </a></td>
+                                                    </tr>
+                                                     <tr>
+                                                         <td><a href="http://www.perfect99.com/htm/xianxue/index.asp" target="_blank">·&nbsp;&nbsp;&nbsp;第二届完美献血活动 </a></td>
+                                                          <td><a href="http://www.perfect99.com/htm/xianxue_se/index.asp"  target="_blank">·&nbsp;&nbsp;&nbsp;第三届完美献血活动 </a></td>
+                                                          <td><a href="http://www.perfect99.com/htm/healthy/index.html"  target="_blank">·&nbsp;&nbsp;&nbsp;中华健康快车 </a></td>
+                                                    </tr>
+                    						</table>
+                                    	 	</div>
+                                    	 </div>
+
+                                    
+                                    </div>
+                                  
+	                </div>
+                </div>
+	</div>
+	<div class="footer">
+		<div class="footer-top">
+			<a href="#" class="footer-link">公司简介</a>
+			<a href="#" class="footer-link">回报社会</a>
+			<a href="#" class="footer-link">扬州完美</a>
+			<a href="mailto:perfect@perfect99.com" class="footer-link">建议信箱</a>
+			<a href="webmaster@perfect99.com" class="footer-link">网站报障</a>
+			<a href="http://www.perfect99.com/WebPage/MessClass.aspx" class="footer-link">完美留言簿</a>
+			<a href="http://www.perfect99.com/Webvideo/default.html" class="footer-link" target="_blank">视频中心</a><sup style="color:white;">new</sup>
+			<a href="#" class="footer-link">站点地图</a>
+			<a href="#" class="footer-link">交通示意图</a>
+		</div>
+		<div class="footer-bottom">
+			<span>© 1994 - 2013 完美（中国）有限公司版权所有，未经许可不得转载或链接。</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="http://www.miibeian.gov.cn/"><span>粤ICP备11037219号</span></a>
+		</div>
+	</div>
+<script type="text/javascript">
+$(document).ready(function(){
+	$(".header>.nav>.nav-list>.item").ScrollNav({
+	     scrollObj:".header>.nav>.scrollObj", //滑动的对象
+	     speed:"fast" //速度
+	});
+});
+</script>
+</body>
+</html>

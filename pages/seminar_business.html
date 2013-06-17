@@ -1,0 +1,307 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"> 
+<html>
+<head>
+ <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /> 
+ <link href="../css/common/common.css" type="text/css" rel="stylesheet"></link>
+<style type="text/css">
+          .contents{width: 980px;height: 1500px;margin: 0 auto;}
+          .contents .contents_left{width:220px;height:190px;float: left;}
+
+          .contents_left_lmdh{width:160px;height: 200px;margin-left:15px; }
+          .contents_left_lmdh ul{display: block;text-indent: 20px;}
+          .contents_left_lmdh ul li{font-family:Verdana, Arial, Helvetica, sans-serif;word-spacing:25px;font-style:normal;font-size: 12px;font-weight:bold;list-style-type: none;line-height:30px;}
+          .contents_left_lmdh ul li a{color:black;letter-spacing: 3px;}
+          .contents .contents_right{width: 760px;height: 560px;float:left;}
+          .contents_right_Path{width:760px;height: 28px;font-size:12px;text-align: right;overflow:hidden;}
+          .contents_right_Path a{color:black; }
+          .contents_right_Mian{width: 760px;height: 540px;margin-top: 20px;}
+          .contents_right_Mian_one{width: 758px;height: 170px;margin-top:0px;}
+          .contents_right_Mian_two{width: 758px;height: 450px;margin-top:15px;}
+          .contents_right_Mian_three{width: 758px;height: 450px;margin-top:15px;}
+          .contents_right_Mian_one_title{width: 760px;height: 25px;border:#DFDDE0 1px solid;}
+          .contents_right_Mian_one_mian{width: :760px;}
+          .contents_right_Mian_one_mian table{margin-left: 16px;margin-top: 16px;border:0;}
+          .contents_right_Mian_one_mian table td{width:174px;font-size: 12px}
+          .contents_right_Mian_two_mian table{width:735px;margin-left: 16px;margin-top: 16px;}
+          .contents_right_Mian_two_mian table td{width:174px;text-align:center;font-size: 12px}
+          .contents_right_Mian_two table td a{color:black;}
+          .contents_right_Mian_three table{width:735px;margin-left: 16px;margin-top: 16px;}
+          .contents_right_Mian_three table td{width:250px;height:25px;font-size: 12px;}
+          .contents_right_Mian_three table td a{color:black;}
+
+          .contents .about-us-link{width:175px;background: gray;height: 100px;position: absolute;background: url(../images/seminar/Special_lefttitle.jpg);background-position: left top;background-repeat: no-repeat;}
+          .contents .about-us-link ul{margin-top:69px;list-style: none;}
+          .contents .about-us-link ul li{font-size: 12px;font-weight: bold;width: 100%;text-align: center;line-height: 3em;background: url('../images/common/card-top-bg.png');background-repeat: repeat-x;background-position: right center;cursor: pointer;}
+          .contents .about-us-link ul li:hover{width: 105%;background:url('../images/index/bg_hdft.png');background-repeat: repeat-x;background-position: right center;color: white;}
+          .contents .about-us-link ul li.cur-link{width: 105%;background:url('../images/index/bg_hdft.png');background-repeat: repeat-x;background-position: right center;color: white;}
+          .contents .about-us-link ul li.cur-link a{color: white;}
+          .contents .about-us-link ul li a{color: black;display: block;;width: 100%;height: 100%;}
+          .contents .about-us-link ul li a:hover{color: white;}
+          .contents .contents_right .cur-path{text-align: right;font-size: 12px;line-height: 2em;border-bottom: 1px lightgray dashed;}
+          .contents .contents_right .cur-path a{color: black;}
+          .contents_right a img{border-top: 3px white  solid;}
+          .contents_right a:hover img{border-top: 3px red solid;}
+          .contents_right a{color:black}
+          .contents_right a:hover{color:red}
+
+           .link-list{}
+           .link-list li{width: 229px;float: left;list-style: none;background:red;font-size: 12px;line-height: 24px;display: block;background:url(../images/index/dot_newslist_black.gif);padding-left:10px;background-position: left center;background-repeat: no-repeat;-o-text-overflow:ellipsis; text-overflow:ellipsis; white-space:nowrap;overflow:hidden; margin-right: 2px;}
+</style>
+<script type="text/javascript" src="../js/common/jquery-1.9.1.min.js"></script>
+<script type="text/javascript" src="../js/common/navScroll.js"></script>  
+<script type="text/javascript" src="../js/common/topNav.js"></script> 
+</head>
+<body>
+  <!--头部-->
+  <div class="header">
+    <div class="top">
+      <div class="topfun">
+        <span><a href="javascript:void(0);" onclick="setHome(this,window.location);">设为首页</a><span>&nbsp;|&nbsp;</span></span>
+        <span><a href="javascript:void(0);" onclick="addFavorite(window.location,document.title);">加入收藏夹</a><span>&nbsp;|&nbsp;</span></span>
+        <span><a href="tencent://message/?uin=526767863&Menu=yes"><img src="../images/common/qq.png" style="vertical-align:text-top;;" alt="" />联系我们</a><span>&nbsp;|&nbsp;</span></span>
+      </div>
+    </div>
+    <div class="container">
+      <a href="#" class="logo-link"><img src="../images/common/logo.gif" /></a>
+      <span class="server-link"><a href="http://global.perfect99.com/">香港镜像服务器</a></span>
+      <span class="hotline">客户服务热线：4008701828</span>
+      <div class="search-form">
+        <button id="search-button">&nbsp;</button>
+        <input  id="search-input"/>
+      </div>
+    </div>
+    <div class="nav">
+      <ul class="nav-list"> 
+        <li class="item"><a href="index.html" class="nav-link">首页</a></li>
+        <li class="item"><a href="aboutus.html" class="nav-link">关于完美</a></li>
+        <li class="item"><a href="products.html" class="nav-link">完美产品</a></li>
+        <li class="item"><a href="news.html" class="nav-link">新闻动态</a></li>
+        <li class="current"><a href="seminar.html" class="nav-link">完美专题</a></li>
+        <li class="item"><a href="connectus.html" class="nav-link">联系我们</a></li>
+      </ul>
+        <div class="scrollObj"></div>
+    </div>
+          
+  </div>
+  <div class="contents">
+                <div style="margin-top:15px;">
+                  <div class="contents_left">
+                          <div class="about-us-link">
+                                <ul>
+                                        <li><a href="seminar_welfare.html">公益专题</a></li>
+                                        <li  class="cur-link"><a href="seminar_business.html">业务专题</a></li>
+                                        <li><a href="seminar_product.html">产品专题</a></li>
+                                </ul>
+                          </div>
+               </div>
+                  <div class="contents_right">
+                                      <p class="cur-path"><a href="index.html">首页</a>&nbsp;&nbsp;>&nbsp;&nbsp;完美专题&nbsp;&nbsp;>&nbsp;&nbsp;<font color="#898989">业务专题</font></p>
+
+                                    <div class="contents_right_Mian">
+
+                                         <div class="contents_right_Mian_one">
+                                            <div class="contents_right_Mian_one_title"><img src="../images/seminar/welfare_tubiao.png"><font size="2" color="#AC171B"  face="华文行楷" ><b>2013年</b></font>&nbsp;&nbsp;|&nbsp;&nbsp;<font size="2">2个专题新建或更新</font>
+                                                </div>
+                                            <div class="contents_right_Mian_one_mian">
+                                    <table cellspacing="8">
+                                  <tr>
+                                    <td><a href="http://www.perfect99.com/Htm/ZT_2013_PerfectYg/default.html" target="_blank"><img src="../images/seminar/zhuanti_one.jpg"></a></td>
+                                                             <td><a href="http://www.perfect99.com/Htm/ZT_2013_315/" target="_blank"><img src="../images/seminar/zhuanti_two.jpg"></a></td>
+                                  </tr>
+                                  <tr>
+                                      <td><a href="http://www.perfect99.com/Htm/ZT_2013_PerfectYg/default.html" target="_blank">完美义工进万家</a></td>
+                                                            <td><a href="http://www.perfect99.com/Htm/ZT_2013_315/">绿色时尚 美丽中国──201...</a></td>
+                                  </tr> 
+                                    </table>
+                                            </div>
+                                         </div>
+
+                                       <div class="contents_right_Mian_two">
+                                        <div class="contents_right_Mian_one_title"><img src="../images/seminar/welfare_tubiao.png"><font size="2" color="#AC171B"   ><b>更2012年</b></font>&nbsp;&nbsp;|&nbsp;&nbsp;<font size="2">10个专题新建或更新</font>
+                                        </div>
+                                        <div class="contents_right_Mian_two_mian">
+                                <table cellspacing="7">
+                              <tr>
+                                                          <td><a href="http://www.perfect99.com/Htm/ZT_2012_TXZW"  target="_blank"><img src="../images/seminar/buess1.png"></a></td>
+                                                          <td><a href="http://www.perfect99.com/Htm/ZT_2012_TenEvent" target="_blank"><img src="../images/seminar/buess2.png"></a></td>
+                                                          <td><a href="http://www.perfect99.com/Htm/ZT_2012_GermanyMly" target="_blank"><img src="../images/seminar/buess3.png"></a></td>
+                                                          <td><a href="http://www.perfect99.com/Htm/ZT_2012_Malaysia" target="_blank"><img src="../images/seminar/buess4.png"></a></td>
+                                                    </tr>
+                                                    <tr>
+                                                          <td><a href="http://www.perfect99.com/Htm/ZT_2012_TenEvent">完美中国 魅力中山──2012</a></td>
+                                                          <td><a href="http://www.perfect99.com/Htm/ZT_2012_GermanyMly">2012年完美十大热点 </a></td>
+                                                          <td><a href="http://www.perfect99.com/Htm/ZT_2012_Malaysia">2012完美玛丽艳（德国）商务...</a></td>
+                                                          <td><a href="http://www.perfect99.com/Htm/ZT_2012_Malaysia">2012年完美马来西亚研讨会</a></td>
+                                                    </tr>
+                                                    <tr>
+                                                          <td><a href="http://www.perfect99.com/htm/ZT_Honggjiujiangli"   target="_blank"><img src="../images/seminar/buess5.png"></a></td>
+                                                          <td><a href="http://www.perfect99.com/Htm/ZT_2012_mlyTour" target="_blank"><img src="../images/seminar/buess6.png"></a></td>
+                                                          <td><a href="http://www.perfect99.com/Htm/zt_2012Tour_yuenan" target="_blank"><img src="../images/seminar/buess7.png"></a></td>
+                                                          <td><a href="http://www.perfect99.com/Htm/ZT_2012_Malaysia" target="_blank"><img src="../images/seminar/buess8.png"></a></td>
+                                                    </tr>
+                                                    <tr>
+                                                          <td><a href="http://www.perfect99.com/htm/ZT_Honggjiujiangli">2012完美南非葡萄酒奖励计... </a></td>
+                                                          <td><a href="http://www.perfect99.com/Htm/ZT_2012_mlyTour">2012完美玛丽艳（日韩）商务...</a></td>
+                                                          <td><a href="http://www.perfect99.com/Htm/zt_2012Tour_yuenan">2012年完美越南研讨会</a></td>
+                                                          <td><a href="http://www.perfect99.com/Htm/ZT_2012_Malaysia">第三届 玛丽艳魅力学堂 形...</a></td>
+                                                    </tr>
+                                                    <tr>
+                                                          <td><a href="http://www.perfect99.com/Htm/ZT_2012_DzH/"   target="_blank"><img src="../images/seminar/buess9.png"></a></td>
+                                                          <td><a href="http://www.perfect99.com/Htm/ZT_2012_315/default.aspx" target="_blank"><img src="../images/seminar/buess10.png"></a></td>
+                                                    </tr>
+                                                    <tr>
+                                                          <td><a href="http://www.perfect99.com/Htm/ZT_2012_DzH/">2012年完美意大利、地中海研...</a></td>
+                                                          <td><a href="http://www.perfect99.com/Htm/ZT_2012_315/default.aspx">完美品质 安全可靠──2012</a></td>
+                                                    </tr>
+                          </table>
+                                        </div>
+                                       </div>
+                        
+                                     <div class="contents_right_Mian_three">
+                                             <div class="contents_right_Mian_one_title"><img src="../images/seminar/welfare_tubiao.png"><font size="2" color="#AC171B"   ><b>更早专题</b></font>&nbsp;&nbsp;|&nbsp;&nbsp;<font size="2">74个专题新建或更新</font>
+                                           </div>
+                                            <div class="contents_right_Mian_one_main">
+                                                <ul class="link-list">
+                                                        <li><a href="http://www.perfect99.com/Htm/ZT_2011_TenEvent/"  target="_blank" title="2011年完美十大热点">2011年完美十大热点</a></li>
+                                                        <li><a href="http://www.perfect99.com/Htm/ZT_2011_Healthy/index.html"  target="_blank" title="完美名家健康大讲堂">完美名家健康大讲堂</a></li>
+                                                        <li><a href="http://www.perfect99.com/Htm/ZT_2011_DjYs/Default.aspx"  target="_blank" title="铸大业 谱新章 热烈祝贺完美（中国）有限公司华南基地成功奠基">铸大业 谱新章 热烈祝贺完美（中...</a></li>
+                                                        <li><a href="http://www.perfect99.com/Htm/ZT_2011_QzY/"  target="_blank" title="2011快乐看天下完美亲子游（北京站）">2011快乐看天下 完美亲子游（北...</a></li>
+                                                        <li><a href="http://www.perfect99.com/htm/ZT_2011Tour-mysg/index.html"  target="_blank" title="完美传奇 魅力南洋">完美传奇 魅力南洋</a></li>
+                                                        <li><a href="http://www.perfect99.com/htm/ZT_2011Tour-Nordic"  target="_blank" title="完美仲夏 瑞丽典雅 2011年完美北欧">完美仲夏 瑞丽典雅 2011年完美...</a></li>
+                                                        <li><a href="http://www.perfect99.com/Htm/ZT_2011mlyTour"  target="_blank" title="2011年完美玛丽艳商务研讨会">2011年完美玛丽艳商务研讨会</a></li>
+                                                        <li><a href="http://www.perfect99.com/Htm/ZT_2011_ACC"  target="_blank" title="2010年度完美ACC丽星豪华邮轮研讨会">2010年度完美ACC丽星豪华邮轮研...</a></li>
+                                                        <li><a href="http://www.perfect99.com/htm/ZT_315_2011"  target="_blank" title="铿锵品质 完美生活 ── 2011完美消费嘉">铿锵品质 完美生活 ── 2011完美...
+
+                                                        </a></li>
+                                                        <li><a href="http://www.perfect99.com/Htm/ZT_M2011_Tourmdlist/index.asp"  target="_blank" title="2011年完美玛丽艳商务研讨班">2011年完美玛丽艳商务研讨班</a></li>
+                                                        <li><a href="http://www.perfect99.com/Htm/ZT_2010TenEvent/index.asp"  target="_blank" title="2010年完美十大热点">2010年完美十大热点</a></li>
+                                                        <li><a href="http://www.perfect99.com/Htm/ZT_20101230Perfect/index.asp"  target="_blank" title="完美与梦想同行">完美与梦想同行</a></li>
+                                                        <li><a href="http://www.perfect99.com/Htm/ZT_20101221JcLl/index.asp"  target="_blank" title="2011快乐看天下 完美亲子游">2011快乐看天下 完美亲子游</a></li>
+                                                        <li><a href="http://www.perfect99.com/htm/2009_dnkb/index.asp"  target="_blank" title="魅力玛丽艳 美丽再体现 - 福建东南快报">魅力玛丽艳 美丽再体现 - 福
+
+                                                        建...</a></li>
+                                                        <li><a href="http://www.perfect99.com/htm/ZT_2010HawaiiTour/index.asp"  target="_blank" title="2010年资深客户总监夏威夷研讨会"> 2010年资深客户总监夏威夷研
+
+                                                        讨...</a></li>
+                                                        <li><a href="http://www.perfect99.com/Htm/ZT_expotour/index.asp"  target="_blank" title="2010快乐看天下 完美亲子游">2010快乐看天下 完美亲子游</a></li>
+                                                        <li><a href="http://www.perfect99.com/Htm/ZT_2010623Taiwan/index.asp"  target="_blank" title="2010完美（中国）台湾研讨会">2010完美（中国）台湾研讨会</a></li>
+                                                        <li><a href="http://www.perfect99.com/Htm/ZT_201063MlYxXgL/index.asp"  target="_blank" title="玛丽艳魅力学堂 形象管理培训">玛丽艳魅力学堂 形象管理培训</a></li>
+                                                        <li><a href="http://www.perfect99.com/Htm/ZT_2010519SpH/index.asp"  target="_blank" title="精彩世博 魅力完美">精彩世博 魅力完美</a></li>
+                                                        <li><a href="http://www.perfect99.com/htm/ZT_2010315/index.asp"  target="_blank" title="放心消费 完美服务">放心消费 完美服务</a></li>
+                                                        <li><a href="http://www.perfect99.com/Htm/ZT_2010312DHY/index.asp"  target="_blank" title="2010年完美玛丽艳商务研讨会">2010年完美玛丽艳商务研讨会</a></li>
+                                                        <li><a href="http://www.perfect99.com/htm/ZT_2009ZJZT/index.asp"  target="_blank" title="2009专题总结">2009专题总结</a></li>
+                                                        <li><a href="http://www.perfect99.com/htm/ZT_M2010_Tourmdlist/pic.asp"  target="_blank" title="2010年完美玛丽艳商务研讨会名单">2010年完美玛丽艳商务研讨会名
+
+                                                        ...</a></li>
+                                                        <li><a href="http://www.perfect99.com/htm/ZT_2009TenEvent/index.asp"  target="_blank" title="2009完美十大热点">2009完美十大热点</a></li>
+                                                        <li><a href="http://www.perfect99.com/htm/ZT_2009JcLl/index.asp"  target="_blank" title="9-12月“精彩生活喜连连”优惠活动抽奖结果公布">9-12月“精彩生活喜连
+
+                                                        连”优惠活...</a></li>
+                                                        <li><a href="http://www.perfect99.com/htm/ZT_20090928MlyDjt/index.asp"  target="_blank" title="2009玛丽艳魅力大讲堂">2009玛丽艳魅力大讲堂</a></li>
+                                                        <li><a href="http://www.perfect99.com/htm/zt_2009Tour_hanguo/index.asp"  target="_blank" title="2009年完美韩国研讨会">2009年完美韩国研讨会</a></li>
+                                                        <li><a href="http://www.perfect99.com/htm/ZT_2009Tour/default.asp"  target="_blank" title="2009年完美高级客户总监英国研讨会">2009年完美高级客户总监英国
+
+                                                        研...</a></li>
+                                                        <li><a href="http://www.perfect99.com/htm/2009_MlyTour_Korea/index.asp"  target="_blank" title="2009年完美玛丽艳（韩国）研习班">2009年完美玛丽艳（韩国）研
+
+                                                        习班...</a></li>
+                                                        <li><a href="http://www.perfect99.com/htm/20090325_zmdhy/index.asp"  target="_blank" title="2008年度专卖店总结会">2008年度专卖店总结会</a></li>
+                                                        <li><a href="http://www.perfect99.com/htm/2009World/index.asp"  target="_blank" title="古润金董事长荣获“第十一届世界杰出华人奖”">古润金董事长荣获“第十一
+
+                                                        届世界...</a></li>
+                                                        <li><a href="http://www.perfect99.com/htm/2009_yz/index.asp"  target="_blank" title="扬州完美2009新貌全面看">扬州完美2009新貌全面看</a></li>
+                                                        <li><a href="http://www.perfect99.com/htm/2009315/index.asp"  target="_blank" title="2009年3·15活动 完美中国十五年 健康和谐共发展">2009年3·15活动 “完美
+
+                                                        中国十五...</a></li>
+                                                        <li><a href="http://www.perfect99.com/htm/2009F_Tour/pic.asp"  target="_blank" title="魅力玛丽艳 美丽再体验">魅力玛丽艳 美丽再体验</a></li>
+                                                        <li><a href="http://www.perfect99.com/htm/2008TenEvent/2008TenEvent.asp"  target="_blank" title="2008“我心中的完美十大热点”评选活动">2008“我心中的完美十
+
+                                                        大热点”评...</a></li>
+                                                        <li><a href="http://www.perfect99.com/htm/2008228CHinaJJ/index.asp"  target="_blank" title="2007中国十大经济新闻">2007中国十大经济新闻</a></li>
+                                                        <li><a href="http://www.perfect99.com/htm/2008cuxiao/index.asp"  target="_blank" title="我们的2008，完美优惠活动精彩呈现">我们的2008，完美优惠活动精彩
+
+                                                        呈...</a></li>
+                                                        <li><a href="http://www.perfect99.com/htm/2008yewu/index.asp"  target="_blank" title="2008年完美（中国）业务大会"> 2008年完美（中国）业务大会</a></li>
+                                                        <li><a href="http://www.perfect99.com/htm/2008Tour/index.asp"  target="_blank" title="2008完美海外研讨会">
+                                                        2008完美海外研讨会</a></li>
+                                                        <li><a href="http://www.perfect99.com/htm/jiance/index.asp"  target="_blank" title="完美公司质保部检测中心成为国家认可实验室">
+                                                        完美公司质保部检测中心成为国...</a></li>
+                                                        <li><a href="http://www.perfect99.com/htm/2008_YZ/index.asp"  target="_blank" title="飞跃14年,2008扬州完美全面起航">
+                                                        飞跃14年,2008扬州完美全面起航...</a></li>
+                                                        <li><a href="http://www.perfect99.com/htm/2008F_Tour/index.asp"  target="_blank" title="2008年完美·玛丽艳（法国）商务研讨会">
+                                                        2008年完美·玛丽艳（法国）商务研...</a></li>
+                                                        <li><a href="http://www.perfect99.com/htm/2008315/index.asp"  target="_blank" title="2008年3·15活动">
+                                                        2008年3·15活动</a></li>
+                                                        <li><a href="http://www.perfect99.com/htm/TenWeb/default.asp"  target="_blank" title="2008“中国有我”十网联播全球杰出华人大拜年">
+                                                        2008“中国有我”十网联播全球杰...</a></li>
+                                                        <li><a href="http://www.perfect99.com/htm/ZXY_PX/default.asp"  target="_blank" title="直销员培训">
+                                                        直销员培训</a></li>
+                                                        <li><a href="http://www.perfect99.com/htm/P-ERP/default.asp"  target="_blank" title="全面实行ERP管理 推动信息化战略执行">
+                                                        全面实行ERP管理 推动信息化战...</a></li>
+                                                        <li><a href="http://www.perfect99.com/htm/20070815_tour_cl/default.asp"  target="_blank" title="2007完美海外研讨会">
+                                                        2007完美海外研讨会</a></li>
+                                                        <li><a href="http://www.perfect99.com/htm/20070609_banjiang/index.asp"  target="_blank" title="公司荣膺“具潜质品牌企业奖”">
+                                                        公司荣膺“具潜质品牌企业奖”</a></li>
+                                                        <li><a href="http://www.perfect99.com/htm/2007518mytour/default.asp"  target="_blank" title="梦开始的地方 魅力马来西亚">梦开始的地方 魅力马来西亚</a></li>
+                                                        <li><a href="http://www.perfect99.com/htm/20070406_2007328jiangxiang/index.asp"  target="_blank" title="石岐区2007年经济工作表彰大会">石岐区2007年经济工作
+
+                                                        表彰大会</a></li>
+                                                        <li><a href="http://www.perfect99.com/htm/2007_mothersday/index.asp"  target="_blank" title="07年“爱在完美”母亲节">07年“爱在完美”母亲节</a></li>
+                                                        <li><a href="http://www.perfect99.com/htm/VIPBX/default.asp"  target="_blank" title="保险事项与查询">保险事项与查询</a></li>
+                                                        <li><a href="http://www.perfect99.com/htm/2007626_MlyMlPx_CL/default.asp"  target="_blank" title="玛丽艳半天美容培训专题">玛丽艳半天美容培训专题</a></li>
+                                                        <li><a href="http://www.perfect99.com/htm/20070417_pro_mly/default.asp"  target="_blank" title="玛丽艳市场系列奖励方案">玛丽艳市场系列奖励方案</a></li>
+                                                        <li><a href="http://www.perfect99.com/htm/20073331Perfect_yz/index.asp"  target="_blank" title="扬州完美新专题">扬州完美新专题</a></li>
+                                                        <li><a href="http://www.perfect99.com/htm/2007315/index.asp"  target="_blank" title="2007年3·15活动">2007年3·15活动</a></li>
+                                                        <li><a href="http://www.perfect99.com/htm/phoenixtv/default.asp"  target="_blank" title="凤凰卫视“完美月”">凤凰卫视“完美月”</a></li>
+                                                        <li><a href="http://www.perfect99.com/htm/Employer/index.asp"  target="_blank" title="中国100最佳雇主">中国100最佳雇主</a></li>
+                                                        <li><a href="http://www.perfect99.com/htm/pingpai/index.asp"  target="_blank" title="中国品牌年度大奖">中国品牌年度大奖</a></li>
+                                                        <li><a href="http://www.perfect99.com/htm/zfhd/default.asp"  target="_blank" title="健康与发展·中山论坛">健康与发展·中山论坛</a></li>
+                                                        <li><a href="http://www.perfect99.com/htm/Overseastour/default.asp"  target="_blank" title="2006完美海外研讨会">2006完美海外研讨会</a></li>
+                                                        <li><a href="http://www.perfect99.com/htm/sales/index.asp"  target="_blank" title="GOGOGO,百万大奖等着你">GOGOGO,百万大奖等着你</a></li>
+                                                        <li><a href="http://www.perfect99.com/htm/mothersday/index.asp"  target="_blank" title="情动五月 爱在完美">情动五月 爱在完美</a></li>
+                                                        <li><a href="http://www.perfect99.com/htm/315/index.asp"  target="_blank" title="3.15系列活动专题">3.15系列活动专题</a></li>
+                                                        <li><a href="http://www.perfect99.com/htm/lover/index.asp"  target="_blank" title="完美情人节">完美情人节</a></li>
+                                                        <li><a href="http://www.perfect99.com/htm/newyear/game_news_fenggong_all.asp"  target="_blank" title="全国各地新春活动报道">全国各地新春活动报道</a></li>
+                                                        <li><a href="http://www.perfect99.com/htm/Insurance/index.asp"  target="_blank" title="完美关怀 温暖人生">完美关怀 温暖人生</a></li>
+                                                        <li><a href="http://www.perfect99.com/htm/newyear/index.asp"  target="_blank" title="这个春节真完美">
+                                                                            "这个春节真完美"</a></li>
+                                                        <li><a href="http://www.perfect99.com/htm/xb/index_swf.asp"  target="_blank" title="高原寻宝之旅">高原寻宝之旅</a></li>
+                                                        <li><a href="http://www.perfect99.com/htm/hk/index.asp"  target="_blank" title="香港旅游专题">香港旅游专题</a></li>
+                                                        <li><a href="http://www.perfect99.com/htm/perfect_UN/index.asp"  target="_blank" title="江南大学研发中心">江南大学研发中心</a></li>
+                                                        <li><a href="http://www.perfect99.com/htm/YZ/index.asp"  target="_blank" title="崛起中的扬州完美">崛起中的扬州完美</a></li>
+                                                        <li><a href="http://www.perfect99.com/htm/france/index.asp"  target="_blank" title="飞跃2005 相约巴黎">飞跃2005 相约巴黎</a></li>
+                                                        <li><a href="http://www.perfect99.com/htm/10year/xu.asp"  target="_blank" title="十周年庆典">十周年庆典</a></li>
+                                                </ul>
+                                            </div>
+                                     </div>
+                                    
+                                  </div>
+                           </div>
+                </div>
+  </div>
+  <div class="footer">
+    <div class="footer-top">
+      <a href="#" class="footer-link">公司简介</a>
+      <a href="#" class="footer-link">回报社会</a>
+      <a href="#" class="footer-link">扬州完美</a>
+      <a href="mailto:perfect@perfect99.com" class="footer-link">建议信箱</a>
+      <a href="webmaster@perfect99.com" class="footer-link">网站报障</a>
+      <a href="http://www.perfect99.com/WebPage/MessClass.aspx" class="footer-link">完美留言簿</a>
+      <a href="http://www.perfect99.com/Webvideo/default.html" class="footer-link" target="_blank">视频中心</a><sup style="color:white;">new</sup>
+      <a href="#" class="footer-link">站点地图</a>
+      <a href="#" class="footer-link">交通示意图</a>
+    </div>
+    <div class="footer-bottom">
+      <span> 1994 - 2013 完美（中国）有限公司版权所有，未经许可不得转载或链接。</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="http://www.miibeian.gov.cn/"><span>粤ICP备11037219号</span></a>
+    </div>
+  </div>
+<script type="text/javascript">
+$(document).ready(function(){
+  $(".header>.nav>.nav-list>.item").ScrollNav({
+       scrollObj:".header>.nav>.scrollObj", //滑动的对象
+       speed:"fast" //速度
+  });
+});
+</script>
+</body>
+</html>

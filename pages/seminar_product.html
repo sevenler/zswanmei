@@ -1,0 +1,208 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"> 
+<html>
+<head>
+ <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /> 
+ <link href="../css/common/common.css" type="text/css" rel="stylesheet"></link>
+<style type="text/css">
+            .contents{width: 980px;height: 700px;margin: 0 auto;}
+            .contents .contents_left{width:220px;height:190px;float: left;}
+
+            .contents_left_lmdh{width:160px;height: 200px;margin-left:15px; }
+            .contents_left_lmdh ul{display: block;text-indent: 20px;}
+            .contents_left_lmdh ul li{font-family:Verdana, Arial, Helvetica, sans-serif;word-spacing:25px;font-style:normal;font-size: 12px;font-weight:bold;list-style-type: none;line-height:30px;}
+            .contents_left_lmdh ul li a{color:black;letter-spacing: 3px;}
+            .contents .contents_right{width: 760px;height: 560px;float:left;}
+            .contents_right_Path{width:760px;height: 28px;font-size:12px;text-align: right;overflow:hidden;}
+            .contents_right_Path a{color:black; }
+            .contents_right_Mian{width: 760px;height: 540px;margin-top: 20px;}
+            .contents_right_Mian_one{width: 758px;height: 170px;margin-top:0px;}
+            .contents_right_Mian_two{width: 758px;height: 175px;margin-top:15px;}
+            .contents_right_Mian_three{width: 758px;height: 280px;margin-top:15px;}
+            .contents_right_Mian_one_title{width: 760px;height: 25px;border:#DFDDE0 1px solid;}
+            .contents_right_Mian_one_mian{width: :760px;}
+            .contents_right_Mian_one_mian table{margin-left: 16px;margin-top: 16px;border:0;}
+            .contents_right_Mian_one_mian table td{width:174px;font-size: 12px}
+            .contents_right_Mian_two_mian table{width:735px;margin-left: 16px;margin-top: 16px;}
+            .contents_right_Mian_two_mian table td{width:174px;text-align:center;font-size: 12px}
+            .contents_right_Mian_two table td a{color:black;}
+            .contents_right_Mian_three table{width:735px;margin-left: 16px;margin-top: 16px;}
+            .contents_right_Mian_three table td{width:250px;height:25px;font-size: 12px;}
+            .contents_right_Mian_three table td a{color:black;}
+
+            .contents .about-us-link{width:175px;background: gray;height: 100px;position: absolute;background: url(../images/seminar/Special_lefttitle.jpg);background-position: left top;background-repeat: no-repeat;}
+            .contents .about-us-link ul{margin-top:69px;list-style: none;}
+            .contents .about-us-link ul li{font-size: 12px;font-weight: bold;width: 100%;text-align: center;line-height: 3em;background: url('../images/common/card-top-bg.png');background-repeat: repeat-x;background-position: right center;cursor: pointer;}
+            .contents .about-us-link ul li:hover{width: 105%;background:url('../images/index/bg_hdft.png');background-repeat: repeat-x;background-position: right center;color: white;}
+            .contents .about-us-link ul li.cur-link{width: 105%;background:url('../images/index/bg_hdft.png');background-repeat: repeat-x;background-position: right center;color: white;}
+            .contents .about-us-link ul li.cur-link a{color: white;}
+            .contents .about-us-link ul li a{color: black;display: block;;width: 100%;height: 100%;}
+            .contents .about-us-link ul li a:hover{color: white;}
+            .contents .contents_right .cur-path{text-align: right;font-size: 12px;line-height: 2em;border-bottom: 1px lightgray dashed;}
+            .contents .contents_right .cur-path a{color: black;}
+                     .contents_right a img{border-top: 3px white  solid;}
+            .contents_right a:hover img{border-top: 3px red solid;}
+            .link-list{}
+            .link-list li{width: 229px;float: left;list-style: none;background:red;font-size: 12px;line-height: 24px;display: block;background:url(../images/index/dot_newslist_black.gif);padding-left:10px;background-position: left center;background-repeat: no-repeat;-o-text-overflow:ellipsis; text-overflow:ellipsis; white-space:nowrap;overflow:hidden; margin-right: 2px;}
+            .link-list li a{color: black;}
+            .link-list li a:hover{color: red;}
+            table tr td a:hover{color: red;}
+</style>
+<script type="text/javascript" src="../js/common/jquery-1.9.1.min.js"></script>
+<script type="text/javascript" src="../js/common/navScroll.js"></script>  
+<script type="text/javascript" src="../js/common/topNav.js"></script> 
+</head>
+<body>
+  <!--头部-->
+  <div class="header">
+    <div class="top">
+      <div class="topfun">
+        <span><a href="javascript:void(0);" onclick="setHome(this,window.location);">设为首页</a><span>&nbsp;|&nbsp;</span></span>
+        <span><a href="javascript:void(0);" onclick="addFavorite(window.location,document.title);">加入收藏夹</a><span>&nbsp;|&nbsp;</span></span>
+        <span><a href="tencent://message/?uin=526767863&Menu=yes"><img src="../images/common/qq.png" style="vertical-align:text-top;;" alt="" />联系我们</a><span>&nbsp;|&nbsp;</span></span>
+      </div>
+    </div>
+    <div class="container">
+      <a href="#" class="logo-link"><img src="../images/common/logo.gif" /></a>
+      <span class="server-link"><a href="http://global.perfect99.com/">香港镜像服务器</a></span>
+      <span class="hotline">客户服务热线：4008701828</span>
+      <div class="search-form">
+        <button id="search-button">&nbsp;</button>
+        <input  id="search-input"/>
+      </div>
+    </div>
+    <div class="nav">
+      <ul class="nav-list"> 
+        <li class="item"><a href="index.html" class="nav-link">首页</a></li>
+        <li class="item"><a href="aboutus.html" class="nav-link">关于完美</a></li>
+        <li class="item"><a href="products.html" class="nav-link">完美产品</a></li>
+        <li class="item"><a href="news.html" class="nav-link">新闻动态</a></li>
+        <li class="current"><a href="seminar.html" class="nav-link">完美专题</a></li>
+        <li class="item"><a href="connectus.html" class="nav-link">联系我们</a></li>
+      </ul>
+        <div class="scrollObj"></div>
+    </div>
+          
+  </div>
+  <div class="contents">
+                <div style="margin-top:15px;">
+                  <div class="contents_left">
+                          <div class="about-us-link">
+                                <ul>
+                                        <li><a href="seminar_welfare.html">公益专题</a></li>
+                                        <li><a href="seminar_business.html">业务专题</a></li>
+                                        <li  class="cur-link"><a href="seminar_product.html" >产品专题</a></li>
+                                </ul>
+                          </div>
+                  </div>
+                  <div class="contents_right">
+                                     <p class="cur-path"><a href="index.html"> <a href="index.html">首页</a>&nbsp;&nbsp;>&nbsp;&nbsp;完美专题&nbsp;&nbsp;>&nbsp;&nbsp;<font color="#898989">产品专题</font></p>
+                                    <div class="contents_right_Mian">
+
+                                         <div class="contents_right_Mian_one">
+                                                  <div class="contents_right_Mian_one_title"><img src="../images/seminar/welfare_tubiao.png"><font size="2" color="#AC171B"  face="华文行楷" ><b>2013年</b></font>&nbsp;&nbsp;|&nbsp;&nbsp;<font size="2">4个专题新建或更新</font>
+                                                   </div>
+                                                  <div class="contents_right_Mian_one_mian">
+                                                         <table cellspacing="8">
+                                                             <tr>
+                                                                    <td><a href="http://www.perfect99.com/Htm/ZT_2013_mianyili/default.aspx"><img src="../images/seminar/chanpin_one.jpg"></a></td>
+                                                                    <td><a href="http://www.perfect99.com/Htm/ZT_2012_JWLjsq/default.html"><img src="../images/seminar/chanpin_two.jpg"></a></td>
+                                                                    <td><a href="http://www.perfect99.com/htm/npro_balmcream/default.aspx"><img src="../images/seminar/chanpin_three.jpg"></a></td>
+                                                                    <td><a href="http://www.perfect99.com/htm/nPro_rsdw/Default.aspx"><img src="../images/seminar/chanpin_four.jpg"></a></td>
+                                                             </tr>
+                                                             <tr>
+                                                                      <td>增强免疫力，健康长相伴</td>
+                                                                      <td>七芯级 健康水 </td>
+                                                                      <td>玛丽艳BB霜魅力上市</td>
+                                                                      <td>吉福参牌人参滴丸</td>
+                                                              </tr> 
+                                                            </table>
+                                                    </div>
+                                           </div>
+
+                                              <div class="contents_right_Mian_two">
+                                                    <div class="contents_right_Mian_one_title"><img src="../images/seminar/welfare_tubiao.png"><font size="2" color="#AC171B"   ><b>2012年</b></font>&nbsp;&nbsp;|&nbsp;&nbsp;<font size="2">2个专题新建或更新</font>
+                                                    </div>
+                                                    <div class="contents_right_Mian_two_mian">
+                                                            <table cellspacing="7">
+                                                                    <tr>
+                                                                          <td><a href="http://www.perfect99.com/htm/zt_cof/default.html"   target="_blank"><img src="../images/seminar/product1.png"></a></td>
+                                                                          <td><a href="http://www.perfect99.com/Htm/HTM_ptjyj/index.html" target="_blank"><img src="../images/seminar/product2.png"></a></td>
+                                                                          <td style="visibility:hidden;"><a href="" target="_blank"><img src="../images/seminar/product3.png"></a></td>
+                                                                           <td style="visibility:hidden;"><a href="" target="_blank"><img src="../images/seminar/product3.png"></a></td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                          <td><a href="http://www.perfect99.com/Htm/HTM_ptjyj/index.html">为健康加油 - 完美牌营养配...</a></td>
+                                                                          <td><a href="http://www.perfect99.com/Htm/HTM_ptjyj/index.html">拉格诺西拉葡萄酒再次荣获...</a></td>
+                                                                         <td style="visibility:hidden;">品自然奢华 为成功干杯──</td>
+                                                                         <td style="visibility:hidden;">品自然奢华 为成功干杯──</td>
+                                                                    </tr>
+                                                             
+                                                             </table>
+                                                   </div>
+                                       </div>
+
+                                     <div class="contents_right_Mian_three">
+                                             <div class="contents_right_Mian_one_title"><img src="../images/seminar/welfare_tubiao.png"><font size="2" color="#AC171B"   ><b>更早专题</b></font>&nbsp;&nbsp;|&nbsp;&nbsp;<font size="2">24个专题新建或更新</font>
+                                           </div>
+                                            <div class="contents_right_Mian_one_main">
+                                                     <ul class="link-list">
+                                                            <li><a href="http://www.perfect99.com/htm/ZT_Jkbfj/index.html"  target="_blank" title="健康不放假 快乐过新年">健康不放假 快乐过新年</a></li>
+                                                            <li><a href="http://www.perfect99.com/Htm/ZT_2011_Yst"  target="_blank" title="伴你一生的健康糖">伴你一生的健康糖</a></li>
+                                                            <li><a href="http://www.perfect99.com/Htm/ZT_2011_38"  target="_blank" title="爱·家·玛丽艳2011">爱·家·玛丽艳2011</a></li>
+                                                            <li><a href="http://www.perfect99.com/Htm/20110325_Redwine/index.aspx"  target="_blank" title="权威检测，至臻品质">权威检测，至臻品质</a></li>
+                                                            <li><a href="http://www.perfect99.com/Htm/ZT_20110301HjFbH/default.aspx"  target="_blank" title="尚品生活" 完美体验>尚品生活 完美体验</a></li>
+                                                            <li><a href="http://www.perfect99.com/Htm/ZT_20101110LhJ/index.asp"  target="_blank" title="2010年完美芦荟胶新增防伪标识">2010年完美芦荟胶新增防伪标识</a></li>
+                                                            <li><a href="http://www.perfect99.com/htm/zt_cac/index.asp"  target="_blank" title="完美汽车空调喷雾净CAC">完美汽车空调喷雾净CAC</a></li>
+                                                            <li><a href="http://www.perfect99.com/htm/Html_Packaging091225/default.asp"  target="_blank" title="产品包装改版一览表">产品包装改版一览表</a></li>
+                                                            <li><a href="http://www.perfect99.com/htm/ZT_20091112HxXf/index.asp"  target="_blank" title="荟新洗护系列产品">荟新洗护系列产品</a></li>
+                                                            <li><a href="http://www.perfect99.com/htm/ZT_20091102Ymt/index.asp"  target="_blank" title="玉米肽" 玉成健康>玉米肽 玉成健康</a></li>
+                                                            <li><a href="http://www.perfect99.com/htm/zt_2009109_scy/index.asp"  target="_blank" title="完美牌压榨山茶籽油">完美牌压榨山茶籽油</a></li>
+                                                            <li><a href="http://www.perfect99.com/htm/Pro_GXL_20090908/index.html"  target="_blank" title="2009年部分产品包装工艺调整">2009年部分产品包装工艺调整</a></li>
+                                                            <li><a href="http://www.perfect99.com/htm/wmbz/default.htm"  target="_blank" title="完美公司产品包装常识">完美公司产品包装常识</a></li>
+                                                            <li><a href="http://www.perfect99.com/htm/2009428_Healthy/index.asp"  target="_blank" title="完美名家健康大讲堂暨健康俱乐部">完美名家健康大讲堂暨健康俱乐...</a></li>
+                                                            <li><a href="http://www.perfect99.com/htm/2008_taizao/index.asp"  target="_blank" title="肽藻营养粉">肽藻营养粉</a></li>
+                                                            <li><a href="http://www.perfect99.com/htm/NewProPacking/default.asp"  target="_blank" title="2008年完美产品新包装">2008年完美产品新包装</a></li>
+                                                            <li><a href="http://www.perfect99.com/htm/cg/index.asp"  target="_blank" title="缤纷世界　唇色人生">缤纷世界　唇色人生</a></li>
+                                                            <li><a href="http://www.perfect99.com/htm/oligo/default.asp"  target="_blank" title="活立多专题网站">活立多专题网站</a></li>
+                                                            <li><a href="http://www.perfect99.com/htm/2007329_ACC_Pro/default.asp"  target="_blank" title="完美空调泡沫清洁剂ACC专题">完美空调泡沫清洁剂ACC专题</a></li>
+                                                            <li><a href="http://www.perfect99.com/htm/SS/index.asp"  target="_blank" title="沙蒜软胶囊专题">沙蒜软胶囊专题</a></li>
+                                                            <li><a href="http://www.perfect99.com/htm/food/index_swf.asp"  target="_blank" title="食品安全专题">食品安全专题</a></li>
+                                                            <li><a href="http://www.perfect99.com/htm/tooth/index.html"  target="_blank" title="9·20世界爱牙日">9·20世界爱牙日</a></li>
+                                                            <li><a href="http://www.perfect99.com/htm/Hair/index.asp"  target="_blank" title="新AF洗护系列隆重上市">新AF洗护系列隆重上市</a></li>
+                                                            <li><a href="http://www.perfect99.com/htm/spaq/index.html"  target="_blank" title="2006年度全国食品安全年会">2006年度全国食品安全年会</a></li>
+                                                                                                                      
+                                                     </ul>
+                                            </div>
+                                     </div>
+                                    
+                                  </div>
+                           </div>
+                </div>
+  </div>
+  <div class="footer">
+    <div class="footer-top">
+      <a href="#" class="footer-link">公司简介</a>
+      <a href="#" class="footer-link">回报社会</a>
+      <a href="#" class="footer-link">扬州完美</a>
+      <a href="mailto:perfect@perfect99.com" class="footer-link">建议信箱</a>
+      <a href="webmaster@perfect99.com" class="footer-link">网站报障</a>
+      <a href="http://www.perfect99.com/WebPage/MessClass.aspx" class="footer-link">完美留言簿</a>
+      <a href="http://www.perfect99.com/Webvideo/default.html" class="footer-link" target="_blank">视频中心</a><sup style="color:white;">new</sup>
+      <a href="#" class="footer-link">站点地图</a>
+      <a href="#" class="footer-link">交通示意图</a>
+    </div>
+    <div class="footer-bottom">
+      <span>© 1994 - 2013 完美（中国）有限公司版权所有，未经许可不得转载或链接。</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="http://www.miibeian.gov.cn/"><span>粤ICP备11037219号</span></a>
+    </div>
+  </div>
+<script type="text/javascript">
+$(document).ready(function(){
+  $(".header>.nav>.nav-list>.item").ScrollNav({
+       scrollObj:".header>.nav>.scrollObj", //滑动的对象
+       speed:"fast" //速度
+  });
+});
+</script>
+</body>
+</html>
+

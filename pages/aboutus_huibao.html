@@ -1,0 +1,246 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"> 
+<html>
+<head>
+ <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /> 
+ <link href="../css/common/common.css" type="text/css" rel="stylesheet"></link>
+<style type="text/css">
+	.contents{width: 980px;height: auto;margin: 0 auto;position: relative;}
+	.contents .about-us-link{width:175px;background: gray;height: 100px;position: absolute;background: url(../images/aboutus/left_about_title.jpg);background-position: left top;background-repeat: no-repeat;margin-top:10px; }
+	.contents .about-us-link ul{margin-top:69px;list-style: none;}
+	.contents .about-us-link ul li{font-size: 12px;font-weight: bold;width: 100%;text-align: center;line-height: 3em;background: url('../images/common/card-top-bg.png');background-repeat: repeat-x;background-position: right center;cursor: pointer;}
+	.contents .about-us-link ul li:hover{width: 105%;background:url('../images/index/bg_hdft.png');background-repeat: repeat-x;background-position: right center;color: white;}
+	.contents .about-us-link ul li.cur-link{width: 105%;background:url('../images/index/bg_hdft.png');background-repeat: repeat-x;background-position: right center;color: white;}
+	.contents .about-us-link ul li a{color: black;display: block;;width: 100%;height: 100%;}
+	.contents .about-us-link ul li a:hover{color: white;}
+	.contents .about-us-link ul li.cur-link a{color:white;}
+	.contents .right-content{float: right;width: 750px; height: auto;text-align: center;}
+	.contents .right-content .cur-path{text-align: right;font-size: 12px;line-height: 2em;border-bottom: 1px lightgray dashed;}
+	.contents .right-content .introduce{text-align: justify;text-justify:newspaper; font-size: 14px;margin-top: 20px;color: #333;font-size: 12px;}
+	.contents .right-content .introduce a{color: black;}
+	.contents .right-content .introduce a:hover{color: red;}
+	.contents .right-content .introduce .tab{background: url(../images/aboutus/tabbg.gif);list-style: none;height: 30px;padding-left: 50px;}
+	.contents .right-content .introduce .tab li{width: 120px;float: left;height: 30px;line-height: 30px;text-align: center;cursor: pointer;border-top: 2px transparent solid;border-left: 1px transparent solid;border-right:  1px transparent solid;}
+	.contents .right-content .introduce .tab li:hover{background: white;border-top: 2px solid red;border-left: 1px lightgray solid;border-right:  1px lightgray solid;}
+	.contents .right-content .introduce .tab .cur-tab{background: white;border-top: 2px solid red;border-left: 1px lightgray solid;border-right:  1px lightgray solid;}
+	.contents .right-content .introduce .detail{height: auto;margin-top: 20px;padding-left: 10px;padding-right: 10px}
+	.contents .right-content .introduce .detail p{text-indent: 2em;font-size: 14px;line-height: 1.5em;}
+	.contents .right-content .introduce table{border-bottom: 1px lightgray dashed;padding-bottom: 10px;width: 100%;margin-top: 10px}
+	.contents .right-content .introduce table .img-td{width: 170px;text-align: center;}
+
+	#detail-card2,#detail-card3{display: none;}
+</style>
+<script type="text/javascript" src="../js/common/jquery-1.9.1.min.js"></script>
+<script type="text/javascript" src="../js/common/navScroll.js"></script>	
+<script type="text/javascript" src="../js/common/topNav.js"></script>	
+</head>
+<body>
+	<!--头部-->
+	<div class="header">
+		<div class="top">
+			<div class="topfun">
+				<span><a href="javascript:void(0);" onclick="setHome(this,window.location);">设为首页</a><span>&nbsp;|&nbsp;</span></span>
+				<span><a href="javascript:void(0);" onclick="addFavorite(window.location,document.title);">加入收藏夹</a><span>&nbsp;|&nbsp;</span></span>
+				<span><a href="tencent://message/?uin=526767863&Menu=yes"><img src="../images/common/qq.png" style="vertical-align:text-top;;" alt="" />联系我们</a><span>&nbsp;|&nbsp;</span></span>
+			</div>
+		</div>
+		<div class="container">
+			<a href="#" class="logo-link"><img src="../images/common/logo.gif" /></a>
+			<span class="server-link"><a href="http://global.perfect99.com/">香港镜像服务器</a></span>
+			<span class="hotline">客户服务热线：4008701828</span>
+			<div class="search-form">
+				<button id="search-button">&nbsp;</button>
+				<input  id="search-input"/>
+			</div>
+		</div>
+		<div class="nav">
+			<ul class="nav-list">
+				<li class="item"><a href="index.html" class="nav-link">首页</a></li>
+				<li class="current"><a href="aboutus.html" class="nav-link">关于完美</a></li>
+				<li class="item"><a href="products.html" class="nav-link">完美产品</a></li>
+				<li class="item"><a href="news.html" class="nav-link">新闻动态</a></li>
+				<li class="item"><a href="seminar.html" class="nav-link">完美专题</a></li>
+				<li class="item"><a href="connectus.html" class="nav-link">联系我们</a></li>
+			</ul>
+  			<div class="scrollObj"></div>
+		</div>
+	</div>
+	<div class="contents">
+		<div class="about-us-link">
+			<ul>
+				<li ><a href="aboutus_company.html">公司简介</a></li>
+				<li ><a href="aboutus_yangzhou.html">扬州完美</a></li>
+				<li><a href="aboutus_leaders.html">领导风采</a></li>
+				<li class="cur-link"><a href="aboutus_huibao.html">回报社会</a></li>
+				<li><a href="aboutus_rongyu.html">企业荣誉</a></li>
+				<li><a href="aboutus_research.html">研发生产</a></li>
+				<li><a href="http://www.perfect99.com/htm/wl/index.htm" target="_blank">物流中心</a></li>
+			</ul>
+		</div>
+		<div class="right-content">
+			<p class="cur-path"> 首页 >  关于完美 > 回报社会</p>
+			<div class="introduce">
+				<div class="detail">
+					<div id="detail-card1">
+						<p>“取之社会，用之社会”是完美公司的经营方针，公司在自身不断发展的同时，也不忘回报社会。从成立至今，积极支持、赞助社会各类公益活动，为社会的物质文明和精神文明建设作出了巨大贡献。 目前，公司向社会各界捐款捐物累计资金逾三亿元。以下记录，可见一斑。</p>
+						<br/>
+						<table cellspacing="0">
+							<tr>
+								<td rowspan="2" class="img-td"><a href="http://hope.perfect99.com/" target="_blank"><img src="../images/aboutus/hb1.jpg" alt="" /></td>
+								<td  ><strong>希望工程</strong></a></td>
+							</tr>
+							<tr>
+								<td   valign="top"><a href="http://hope.perfect99.com/" target="_blank">截止目前，完美向中国希望工程项目捐款总额逾7000万元。</a></td>
+							</tr>
+						</table>
+						<table cellspacing="0">
+							<tr>
+								<td  style="text-align:right;"><strong>献血活动</strong></td>
+								<td rowspan="2" class="img-td"><a href="http://www.perfect99.com/htm/2009xianxue/default.asp" target="_blank"><img src="../images/aboutus/hb2.jpg" alt="" /></a></td>
+							</tr>
+							<tr>
+								<td   valign="top" ><a href="http://www.perfect99.com/htm/2009xianxue/default.asp" target="_blank">完美公司三位领导的亲自带领下，总公司、全国各地分公司、专卖店、消费者积极参与，历届累计献血总人数已接近18万人次，总献血量逾4500万毫升，这意味着可以拯救数万人的生命。</a></td>
+							</tr>
+						</table>
+						<table cellspacing="0">
+							<tr>
+								<td rowspan="2" class="img-td"><a href="http://www.perfect99.com/htm/MothersSJ/default.asp" target="_blank"><img src="../images/aboutus/hb3.jpg" alt="" /></a></td>
+								<td  ><strong>母亲水窖</strong></td>
+							</tr>
+							<tr>
+								<td   valign="top"><a href="http://www.perfect99.com/htm/MothersSJ/default.asp" target="_blank">为了缓解西部地区人民因缺水带来的生存危机，2000年，中国妇联开始发起“母亲水窖”工程。至今，已经在西部贫困干旱地区修建了12万口水窖，1300多处小型供水系统，受益人口达160多万，并在有水的基础上开展了扶贫计划。作为第一家支持母亲水窖项目的企业，完美公司迄今已为西部干旱地区捐款近两千万元，解决了数万人的生活用水问题。</a></td>
+							</tr>
+						</table>
+						<table cellspacing="0">
+							<tr>
+								<td  style="text-align:right;"><strong>健康快车</strong></td>
+								<td rowspan="2" class="img-td"><a href="http://www.perfect99.com/htm/healthy/index.html" target="_blank"><img src="../images/aboutus/hb4.jpg" alt="" /></a></td>
+							</tr>
+							<tr>
+								<td   valign="top" ><a href="http://www.perfect99.com/htm/healthy/index.html" target="_blank">中华健康快车捐款达370万，并捐建一所眼科中心，参与健康快车行程达1万多公里。</a></td>
+							</tr>
+						</table>
+						<table cellspacing="0">
+							<tr>
+								<td rowspan="2" class="img-td"><a href="http://www.perfect99.com/htm/200734wrx/default.asp" target="_blank"><img src="../images/aboutus/hb5.jpg" alt="" /></a></td>
+								<td  ><strong>慈善万人行</strong></td>
+							</tr>
+							<tr>
+								<td   valign="top"><a href="http://www.perfect99.com/htm/200734wrx/default.asp" target="_blank">“扶危济困，救死扶伤，敬老助残”是中山市历届万人行的主题。公司从96年开始每年参加慈善万人行活动，将完美爱心洒遍中山大地。历届累计捐赠总额近两千万元。</a></td>
+							</tr>
+						</table>
+						<table cellspacing="0">
+							<tr>
+								<td  style="text-align:right;"><strong>救灾</strong></td>
+								<td rowspan="2" class="img-td"><a href="http://www.perfect99.com/WebPage/Aboutusdetail_12.html" target="_blank"><img src="../images/aboutus/hb6.jpg" alt="" /></a></td>
+							</tr>
+							<tr>
+								<td   valign="top" ><a href="http://www.perfect99.com/WebPage/Aboutusdetail_12.html" target="_blank">“灾难无情，完美有爱。”在1998年长江流域发生特大洪涝灾害中，公司捐赠536万元物资和现金，并派遣专人用28部大卡车，将赈灾款物亲自送到江西九江灾区。</a></td>
+							</tr>
+						</table>
+						<table cellspacing="0">
+							<tr>
+								<td rowspan="2" class="img-td"><a href="http://www.perfect99.com/WebPage/Aboutusdetail_9.html" target="_blank"><img src="../images/aboutus/hb7.jpg" alt="" /></a></td>
+								<td  ><strong>敬老</strong></td>
+							</tr>
+							<tr>
+								<td   valign="top"><a href="http://www.perfect99.com/WebPage/Aboutusdetail_9.html" target="_blank">“在家敬父母，九九敬百老”。尊老敬老是中华民族的优良传统。逢年过节，公司都向中山市社会福利院和敬老院的老人们送去节日的问候。2004年10月20日，古润金董事长、胡瑞连董事总经理在人民大会堂出席了首届“中国九九重阳敬百老养生联谊会”，同时向组委会捐赠近百万元，藉此推动全国敬老、爱老、助老的热潮。</a></td>
+							</tr>
+						</table>
+						<table cellspacing="0">
+							<tr>
+								<td  style="text-align:right;"><strong>文化</strong></td>
+								<td rowspan="2" class="img-td"><a href="http://www.perfect99.com/htm/2009xianxue/default.asp" target="_blank"><img src="../images/aboutus/hb8.jpg" alt="" /></a></td>
+							</tr>
+							<tr>
+								<td   valign="top" ><a href="http://www.perfect99.com/htm/2009xianxue/default.asp" target="_blank">完美公司三位领导的亲自带领下，总公司、全国各地分公司、专卖店、消费者积极参与，历届累计献血总人数已接近18万人次，总献血量逾4500万毫升，这意味着可以拯救数万人的生命。</a></td>
+							</tr>
+						</table>
+						<table cellspacing="0">
+							<tr>
+								<td rowspan="2" class="img-td"><a href="http://www.perfect99.com/WebPage/Aboutusdetail_7.html" target="_blank"><img src="../images/aboutus/hb9.jpg" alt="" /></a></td>
+								<td ><strong>教育</strong></td>
+							</tr>
+							<tr>
+								<td   valign="top" ><a href="http://www.perfect99.com/WebPage/Aboutusdetail_7.html" target="_blank">十年树木、百年树人，教育是根本，身为海外赤子的公司领导始终不忘为家乡乃至中国的教育事业作出贡献，几年来，公司向南朗泮沙小学，花都镜湖小学、松柏朗小学，以及各地“中山完美希望小学”捐款捐物，以改善育人环境，以支持社会教育事业。</a></td>
+							</tr>
+						</table>
+						<table cellspacing="0">
+							<tr>
+								<td  ><strong>医疗</strong></td>
+								<td rowspan="2" class="img-td"><a href="http://www.perfect99.com/WebPage/Aboutusdetail_6.html" target="_blank"><img src="../images/aboutus/hb11.jpg" alt="" /></a></td>
+							</tr>
+							<tr>
+								<td   valign="top"><a href="http://www.perfect99.com/WebPage/Aboutusdetail_6.html" target="_blank">为支持家乡医疗卫生福利事业的发展，98年投资兴建的中山市南区医院古润金大楼隆重落成，在千禧年第一天，又正值完美新工厂落成之际，公司向五桂山镇人民政府捐款20万元修建南桥卫生院，同时向南朗镇西亨村医疗基金会捐赠10万元用于贫困医疗基金。</a></td>
+							</tr>
+						</table>
+						<table cellspacing="0">
+							<tr>
+								<td rowspan="2" class="img-td"><a href="http://www.perfect99.com/WebPage/Aboutusdetail_7.html" target="_blank"><img src="../images/aboutus/hb12.jpg" alt="" /></a></td>
+								<td  style="text-align:right;"><strong>体育</strong></td>
+							</tr>
+							<tr>
+								<td   valign="top" ><a href="http://www.perfect99.com/WebPage/Aboutusdetail_7.html" target="_blank">1998年，公司与中山市乒乓球协会签约，共同筹建“中山完美乒乓球队”，四年内，公司将提供60万元资金，支持发展中山体育事业。该队组建后在1999年首次的全国少年乒乓球赛上，表现出色，取得可喜成绩。此外，从1997年至今，公司每年赞助中山石岐区“完美杯”龙舟赛活动。</a></td>
+							</tr>
+						</table>
+						<table cellspacing="0">
+							<tr>
+								<td  style="text-align:right;"><strong>机关、慈善机构公益活动</strong></td>
+								<td rowspan="2" class="img-td"><a href="http://www.perfect99.com/WebPage/Aboutusdetail_4.html" target="_blank"><img src="../images/aboutus/hb13.jpg" alt="" /></a></td>
+							</tr>
+							<tr>
+								<td   valign="top"><a href="http://www.perfect99.com/WebPage/Aboutusdetail_4.html" target="_blank">完美公司一向热心于慈善公益事业，对政府机关、慈善机构更是热心有加。为支持建设"有中国特色的社会主义"，完美先后向各地人民政府、民政局、公安局及各种基金会捐款。</a></td>
+							</tr>
+						</table>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div style="clear:both;height：50px;"> &nbsp;</div>
+	<div class="footer">
+		<div class="footer-top">
+			<a href="#" class="footer-link">公司简介</a>
+			<a href="#" class="footer-link">回报社会</a>
+			<a href="#" class="footer-link">扬州完美</a>
+			<a href="mailto:perfect@perfect99.com" class="footer-link">建议信箱</a>
+			<a href="webmaster@perfect99.com" class="footer-link">网站报障</a>
+			<a href="http://www.perfect99.com/WebPage/MessClass.aspx" class="footer-link">完美留言簿</a>
+			<a href="http://www.perfect99.com/Webvideo/default.html" class="footer-link" target="_blank">视频中心</a><sup style="color:white;">new</sup>
+			<a href="#" class="footer-link">站点地图</a>
+			<a href="#" class="footer-link">交通示意图</a>
+		</div>
+		<div class="footer-bottom">
+			<span>© 1994 - 2013 完美（中国）有限公司版权所有，未经许可不得转载或链接。</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="http://www.miibeian.gov.cn/"><span>粤ICP备11037219号</span></a>
+		</div>
+	</div>
+<script type="text/javascript">
+var curIndex = 0;
+$(document).ready(function(){
+	$(".header>.nav>.nav-list>.item").ScrollNav({
+	     scrollObj:".header>.nav>.scrollObj", //滑动的对象
+	     speed:"fast" //速度
+	});
+	tabChange();
+});
+
+function tabChange(){
+	var tabs = $(".tab li");
+	var style = {focus:{'background' : 'white','border-top': '2px solid red','border-left': '1px lightgray solid','border-right':  '1px lightgray solid'},blur:{'border-top': '2px transparent solid','border-left': '1px transparent solid','border-right':  '1px transparent solid',"background":"transparent"}};
+	var cards = $("div[id^=detail-card]");
+	tabs.click(function(){
+		var _index = $(this).index();
+		if(curIndex == _index){
+			return false;
+		}
+		$(cards[_index]).show();
+		$(this).css(style.focus);
+		$(tabs[curIndex]).css(style.blur);
+		$(cards[curIndex]).hide();
+		curIndex = _index;
+	});
+}
+
+
+</script>
+</body>
+</html>

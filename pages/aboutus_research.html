@@ -1,0 +1,307 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"> 
+<html>
+<head>
+ <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /> 
+ <link href="../css/common/common.css" type="text/css" rel="stylesheet"></link>
+<style type="text/css">
+	.contents{width: 980px;height: auto;margin: 0 auto;position: relative;}
+	.contents .about-us-link{width:175px;background: gray;height: 100px;position: absolute;background: url(../images/aboutus/left_about_title.jpg);background-position: left top;background-repeat: no-repeat;margin-top:10px; }
+	.contents .about-us-link ul{margin-top:69px;list-style: none;}
+	.contents .about-us-link ul li{font-size: 12px;font-weight: bold;width: 100%;text-align: center;line-height: 3em;background: url('../images/common/card-top-bg.png');background-repeat: repeat-x;background-position: right center;cursor: pointer;}
+	.contents .about-us-link ul li:hover{width: 105%;background:url('../images/index/bg_hdft.png');background-repeat: repeat-x;background-position: right center;color: white;}
+	.contents .about-us-link ul li.cur-link{width: 105%;background:url('../images/index/bg_hdft.png');background-repeat: repeat-x;background-position: right center;color: white;}
+	.contents .about-us-link ul li a{color: black;display: block;;width: 100%;height: 100%;}
+	.contents .about-us-link ul li a:hover{color: white;}
+	.contents .about-us-link ul li.cur-link a{color:white;}
+	.contents .right-content{float: right;width: 750px; height: auto;text-align: center;}
+	.contents .right-content .cur-path{text-align: right;font-size: 12px;line-height: 2em;border-bottom: 1px lightgray dashed;}
+	.contents .right-content .introduce{text-align: justify;text-justify:newspaper; font-size: 14px;margin-top: 20px;color: #333;font-size: 12px;border: 1px lightgray solid;border-top: 0;}
+	.contents .right-content .introduce a{color: black;}
+	.contents .right-content .introduce a:hover{color: red;}
+	.contents .right-content .introduce .tab{background: url(../images/aboutus/tabbg.gif);list-style: none;height: 30px;padding-left: 50px;}
+	.contents .right-content .introduce .tab li{width: 120px;float: left;height: 30px;line-height: 30px;text-align: center;cursor: pointer;border-top: 2px transparent solid;border-left: 1px transparent solid;border-right:  1px transparent solid;}
+	.contents .right-content .introduce .tab li:hover{background: white;border-top: 2px solid red;border-left: 1px lightgray solid;border-right:  1px lightgray solid;}
+	.contents .right-content .introduce .tab .cur-tab{background: white;border-top: 2px solid red;border-left: 1px lightgray solid;border-right:  1px lightgray solid;}
+	.contents .right-content .introduce .detail{height: auto;margin-top: 20px;padding-left: 10px;padding-right: 10px}
+	.contents .right-content .introduce .detail p{text-indent: 2em;font-size: 14px;line-height: 1.5em;}
+	.contents .right-content .introduce table{border-bottom: 1px lightgray dashed;padding-bottom: 10px;width: 100%;margin-top: 10px}
+	.contents .right-content .introduce table .img-td{width: 170px;text-align: center;}
+
+	#detail-card2,#detail-card3{display: none;}
+</style>
+<script type="text/javascript" src="../js/common/jquery-1.9.1.min.js"></script>
+<script type="text/javascript" src="../js/common/navScroll.js"></script>	
+<script type="text/javascript" src="../js/common/topNav.js"></script>	
+</head>
+<body>
+	<!--头部-->
+	<div class="header">
+		<div class="top">
+			<div class="topfun">
+				<span><a href="javascript:void(0);" onclick="setHome(this,window.location);">设为首页</a><span>&nbsp;|&nbsp;</span></span>
+				<span><a href="javascript:void(0);" onclick="addFavorite(window.location,document.title);">加入收藏夹</a><span>&nbsp;|&nbsp;</span></span>
+				<span><a href="tencent://message/?uin=526767863&Menu=yes"><img src="../images/common/qq.png" style="vertical-align:text-top;;" alt="" />联系我们</a><span>&nbsp;|&nbsp;</span></span>
+			</div>
+		</div>
+		<div class="container">
+			<a href="#" class="logo-link"><img src="../images/common/logo.gif" /></a>
+			<span class="server-link"><a href="http://global.perfect99.com/">香港镜像服务器</a></span>
+			<span class="hotline">客户服务热线：4008701828</span>
+			<div class="search-form">
+				<button id="search-button">&nbsp;</button>
+				<input  id="search-input"/>
+			</div>
+		</div>
+		<div class="nav">
+			<ul class="nav-list">
+				<li class="item"><a href="index.html" class="nav-link">首页</a></li>
+				<li class="current"><a href="aboutus.html" class="nav-link">关于完美</a></li>
+				<li class="item"><a href="products.html" class="nav-link">完美产品</a></li>
+				<li class="item"><a href="news.html" class="nav-link">新闻动态</a></li>
+				<li class="item"><a href="seminar.html" class="nav-link">完美专题</a></li>
+				<li class="item"><a href="connectus.html" class="nav-link">联系我们</a></li>
+			</ul>
+  			<div class="scrollObj"></div>
+		</div>
+	</div>
+	<div class="contents">
+		<div class="about-us-link">
+			<ul>
+				<li ><a href="aboutus_company.html">公司简介</a></li>
+				<li ><a href="aboutus_yangzhou.html">扬州完美</a></li>
+				<li><a href="aboutus_leaders.html">领导风采</a></li>
+				<li><a href="aboutus_huibao.html">回报社会</a></li>
+				<li><a href="aboutus_rongyu.html">企业荣誉</a></li>
+				<li class="cur-link"><a href="aboutus_research.html">研发生产</a></li>
+				<li><a href="http://www.perfect99.com/htm/wl/index.htm" target="_blank">物流中心</a></li>
+			</ul>
+		</div>
+		<div class="right-content">
+			<p class="cur-path"> 首页 >  关于完美 > 研发生产</p>
+			<div class="introduce">
+				<ul class="tab">
+					<li class="cur-tab">设备先进</li>
+					<li>技术雄厚</li>
+					<li>品牌卓越</li>
+				</ul>
+				<div class="detail">
+					<div id="detail-card1">
+						<p>于2000年1月1日落成启用的完美工厂，内有生产区、办公楼、多功能综合楼三大部分，其中生产区有日用化妆品厂、保健食品厂。生产从来料、配料、分装、包装都经品管部严格检验，合格后方可入仓贮存，工厂设计采用彩钢板隔断间隔，可防尘、防菌、防火、防污染，圆角结构符合保健食品良好生产规范（GMP）设计，净化车间的设计达到十万级洁净区（内含空气过滤、风淋室、紫外杀菌），地面装修符合国际卫生及美国FDA卫生标准，配有纯净水处理系统，其处理过程有三大步骤：树脂离子交换、过滤、紫外杀菌。保健食品厂于2002年6月顺利通过GMP认证，在保健品行业中是全国第二家通过此认证的厂家。</p>
+						<br/>
+						<table cellspacing="0">
+							<tr>
+								<td rowspan="2" class="img-td"><img src="../images/aboutus/yf11.jpg" alt="" /></td>
+								<td  ><strong>高速小袋包装机</strong></td>
+							</tr>
+							<tr>
+								<td   valign="top">西班牙进口，用于分装小袋包装的产品，每分钟可分装240袋以上，比以往速率增加了4倍。</td>
+							</tr>
+						</table>
+						<table cellspacing="0">
+							<tr>
+								<td rowspan="2" class="img-td"><img src="../images/aboutus/yf12.jpg" alt="" /></td>
+								<td  ><strong>收缩膜套标机</strong></td>
+							</tr>
+							<tr>
+								<td   valign="top">西班牙进口，用于分装小袋包装的产品，每分钟可分装240袋以上，比以往速率增加了4倍</td>
+							</tr>
+						</table>
+						<table cellspacing="0">
+							<tr>
+								<td rowspan="2" class="img-td"><img src="../images/aboutus/yf13.jpg" alt="" /></td>
+								<td  ><strong>全自动装盒机</strong></td>
+							</tr>
+							<tr>
+								<td   valign="top">瑞典进口，将牙膏、芦荟胶、发胶等半成品自动装入包装盒内，每分钟可自动分装70盒以上，代替人工装盒工序</td>
+							</tr>
+						</table>					<table cellspacing="0">
+							<tr>
+								<td rowspan="2" class="img-td"><img src="../images/aboutus/yf14.jpg" alt="" /></td>
+								<td  ><strong>金属探测仪</strong></td>
+							</tr>
+							<tr>
+								<td   valign="top">&nbsp;&nbsp;&nbsp;</td>
+							</tr>
+						</table>					<table cellspacing="0">
+							<tr>
+								<td rowspan="2" class="img-td"><img src="../images/aboutus/yf15.jpg" alt="" /></td>
+								<td  ><strong>全自动圆瓶锁盖机</strong></td>
+							</tr>
+							<tr>
+								<td   valign="top">意大利进口，用于瓶装产品锁瓶盖，节省人工，提高锁盖效率。</td>
+							</tr>
+						</table>					<table cellspacing="0">
+							<tr>
+								<td rowspan="2" class="img-td"><img src="../images/aboutus/yf16.jpg" alt="" /></td>
+								<td  ><strong>圆瓶自动贴标机</strong></td>
+							</tr>
+							<tr>
+								<td   valign="top">英国进口，用于粘贴圆瓶包装之产品商标，每分钟可自动贴标80瓶以上，比人工贴标效率提高了50%。</td>
+							</tr>
+						</table>					<table cellspacing="0">
+							<tr>
+								<td rowspan="2" class="img-td"><img src="../images/aboutus/yf17.jpg" alt="" /></td>
+								<td  ><strong>全自动粉末灌装机</strong></td>
+							</tr>
+							<tr>
+								<td   valign="top">美国进口，主要用于营养餐的灌装，灌装速度快，每分钟可装35-50罐。</td>
+							</tr>
+						</table>					<table cellspacing="0">
+							<tr>
+								<td rowspan="2" class="img-td"><img src="../images/aboutus/yf18.jpg" alt="" /></td>
+								<td  ><strong>全自动干粉灌装机</strong></td>
+							</tr>
+							<tr>
+								<td   valign="top">美国进口，是芦荟矿物晶和健怡茶的全自动流水生产主要设备之一，预计每月产能可达100万瓶。</td>
+							</tr>
+						</table>					<table cellspacing="0">
+							<tr>
+								<td rowspan="2" class="img-td"><img src="../images/aboutus/yf19.jpg" alt="" /></td>
+								<td  ><strong>电磁感应全自动铝箔封口机</strong></td>
+							</tr>
+							<tr>
+								<td   valign="top">美国进口，用于食品锁盖之封口，确保产品的封闭性，避免产品受潮。</td>
+							</tr>
+						</table>
+					</div>
+					<div id="detail-card2">
+						<p>科技是第一生产力。为建立专业化人才队伍，公司吸纳了一批来自海内外高等学府的硕士、博士等专业科研人员，并设立了研发部、质保部，其中包括微生物室、留样室、中试工厂和多功能实验室。公司科研人员与时俱进，根据市场变化和行业发展，审时度势地进行产品定位，不断调整学科方向，紧紧把握时代发展的脉搏。
+						</p>
+						<br/>
+						<p>
+2004年2月，经政府有关部门验收批准，公司成立了“企业技术中心”；2005年8月，完美公司与具有“轻工高等教育明珠”之称的江南大学联合组建研发中心；2008年4月，公司品质保证部检测中心顺利通过中国国家实验室认可委员会（CNAS）的认可评审，成为国家认可实验室。2010年1月，完美公司经广东省科技厅认定为“高新技术企业”。这一切对于提高公司的自主开发能力和综合利用能力，加速高新技术的引进、消化、吸收和创新过程，具有重要意义</p>
+						<br/>
+						<table cellspacing="0">
+							<tr>
+								<td rowspan="2" class="img-td"><img src="../images/aboutus/21.jpg" alt="" /></td>
+								<td  ><strong>原子分光光度计</strong></td>
+							</tr>
+							<tr>
+								<td   valign="top">从美国引进的先进测量仪器，满足了食品与日化产品对重金属的分析水平要求，可对重金属进行ppm级到ppb级的监控。众所周知，在日用品或食品中，如果重金属含量超标（如汞、铅等），被人体吸收后将严重损害人体健康，因此，严格监控产品中的重金属含量极其重要。</td>
+							</tr>
+						</table>
+						<table cellspacing="0">
+							<tr>
+								<td rowspan="2" class="img-td"><img src="../images/aboutus/22.jpg" alt="" /></td>
+								<td  ><strong>比重仪 </strong></td>
+							</tr>
+							<tr>
+								<td   valign="top">从澳大利亚引进，能快速、精确地测量食品中微量元素的比重指标，为科学配制食品提供准确数据，该仪器具有自动校正功能，测量快、精度高，简化了操作过程，节省了分析时间，提高了测量效率。</td>
+							</tr>
+						</table>
+						<table cellspacing="0">
+							<tr>
+								<td rowspan="2" class="img-td"><img src="../images/aboutus/23.jpg" alt="" /></td>
+								<td  ><strong>高压灭菌器</strong></td>
+							</tr>
+							<tr>
+								<td   valign="top">从日本引进的达国际先进水平的灭菌设备，适用范围广，自动化程度高，不仅减轻了工作强度，而且增强了安全性，提高了灭菌效率。</td>
+							</tr>
+						</table>					<table cellspacing="0">
+							<tr>
+								<td rowspan="2" class="img-td"><img src="../images/aboutus/24.jpg" alt="" /></td>
+								<td  ><strong>超纯水仪</strong></td>
+							</tr>
+							<tr>
+								<td   valign="top">从美国引进，是原子吸收分光光度计ppb级分析的最佳配置，能提供微量级甚至痕量级分析要求的超纯水，可有效保证水的质量，确保产品的优异特性。</td>
+							</tr>
+						</table>					<table cellspacing="0">
+							<tr>
+								<td rowspan="2" class="img-td"><img src="../images/aboutus/25.jpg" alt="" /></td>
+								<td  ><strong>酸度电导仪</strong></td>
+							</tr>
+							<tr>
+								<td   valign="top">从德国引进的高精度测量仪，可同时测定pH值和电导率，同时具备自我校正功能和温度测定功能，分析员能通过超大液晶屏幕进行操作与观察。</td>
+							</tr>
+						</table>					<table cellspacing="0">
+							<tr>
+								<td rowspan="2" class="img-td"><img src="../images/aboutus/26.jpg" alt="" /></td>
+								<td  ><strong>全自动卤素水分测定仪</strong></td>
+							</tr>
+							<tr>
+								<td   valign="top">从瑞士引进的一种操作简单、快速的先进测定仪，不仅测试时间短，而且精确性高，广泛应用于食品、化工、制药等行业的生产、研发及品质控制的水分测定，通过图符提示键盘及多功能显示屏，能清晰地看到整个分析过程，严格控制测试。%。</td>
+							</tr>
+						</table>					<table cellspacing="0">
+							<tr>
+								<td rowspan="2" class="img-td"><img src="../images/aboutus/27.jpg" alt="" /></td>
+								<td  ><strong>全自动蛋白质测定仪</strong></td>
+							</tr>
+							<tr>
+								<td   valign="top">从瑞典引进，技术含量达国际领先水平的蛋白质测定仪，分析速度快，精确度高，可测定谷物、食品、水中的蛋白质含量，同时还可广泛用于磷、钙、硝酸盐、化学需氧等的含氮量测定，既减轻了劳动强度，又节省了大量的测定时间。</td>
+							</tr>
+						</table>					<table cellspacing="0">
+							<tr>
+								<td rowspan="2" class="img-td"><img src="../images/aboutus/28.jpg" alt="" /></td>
+								<td  ><strong>电位滴定仪</strong></td>
+							</tr>
+							<tr>
+								<td   valign="top">这是从瑞士引进的先进滴定仪器，该仪器涵盖了所有种类的滴定分析，分析过程由仪器控制，实现了滴定过程的人机分离操作，大大提高了工作效率，其精度达到0.001ml，确保分析的精确性和可靠性，有效消除了因目测带来的误差。</td>
+							</tr>
+						</table>					
+						<table cellspacing="0">
+							<tr>
+								<td rowspan="2" class="img-td"><img src="../images/aboutus/29.jpg" alt="" /></td>
+								<td  ><strong>留样仓库</strong></td>
+							</tr>
+							<tr>
+								<td   valign="top">根据保健食品GMP要求，对所有保质期内的产品质量进行追踪，考查产品保质期内的稳定性，确保产品在保质期内符合质量要求。此外，如果客户对产品质量有任何投诉，可通过留样产品进行追踪，以便提供科学数据。</td>
+							</tr>
+						</table>
+					</div>
+					<div id="detail-card3">
+						<p>2002年6月至2003年1月，完美公司在全国率先通过了保健食品GMP认证、HACCP食品安全控制体系认证、ISO9001质量管理体系认证和ISO14001环境管理体系认证等四项权威认证。2003年3月，完美公司又顺利通过中国伊斯兰教协会的清真食品认证。</p>
+						<br/>
+						<p>这五个认证相辅相成： GMP强调的是生产设施硬件上的要求；HACCP强调保证产品在生产过程中的质量安全，最大限度地减少对消费者具有危害性的风险；ISO9001强调的是产品生产质量的持续改进；ISO14001强调预防、清洁生产，以达到对自然环境的保护；清真食品认证则强调产品不能含任何穆斯林禁忌的成分。</p>
+						<br/>
+						<p>这五个认证能够共同扶持企业的发展，为公司的产品质量提供了全方位的保障，同时，它们也是企业与国际标准接轨的必经之路，成为完美产品进入国际市场的绿色通行证，为完美产品进军国际市场铺开了前进的道路。</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div style="clear:both;height：80px;"> &nbsp;</div>
+	<div class="footer">
+		<div class="footer-top">
+			<a href="#" class="footer-link">公司简介</a>
+			<a href="#" class="footer-link">回报社会</a>
+			<a href="#" class="footer-link">扬州完美</a>
+			<a href="mailto:perfect@perfect99.com" class="footer-link">建议信箱</a>
+			<a href="webmaster@perfect99.com" class="footer-link">网站报障</a>
+			<a href="http://www.perfect99.com/WebPage/MessClass.aspx" class="footer-link">完美留言簿</a>
+			<a href="http://www.perfect99.com/Webvideo/default.html" class="footer-link" target="_blank">视频中心</a><sup style="color:white;">new</sup>
+			<a href="#" class="footer-link">站点地图</a>
+			<a href="#" class="footer-link">交通示意图</a>
+		</div>
+		<div class="footer-bottom">
+			<span>© 1994 - 2013 完美（中国）有限公司版权所有，未经许可不得转载或链接。</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="http://www.miibeian.gov.cn/"><span>粤ICP备11037219号</span></a>
+		</div>
+	</div>
+<script type="text/javascript">
+var curIndex = 0;
+$(document).ready(function(){
+	$(".header>.nav>.nav-list>.item").ScrollNav({
+	     scrollObj:".header>.nav>.scrollObj", //滑动的对象
+	     speed:"fast" //速度
+	});
+	tabChange();
+});
+
+function tabChange(){
+	var tabs = $(".tab li");
+	var style = {focus:{'background' : 'white','border-top': '2px solid red','border-left': '1px lightgray solid','border-right':  '1px lightgray solid'},blur:{'border-top': '2px transparent solid','border-left': '1px transparent solid','border-right':  '1px transparent solid',"background":"transparent"}};
+	var cards = $("div[id^=detail-card]");
+	tabs.click(function(){
+		var _index = $(this).index();
+		if(curIndex == _index){
+			return false;
+		}
+		$(cards[_index]).show();
+		$(this).css(style.focus);
+		$(tabs[curIndex]).css(style.blur);
+		$(cards[curIndex]).hide();
+		curIndex = _index;
+	});
+}
+</script>
+</body>
+</html>
