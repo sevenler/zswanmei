@@ -1,0 +1,150 @@
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<script type="text/javascript">
+var URLPrefix = {"search_keyword":"","image":"","yhmall":"","sitedomainmall":".1mall.com","mall":"","my":"","uploadPostUrl":"","seoLinkMaxSize":"20","my_statics":"","shoping_central":"","pms":"","sitedomain":".yihaodian.com","mymall":"","yiwangauth":"","centralImgDomain":".yihaodianimg.com","shoping_my_statics":"","shoping_search":"","commentZoneMall":"","busystock":"","TipDate":"2012-09-29","shoping_shop":"","centralShop":"","statics":"","selfroot":"","passport":"","shoping_opposite":"","yaowang":"","shoping_passport":"","footFriendLink":"","shoping_my":"","tracker":"tracker.yihaodian.com","shop":"","products_stock":"","commentZoneYhd":"","passportmall":"","central":"","search":"","mallImgDomain":".yihaodianimg.com","shoping_pms":"","shoping_self":""};
+var headerType="base";
+var favorite="";
+var hostUrl="";
+var httpUrl="";
+var no3wUrl="";
+var simpleUrl="";
+var chineseUrl="";
+var imagePath="";
+var currSiteId=1;
+var currBsSiteId=1;//仅busystock使用
+var currSiteType=1;//
+var siteStyle=1;//用于特殊处理逻辑标志
+var siteFlag=1;//用于控制合归生效开关
+var merchant=1;
+var isIndex = 1;
+var indexFlag=1;//区分首页和搜索页
+var currVersionNum=437585;
+var currDomain="";
+var oppositeDomain="";
+var lazyLoadImageObjArry = lazyLoadImageObjArry || [];
+var multiSearch="true";
+var currProvinceId=1;
+var isFixTopNav = false
+</script>
+
+
+<div class="promo_show" id="index_menu_carousel">
+<div class="promo_wrapper">
+<ol class="clearfix" style="left:-2310px;">
+<li flag="1">
+<a href="#" class="big_pic" target="_blank" tk="6304_516879_1">
+<img alt="" class="big" src="../images/index_ad_img1.jpg"><img alt="" class="small" src="../images/index_ad_img1_1.jpg">
+</a>
+<div class="mini_promo clearfix">
+<a href="#" target="_blank" tk="6305_516369_1" class="">
+<img alt="" class="big" src="../images/ad_bottom_img1.jpg"><img alt="" class="small" src="../images/ad_bottom_img1_1.jpg">
+</a>
+<a href="#" target="_blank" tk="6305_517949_2" class="">
+<img alt="" class="big" src="../images/ad_bottom_img2.jpg"><img alt="" class="small" src="../images/ad_bottom_img2_2.jpg">
+</a>
+<a href="#" target="_blank" tk="6305_516852_3" style=" margin:0;">
+<img alt="" class="big" src="../images/ad_bottom_img3.jpg"><img alt="" class="small" src="../images/ad_bottom_img3_3.jpg">
+</a>
+</div>
+</li>
+<li flag="2">
+<a href="#" class="big_pic" target="_blank" tk="6306_517969_1">
+<img alt="" class="big" src="../images/index_ad_img2.jpg"><img alt="" class="small" src="../images/index_ad_img2_2.jpg">
+</a>
+<div class="mini_promo clearfix">
+<a href="#" target="_blank" tk="6307_516140_1" class="">
+<img alt="" class="big" src="../images/ad_bottom_img4.jpg"><img alt="" class="small" src="../images/ad_bottom_img4_4.jpg">
+</a>
+<a href="#" target="_blank" tk="6307_518414_2">
+<img alt="" class="big" src="../images/ad_bottom_img5.jpg"><img alt="" class="small" src="../images/ad_bottom_img5_5.jpg">
+</a>
+<a href="#" target="_blank" tk="6307_518069_3" style="margin:0; ">
+<img alt="" class="big" src="../images/ad_bottom_img6.jpg"><img alt="" class="small" src="../images/ad_bottom_img6_6.jpg">
+</a>
+</div>
+</li>
+<li flag="3">
+<a href="#" class="big_pic" target="_blank" tk="6308_518098_1">
+<img alt="" class="big" src="../images/index_ad_img3.jpg"><img alt="" class="small" src="../images/index_ad_img3_3.jpg">
+</a>
+<div class="mini_promo clearfix">
+<a href="#" target="_blank" tk="6309_518398_1">
+<img alt="" class="big" src="../images/ad_bottom_img7.jpg"><img alt="" class="small" src="../images/ad_bottom_img7_7.jpg">
+</a>
+<a href="#" target="_blank" tk="6309_518129_2">
+<img alt="" class="big" src="../images/ad_bottom_img8.jpg"><img alt="" class="small" src="../images/ad_bottom_img8_8.jpg">
+</a>
+<a href="#" target="_blank" tk="6309_515716_3" style="margin:0; ">
+<img alt="" class="big" src="../images/ad_bottom_img9.jpg"><img alt="" class="small" src="../images/ad_bottom_img9_9.jpg">
+</a>
+</div>
+</li>
+<li flag="4">
+<a href="#" class="big_pic" target="_blank" tk="6310_518114_1">
+<img alt="" class="big" src="../images/index_ad_img4.jpg"><img alt="" class="small" src="../images/index_ad_img4_4.jpg">
+</a>
+<div class="mini_promo clearfix">
+<a href="#" target="_blank" tk="6311_518048_1">
+<img alt="" class="big" src="../images/ad_bottom_img10.jpg"><img alt="" class="small" src="../images/ad_bottom_img10_10.jpg">
+</a>
+<a href="#" target="_blank" tk="6311_507907_2">
+<img alt="" class="big" src="../images/ad_bottom_img11.jpg"><img alt="" class="small" src="../images/ad_bottom_img11_11.jpg">
+</a>
+<a href="#" target="_blank" tk="6311_510424_3" style="margin:0; ">
+<img alt="" class="big" src="../images/ad_bottom_img12.jpg"><img alt="" class="small" src="../images/ad_bottom_img12_12.jpg">
+</a>
+</div>
+</li>
+<li flag="5">
+<a href="#" class="big_pic" target="_blank" tk="6312_517948_1">
+<img alt="" class="big" src="../images/index_ad_img5.jpg"><img alt="" class="small" src="../images/index_ad_img5_5.jpg">
+</a>
+<div class="mini_promo clearfix">
+<a href="#" target="_blank" tk="6313_511304_1">
+<img alt="" class="big" src="../images/ad_bottom_img13.jpg"><img alt="" class="small" src="../images/ad_bottom_img13_13.jpg">
+</a>
+<a href="#" target="_blank" tk="6313_507909_2">
+<img alt="" class="big" src="../images/ad_bottom_img14.jpg"><img alt="" class="small" src="../images/ad_bottom_img14_14.jpg">
+</a>
+<a href="#" target="_blank" tk="6313_517951_3" style="margin:0; ">
+<img alt="" class="big" src="../images/ad_bottom_img15.jpg"><img alt="" class="small" src="../images/ad_bottom_img15_15.jpg">
+</a>
+</div>
+</li>
+<li flag="6">
+<a href="#" class="big_pic" target="_blank" tk="6314_518127_1">
+<img alt="" class="big" src="../images/index_ad_img6.jpg"><img alt="" class="small" src="../images/index_ad_img6_6.jpg">
+</a>
+<div class="mini_promo clearfix">
+<a href="#" target="_blank" tk="6315_518028_1">
+<img alt="" class="big" src="../images/ad_bottom_img16.jpg"><img alt="" class="small" src="../images/ad_bottom_img16_16.jpg">
+</a>
+<a href="#" target="_blank" tk="6315_516268_2">
+<img alt="" class="big" src="../images/ad_bottom_img17.jpg"><img alt="" class="small" src="../images/ad_bottom_img17_17.jpg">
+</a>
+<a href="#" target="_blank" tk="6315_514033_3" style="margin:0; ">
+<img alt="" class="big" src="../images/ad_bottom_img18.jpg"><img alt="" class="small" src="../images/ad_bottom_img18_18.jpg">
+</a>
+</div>
+</li>
+</ol>
+</div>
+<div class="show_num_bg"></div>
+<ul>
+<li class="">1</li>
+<li class="">2</li>
+<li class="">3</li>
+<li class="cur">4</li>
+<li class="">5</li>
+<li class="">6</li>
+</ul>
+<a href="javascript:void(0);" class="show_next" style="display: none; "><s></s></a>
+<a href="javascript:void(0);" class="show_pre" style="display: none; "><s></s></a>
+</div>
+
+<script type="text/javascript" src="themes/yihaodian/js/global_index_top.js"></script>
+ 
+
+ 
+  
+  
+   

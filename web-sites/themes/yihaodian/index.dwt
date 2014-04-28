@@ -1,0 +1,1377 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<META content=IE=EmulateIE7 http-equiv=X-UA-Compatible>
+<meta name="Keywords" content="{$keywords}" />
+<meta name="Description" content="{$description}" />
+
+<!-- TemplateBeginEditable name="doctitle" -->
+<title>{$page_title}</title>
+<!-- TemplateEndEditable -->
+<!-- TemplateBeginEditable name="head" -->
+<!-- TemplateEndEditable -->
+<link rel="shortcut icon" href="favicon.ico" />
+<link rel="icon" href="animated_favicon.gif" type="image/gif" />
+<link href="{$ecs_css_path}" rel="stylesheet" type="text/css" />
+<link rel="alternate" type="application/rss+xml" title="RSS|{$page_title}" href="{$feed_url}" />
+<SCRIPT language=javascript> 
+<!-- 
+window.onerror=function(){return true;} 
+// --> 
+</SCRIPT> 
+{* 包含脚本文件 *}
+{insert_scripts files='common.js,index.js'}
+<script src="themes/<?php echo $GLOBALS['_CFG']['template']; ?>/js/SlideTrans.js"></script>
+<script src="themes/<?php echo $GLOBALS['_CFG']['template']; ?>/js/global_index_top.js"></script>
+ <SCRIPT type=text/javascript>
+window.pageConfig={
+	compatible:true,
+	navId:"home"
+};
+</SCRIPT>
+<script type="text/javascript">
+var URLPrefix = {"search_keyword":"","image":"","yhmall":"","sitedomainmall":".1mall.com","mall":"","my":"","uploadPostUrl":"","seoLinkMaxSize":"20","my_statics":"","shoping_central":"","pms":"","sitedomain":".yihaodian.com","mymall":"","yiwangauth":"","centralImgDomain":".yihaodianimg.com","shoping_my_statics":"","shoping_search":"","commentZoneMall":"","busystock":"","TipDate":"2012-09-29","shoping_shop":"","centralShop":"","statics":"","selfroot":"","passport":"","shoping_opposite":"","yaowang":"","shoping_passport":"","footFriendLink":"","shoping_my":"","tracker":"tracker.yihaodian.com","shop":"","products_stock":"","commentZoneYhd":"","passportmall":"","central":"","search":"","mallImgDomain":".yihaodianimg.com","shoping_pms":"","shoping_self":""};
+var headerType="base";
+var favorite="";
+var hostUrl="";
+var httpUrl="";
+var no3wUrl="";
+var simpleUrl="";
+var chineseUrl="";
+var imagePath="";
+var currSiteId=1;
+var currBsSiteId=1;//仅busystock使用
+var currSiteType=1;//
+var siteStyle=1;//用于特殊处理逻辑标志
+var siteFlag=1;//用于控制合归生效开关
+var merchant=1;
+var isIndex = 1;
+var indexFlag=1;//区分首页和搜索页
+var currVersionNum=444649;
+var currDomain="";
+var oppositeDomain="";
+var lazyLoadImageObjArry = lazyLoadImageObjArry || [];
+var multiSearch="true";
+var currProvinceId=1;
+var isFixTopNav = false
+</script>
+</head>
+<body >
+<!-- #BeginLibraryItem "/library/page_header_index.lbi" --><!-- #EndLibraryItem -->
+
+
+
+<div class="block clearfix">
+ <div class="index_left">
+  <div style="padding-left:215px;">
+   <div style="height:12px; line-height:12px; clear:both; visibility:hidden;"></div>
+   <!-- #BeginLibraryItem "/library/index_ad.lbi" --><!-- #EndLibraryItem -->
+  </div>
+  <div class="blank"></div>
+  <div class="index_l">
+
+
+<div class="index_tab">
+<h2 id="ECS_treea1" class="tabFront" >限时抢购</h2>
+<h2 id="ECS_treea2" class="tabBack"> 新品上架</h2>
+<h2 id="ECS_treea3" class="tabBack">推荐商品</h2>
+<h2 id="ECS_treea4" class="tabBack">疯狂抢购</h2>
+<div id="ECS_treea1_BODY">
+<!-- #BeginLibraryItem "/library/recommend_promotion2.lbi" --><!-- #EndLibraryItem -->
+</div>
+<div id="ECS_treea2_BODY" style="display:none;">
+<!-- TemplateBeginEditable name="滚动新品区" -->
+<!-- #BeginLibraryItem "/library/recommend_new.lbi" -->
+
+ 
+<div class="padding">
+  <!-- {if $new_goods} -->
+  
+  
+  <!--{foreach from=$new_goods item=goods name=new_goods}-->
+ <div class="goodsItem" >
+     
+           <a href="{$goods.url}"><img src="{$goods.thumb}" alt="{$goods.name|escape:html}" class="goodsimg" /></a><br />
+           <p><a href="{$goods.url}" title="{$goods.name|escape:html}">{$goods.short_style_name}</a></p>
+           
+           
+           <font class="f1">
+           <!-- {if $goods.promote_price neq ""} -->
+          {$goods.promote_price}
+          <!-- {else}-->
+          {$goods.shop_price}
+          <!--{/if}-->
+           </font>
+<font style="text-decoration:line-through; font-size:12px;">{$goods.market_price}</font>
+        </div>
+  <!--{/foreach}-->
+
+
+<!-- {/if} -->
+</div>
+ <!-- #EndLibraryItem -->
+<!-- TemplateEndEditable -->
+</div>
+<div id="ECS_treea3_BODY" style="display:none;">
+<!-- TemplateBeginEditable name="滚动推荐区" -->
+<!-- #BeginLibraryItem "/library/recommend_best.lbi" -->
+
+ 
+<div class="padding">
+  <!-- {if $best_goods} -->
+  
+  
+  <!--{foreach from=$best_goods item=goods name=best_goods}-->
+ <div class="goodsItem" >
+     
+           <a href="{$goods.url}"><img src="{$goods.thumb}" alt="{$goods.name|escape:html}" class="goodsimg" /></a><br />
+           <p><a href="{$goods.url}" title="{$goods.name|escape:html}">{$goods.short_style_name}</a></p>
+           
+           
+           <font class="f1">
+           <!-- {if $goods.promote_price neq ""} -->
+          {$goods.promote_price}
+          <!-- {else}-->
+          {$goods.shop_price}
+          <!--{/if}-->
+          </font>
+<font style="text-decoration:line-through; font-size:12px;">{$goods.market_price}</font>
+        </div>
+  <!--{/foreach}-->
+
+
+<!-- {/if} -->
+</div>
+ <!-- #EndLibraryItem -->
+<!-- TemplateEndEditable -->
+</div>
+<div id="ECS_treea4_BODY" style="display:none;">
+<!-- TemplateBeginEditable name="滚动抢购区" -->
+<!-- #BeginLibraryItem "/library/recommend_hot.lbi" -->
+
+ 
+  <div class="padding">
+  <!-- {if $hot_goods} -->
+  
+  
+  <!--{foreach from=$hot_goods item=goods name=hot_goods}-->
+  <!-- {if $smarty.foreach.hot_goods.iteration<6}-->
+ <div class="goodsItem">
+ 
+     <div style="text-align:center; padding:10px 0 5px 0; ">
+           <a href="{$goods.url}"><img src="{$goods.thumb}" alt="{$goods.name|escape:html}" class="goodsimg" /></a>
+	 </div>
+           
+           <p><a href="{$goods.url}" title="{$goods.name|escape:html}">{$goods.short_style_name}</a></p>
+           
+           
+          <div class="price">
+           <font class="f1">
+          {$goods.promote_price}
+           </font>
+<font style="text-decoration:line-through; font-size:12px;">{$goods.market_price}</font>
+        </div>
+ </div>
+  <!-- {/if} -->
+  <!--{/foreach}-->
+<script src="themes/<?php echo $GLOBALS['_CFG']['template']; ?>/js/my_lefttime.js"></script>
+
+<!-- {/if} -->
+</div>
+ <!-- #EndLibraryItem -->
+<!-- TemplateEndEditable -->
+</div>
+</div>
+ <script type="text/javascript">
+//<![CDATA[
+{literal}
+  var cycleList = ['ECS_tree1','ECS_tree2','ECS_tree3'];
+  var tabFront = 'tabFront';
+  var tabBack = 'tabBack';
+  function cycleShow(obj)
+  {
+    var curObj;
+    var curBody;
+    for (i=0; i < cycleList.length; i++)
+    {
+      curObj = document.getElementById(cycleList[i]);
+      curBody = document.getElementById(cycleList[i] + '_BODY');
+      if (obj.id == curObj.id)
+      {
+        curObj.className = tabFront;
+        curBody.style.display = "";
+      }
+      else
+      {
+        curObj.className = tabBack;
+        curBody.style.display = "none";
+      }
+    }
+  }
+
+  // 添加事件
+  for (i=0; i< cycleList.length; i++)
+  {
+    document.getElementById(cycleList[i]).onmousemove = function()
+    {
+      cycleShow(this);
+    };
+  }
+{/literal}
+//]]>
+</script>
+ <script type="text/javascript">
+//<![CDATA[
+{literal}
+  var cycleLista = ['ECS_treea1','ECS_treea2','ECS_treea3','ECS_treea4'];
+  var tabFronta = 'tabFront';
+  var tabBacka = 'tabBack';
+  function cycleShowa(obj)
+  {
+    var curObja;
+    var curBodya;
+    for (i=0; i < cycleLista.length; i++)
+    {
+      curObja = document.getElementById(cycleLista[i]);
+      curBodya = document.getElementById(cycleLista[i] + '_BODY');
+      if (obj.id == curObja.id)
+      {
+        curObja.className = tabFront;
+        curBodya.style.display = "";
+      }
+      else
+      {
+        curObja.className = tabBack;
+        curBodya.style.display = "none";
+      }
+    }
+  }
+
+  // 添加事件
+  for (i=0; i< cycleLista.length; i++)
+  {
+    document.getElementById(cycleLista[i]).onmousemove = function()
+    {
+      cycleShowa(this);
+    };
+  }
+{/literal}
+//]]>
+</script>
+
+
+ </div>
+ </div>
+
+<div class="index_r">
+
+<div class="chengnuo">
+  <a href="#" class="baoyou">满百包邮</a>
+  <a href="#" class="zhengpin">正品保障</a>
+  <a href="#" class="shouhou">售后无忧</a>
+  <div style="clear:both"></div>
+</div>
+<div class="blank"></div>
+<div class="blank"></div>
+
+<div class="zhuanxiang">
+  <h4>1号专享</h4>
+  <div>
+  <a href="#" class="jifen">积分商城</a>
+  <a href="#" class="bang">1号榜</a>
+  <a href="#" class="jiaju" style="margin-right:0">家居馆</a>
+  </div>
+</div>
+<div class="blank"></div>
+
+<dl id="sort_brand" class="sort_brand">
+<dt class="clearfix"><a href="javascript:void(0);" class="cur">品类中心</a><a href="javascript:void(0);" tk="YHD_HOME_HTAB_BRANDSHOP">品牌旗舰</a></dt>
+<dd style="display: block; ">
+<div class="scroll_wrapper">
+<div class="scroll_box clearfix">
+<div class="aort_list">
+  <div class="guanggao">
+  <!-- TemplateBeginEditable name="首页右侧品类中心1" -->
+<!-- #BeginLibraryItem "/library/ad_position.lbi" -->
+
+ 
+{insert name='ads' id=$ads_id num=$ads_num}
+
+ <!-- #EndLibraryItem -->
+<!-- TemplateEndEditable -->
+  </div>
+  <div class="guanggao">
+  <!-- TemplateBeginEditable name="首页右侧品类中心2" -->
+<!-- #BeginLibraryItem "/library/ad_position.lbi" -->
+
+ 
+{insert name='ads' id=$ads_id num=$ads_num}
+
+ <!-- #EndLibraryItem -->
+<!-- TemplateEndEditable -->
+  </div>
+  <div class="guanggao">
+  <!-- TemplateBeginEditable name="首页右侧品类中心3" -->
+<!-- #BeginLibraryItem "/library/ad_position.lbi" -->
+
+ 
+{insert name='ads' id=$ads_id num=$ads_num}
+
+ <!-- #EndLibraryItem -->
+<!-- TemplateEndEditable -->
+  </div>
+  <div class="guanggao">
+  <!-- TemplateBeginEditable name="首页右侧品类中心4" -->
+<!-- #BeginLibraryItem "/library/ad_position.lbi" -->
+
+ 
+{insert name='ads' id=$ads_id num=$ads_num}
+
+ <!-- #EndLibraryItem -->
+<!-- TemplateEndEditable -->
+  </div>
+</div>
+<div class="aort_list">
+  <div class="guanggao">
+  <!-- TemplateBeginEditable name="首页右侧品类中心5" -->
+<!-- #BeginLibraryItem "/library/ad_position.lbi" -->
+
+ 
+{insert name='ads' id=$ads_id num=$ads_num}
+
+ <!-- #EndLibraryItem -->
+<!-- TemplateEndEditable -->
+  </div>
+  <div class="guanggao">
+  <!-- TemplateBeginEditable name="首页右侧品类中心6" -->
+<!-- #BeginLibraryItem "/library/ad_position.lbi" -->
+
+ 
+{insert name='ads' id=$ads_id num=$ads_num}
+
+ <!-- #EndLibraryItem -->
+<!-- TemplateEndEditable -->
+  </div>
+  <div class="guanggao">
+  <!-- TemplateBeginEditable name="首页右侧品类中心7" -->
+<!-- #BeginLibraryItem "/library/ad_position.lbi" -->
+
+ 
+{insert name='ads' id=$ads_id num=$ads_num}
+
+ <!-- #EndLibraryItem -->
+<!-- TemplateEndEditable -->
+  </div>
+  <div class="guanggao">
+  <!-- TemplateBeginEditable name="首页右侧品类中心8" -->
+<!-- #BeginLibraryItem "/library/ad_position.lbi" -->
+
+ 
+{insert name='ads' id=$ads_id num=$ads_num}
+
+ <!-- #EndLibraryItem -->
+<!-- TemplateEndEditable -->
+  </div>
+</div>
+<div class="aort_list">
+  <div class="guanggao">
+  <!-- TemplateBeginEditable name="首页右侧品类中心9" -->
+<!-- #BeginLibraryItem "/library/ad_position.lbi" -->
+
+ 
+{insert name='ads' id=$ads_id num=$ads_num}
+
+ <!-- #EndLibraryItem -->
+<!-- TemplateEndEditable -->
+  </div>
+  <div class="guanggao">
+  <!-- TemplateBeginEditable name="首页右侧品类中心10" -->
+<!-- #BeginLibraryItem "/library/ad_position.lbi" -->
+
+ 
+{insert name='ads' id=$ads_id num=$ads_num}
+
+ <!-- #EndLibraryItem -->
+<!-- TemplateEndEditable -->
+  </div>
+  <div class="guanggao">
+  <!-- TemplateBeginEditable name="首页右侧品类中心11" -->
+<!-- #BeginLibraryItem "/library/ad_position.lbi" -->
+
+ 
+{insert name='ads' id=$ads_id num=$ads_num}
+
+ <!-- #EndLibraryItem -->
+<!-- TemplateEndEditable -->
+  </div>
+  <div class="guanggao">
+  <!-- TemplateBeginEditable name="首页右侧品类中心12" -->
+<!-- #BeginLibraryItem "/library/ad_position.lbi" -->
+
+ 
+{insert name='ads' id=$ads_id num=$ads_num}
+
+ <!-- #EndLibraryItem -->
+<!-- TemplateEndEditable -->
+  </div>
+</div>
+</div>
+</div>
+<p class="scroll_btn">
+<a herf="javascript:void(0);" class="on">1</a>
+<a herf="javascript:void(0);">2</a>
+<a herf="javascript:void(0);">3</a>
+</p>
+</dd>
+<dd class="brand_list clearfix" style="display: none; ">
+<!-- #BeginLibraryItem "/library/brands.lbi" --><!-- #EndLibraryItem -->
+</dd>
+</dl>
+
+<dl id="notice_news" class="notice_news">
+<dt class="clearfix"><a href="javascript:void(0);" class="cur">公 告</a><a href="javascript:void(0);" tk="YHD_HOME_HTAB_NEWS" class="">新 闻</a><a href="javascript:void(0);" tk="YHD_HOME_HTAB_FRIENDLYLINKS" class="">友情推荐</a></dt>
+<dd class="list" style="display: block; ">
+  <!-- TemplateBeginEditable name="公告" -->
+<!-- #BeginLibraryItem "/library/cat_articles.lbi" -->
+
+<div class="box" style="border:none">
+ <div class="box_1 art" style="border:none">
+  <div class="boxCenterList RelaArticle " style=" padding-top:3px; padding-bottom:4px">
+  <!--{foreach from=$articles item=article_item name=no}-->
+ 
+  <a href="{$article_item.url}" title="{$article_item.title|escape:html}">{$article_item.short_title}</a>  
+ 
+  <!--{/foreach}-->
+  </div>
+ </div>
+</div>
+
+ <!-- #EndLibraryItem -->
+<!-- TemplateEndEditable -->
+
+<p class="tr"><a href="" target="_blank">更多</a></p>
+</dd>
+<dd class="list" style="display: none; ">
+  <!-- TemplateBeginEditable name="新闻" -->
+<!-- #BeginLibraryItem "/library/cat_articles.lbi" -->
+
+<div class="box" style="border:none">
+ <div class="box_1 art" style="border:none">
+  <div class="boxCenterList RelaArticle " style=" padding-top:3px; padding-bottom:4px">
+  <!--{foreach from=$articles item=article_item name=no}-->
+ 
+  <a href="{$article_item.url}" title="{$article_item.title|escape:html}">{$article_item.short_title}</a>  
+ 
+  <!--{/foreach}-->
+  </div>
+ </div>
+</div>
+
+ <!-- #EndLibraryItem -->
+<!-- TemplateEndEditable -->
+
+<p class="tr"><a href="#" target="_blank">更多</a></p>
+</dd>
+<dd style="display: none; ">
+<div class=" fr_recommend">
+<span class="fr_pre"></span>
+<ul class="fr_tab ">
+<li class="cur">在线支付<b></b></li>
+<li class=" last">申美卡<b></b></li>
+</ul>
+<span class="fr_next"></span>
+</div>
+<a class="fr_tab_content" href="#" target="_blank" tk="4665_516291_1" onclick="addTrackPositionToCookie(&#39;1&#39;,&#39;4665_516291_1&#39;);" title="在线支付" style="display: block; ">
+<img alt="在线支付" src="images/zaixianzhifu.jpg">
+</a>
+<a class="fr_tab_content" href="#" target="_blank" tk="4838_504016_1" onclick="addTrackPositionToCookie(&#39;1&#39;,&#39;4838_504016_1&#39;);" title="申美卡" style="display: none; ">
+<img alt="申美卡" src="images/shenmeika.jpg">
+</a>
+</dd>
+</dl>
+
+</div>
+
+<div style="clear:both"></div>
+
+<div class="blank"></div>
+
+
+<div class="block" style=" overflow:hidden">
+<!-- TemplateBeginEditable name="首页主区域" -->
+<!-- #BeginLibraryItem "/library/cat_goods.lbi" -->
+
+
+<div class="cat_goods block">
+
+
+<div class="tit">
+ <div class="f_l"><a href="{$goods_cat.url}" style="font-size:14px; color:#333;" >{$goods_cat.name|escape:html}</a></div>
+ <div class="ss_class"> 
+  <!--{foreach name=childlist from=$goods_cat.children item=children name=child}-->
+  <a href="category.php?id={$children.cat_id}" target="_blank">
+  {$children.cat_name}
+  </a>
+  <!--{/foreach}-->
+  <a href="{$goods_cat.url}" ><span>进入频道</span></a>
+ </div>
+</div>
+<div class="cat_goods_in">
+
+<div class="blank"></div>
+
+<div class="cat_goods_in_l">
+        <?php echo get_adv('cat_l',$GLOBALS['smarty']->_var['goods_cat']['id'])?>
+</div>
+
+
+    <div class="clearfix goodsBox">
+      <!--{foreach from=$cat_goods item=goods}-->
+      <div class="goodsItem">
+           <a class="goodsimg_a" href="{$goods.url}"><img src="{$goods.thumb}" alt="{$goods.name|escape:html}" class="goodsimg" /></a> 
+           <div class="blank"></div>
+           <p class="name"><a href="{$goods.url}" title="{$goods.name|escape:html}">{$goods.short_name|escape:html}  <span class="brief">{$goods.brief}</span></a></p>
+           <!-- {if $goods.promote_price neq ""} -->
+          <font class="shop_s">{$goods.promote_price}</font>
+          <!-- {else}-->
+          <font class="shop_s">{$goods.shop_price}</font>
+          <!--{/if}--> 
+           <del style=" color:#888;">{$goods.market_price}</del>
+      </div>
+      <!--{/foreach}-->
+    </div>
+    
+<div class="f_r">
+          <div class="r_ad">
+            <?php echo get_adv('cat_r1',$GLOBALS['smarty']->_var['goods_cat']['id'])?>
+          </div>
+          <div class="blank5"></div>
+          <div class="r_ad">
+            <?php echo get_adv('cat_r2',$GLOBALS['smarty']->_var['goods_cat']['id'])?>
+          </div>
+          <div class="blank5"></div>
+          <div class="r_ad">
+            <?php echo get_adv('cat_r3',$GLOBALS['smarty']->_var['goods_cat']['id'])?>
+          </div>
+</div>
+    
+    <div style=" clear:both"></div>
+    
+    
+</div>   
+    
+    
+
+ </div>
+<div style="clear:both"></div>
+<div class="blank"></div>
+
+
+
+ <!-- #EndLibraryItem -->
+<!-- #BeginLibraryItem "/library/ad_position.lbi" -->
+
+ 
+{insert name='ads' id=$ads_id num=$ads_num}
+
+ <!-- #EndLibraryItem -->
+<!-- #BeginLibraryItem "/library/cat_goods.lbi" -->
+
+
+<div class="cat_goods block">
+
+
+<div class="tit">
+ <div class="f_l"><a href="{$goods_cat.url}" style="font-size:14px; color:#333;" >{$goods_cat.name|escape:html}</a></div>
+ <div class="ss_class"> 
+  <!--{foreach name=childlist from=$goods_cat.children item=children name=child}-->
+  <a href="category.php?id={$children.cat_id}" target="_blank">
+  {$children.cat_name}
+  </a>
+  <!--{/foreach}-->
+  <a href="{$goods_cat.url}" ><span>进入频道</span></a>
+ </div>
+</div>
+<div class="cat_goods_in">
+
+<div class="blank"></div>
+
+<div class="cat_goods_in_l">
+        <?php echo get_adv('cat_l',$GLOBALS['smarty']->_var['goods_cat']['id'])?>
+</div>
+
+
+    <div class="clearfix goodsBox">
+      <!--{foreach from=$cat_goods item=goods}-->
+      <div class="goodsItem">
+           <a class="goodsimg_a" href="{$goods.url}"><img src="{$goods.thumb}" alt="{$goods.name|escape:html}" class="goodsimg" /></a> 
+           <div class="blank"></div>
+           <p class="name"><a href="{$goods.url}" title="{$goods.name|escape:html}">{$goods.short_name|escape:html}  <span class="brief">{$goods.brief}</span></a></p>
+           <!-- {if $goods.promote_price neq ""} -->
+          <font class="shop_s">{$goods.promote_price}</font>
+          <!-- {else}-->
+          <font class="shop_s">{$goods.shop_price}</font>
+          <!--{/if}--> 
+           <del style=" color:#888;">{$goods.market_price}</del>
+      </div>
+      <!--{/foreach}-->
+    </div>
+    
+<div class="f_r">
+          <div class="r_ad">
+            <?php echo get_adv('cat_r1',$GLOBALS['smarty']->_var['goods_cat']['id'])?>
+          </div>
+          <div class="blank5"></div>
+          <div class="r_ad">
+            <?php echo get_adv('cat_r2',$GLOBALS['smarty']->_var['goods_cat']['id'])?>
+          </div>
+          <div class="blank5"></div>
+          <div class="r_ad">
+            <?php echo get_adv('cat_r3',$GLOBALS['smarty']->_var['goods_cat']['id'])?>
+          </div>
+</div>
+    
+    <div style=" clear:both"></div>
+    
+    
+</div>   
+    
+    
+
+ </div>
+<div style="clear:both"></div>
+<div class="blank"></div>
+
+
+
+ <!-- #EndLibraryItem -->
+<!-- #BeginLibraryItem "/library/cat_goods.lbi" -->
+
+
+<div class="cat_goods block">
+
+
+<div class="tit">
+ <div class="f_l"><a href="{$goods_cat.url}" style="font-size:14px; color:#333;" >{$goods_cat.name|escape:html}</a></div>
+ <div class="ss_class"> 
+  <!--{foreach name=childlist from=$goods_cat.children item=children name=child}-->
+  <a href="category.php?id={$children.cat_id}" target="_blank">
+  {$children.cat_name}
+  </a>
+  <!--{/foreach}-->
+  <a href="{$goods_cat.url}" ><span>进入频道</span></a>
+ </div>
+</div>
+<div class="cat_goods_in">
+
+<div class="blank"></div>
+
+<div class="cat_goods_in_l">
+        <?php echo get_adv('cat_l',$GLOBALS['smarty']->_var['goods_cat']['id'])?>
+</div>
+
+
+    <div class="clearfix goodsBox">
+      <!--{foreach from=$cat_goods item=goods}-->
+      <div class="goodsItem">
+           <a class="goodsimg_a" href="{$goods.url}"><img src="{$goods.thumb}" alt="{$goods.name|escape:html}" class="goodsimg" /></a> 
+           <div class="blank"></div>
+           <p class="name"><a href="{$goods.url}" title="{$goods.name|escape:html}">{$goods.short_name|escape:html}  <span class="brief">{$goods.brief}</span></a></p>
+           <!-- {if $goods.promote_price neq ""} -->
+          <font class="shop_s">{$goods.promote_price}</font>
+          <!-- {else}-->
+          <font class="shop_s">{$goods.shop_price}</font>
+          <!--{/if}--> 
+           <del style=" color:#888;">{$goods.market_price}</del>
+      </div>
+      <!--{/foreach}-->
+    </div>
+    
+<div class="f_r">
+          <div class="r_ad">
+            <?php echo get_adv('cat_r1',$GLOBALS['smarty']->_var['goods_cat']['id'])?>
+          </div>
+          <div class="blank5"></div>
+          <div class="r_ad">
+            <?php echo get_adv('cat_r2',$GLOBALS['smarty']->_var['goods_cat']['id'])?>
+          </div>
+          <div class="blank5"></div>
+          <div class="r_ad">
+            <?php echo get_adv('cat_r3',$GLOBALS['smarty']->_var['goods_cat']['id'])?>
+          </div>
+</div>
+    
+    <div style=" clear:both"></div>
+    
+    
+</div>   
+    
+    
+
+ </div>
+<div style="clear:both"></div>
+<div class="blank"></div>
+
+
+
+ <!-- #EndLibraryItem -->
+<!-- #BeginLibraryItem "/library/ad_position.lbi" -->
+
+ 
+{insert name='ads' id=$ads_id num=$ads_num}
+
+ <!-- #EndLibraryItem -->
+<!-- #BeginLibraryItem "/library/cat_goods.lbi" -->
+
+
+<div class="cat_goods block">
+
+
+<div class="tit">
+ <div class="f_l"><a href="{$goods_cat.url}" style="font-size:14px; color:#333;" >{$goods_cat.name|escape:html}</a></div>
+ <div class="ss_class"> 
+  <!--{foreach name=childlist from=$goods_cat.children item=children name=child}-->
+  <a href="category.php?id={$children.cat_id}" target="_blank">
+  {$children.cat_name}
+  </a>
+  <!--{/foreach}-->
+  <a href="{$goods_cat.url}" ><span>进入频道</span></a>
+ </div>
+</div>
+<div class="cat_goods_in">
+
+<div class="blank"></div>
+
+<div class="cat_goods_in_l">
+        <?php echo get_adv('cat_l',$GLOBALS['smarty']->_var['goods_cat']['id'])?>
+</div>
+
+
+    <div class="clearfix goodsBox">
+      <!--{foreach from=$cat_goods item=goods}-->
+      <div class="goodsItem">
+           <a class="goodsimg_a" href="{$goods.url}"><img src="{$goods.thumb}" alt="{$goods.name|escape:html}" class="goodsimg" /></a> 
+           <div class="blank"></div>
+           <p class="name"><a href="{$goods.url}" title="{$goods.name|escape:html}">{$goods.short_name|escape:html}  <span class="brief">{$goods.brief}</span></a></p>
+           <!-- {if $goods.promote_price neq ""} -->
+          <font class="shop_s">{$goods.promote_price}</font>
+          <!-- {else}-->
+          <font class="shop_s">{$goods.shop_price}</font>
+          <!--{/if}--> 
+           <del style=" color:#888;">{$goods.market_price}</del>
+      </div>
+      <!--{/foreach}-->
+    </div>
+    
+<div class="f_r">
+          <div class="r_ad">
+            <?php echo get_adv('cat_r1',$GLOBALS['smarty']->_var['goods_cat']['id'])?>
+          </div>
+          <div class="blank5"></div>
+          <div class="r_ad">
+            <?php echo get_adv('cat_r2',$GLOBALS['smarty']->_var['goods_cat']['id'])?>
+          </div>
+          <div class="blank5"></div>
+          <div class="r_ad">
+            <?php echo get_adv('cat_r3',$GLOBALS['smarty']->_var['goods_cat']['id'])?>
+          </div>
+</div>
+    
+    <div style=" clear:both"></div>
+    
+    
+</div>   
+    
+    
+
+ </div>
+<div style="clear:both"></div>
+<div class="blank"></div>
+
+
+
+ <!-- #EndLibraryItem -->
+<!-- #BeginLibraryItem "/library/cat_goods.lbi" -->
+
+
+<div class="cat_goods block">
+
+
+<div class="tit">
+ <div class="f_l"><a href="{$goods_cat.url}" style="font-size:14px; color:#333;" >{$goods_cat.name|escape:html}</a></div>
+ <div class="ss_class"> 
+  <!--{foreach name=childlist from=$goods_cat.children item=children name=child}-->
+  <a href="category.php?id={$children.cat_id}" target="_blank">
+  {$children.cat_name}
+  </a>
+  <!--{/foreach}-->
+  <a href="{$goods_cat.url}" ><span>进入频道</span></a>
+ </div>
+</div>
+<div class="cat_goods_in">
+
+<div class="blank"></div>
+
+<div class="cat_goods_in_l">
+        <?php echo get_adv('cat_l',$GLOBALS['smarty']->_var['goods_cat']['id'])?>
+</div>
+
+
+    <div class="clearfix goodsBox">
+      <!--{foreach from=$cat_goods item=goods}-->
+      <div class="goodsItem">
+           <a class="goodsimg_a" href="{$goods.url}"><img src="{$goods.thumb}" alt="{$goods.name|escape:html}" class="goodsimg" /></a> 
+           <div class="blank"></div>
+           <p class="name"><a href="{$goods.url}" title="{$goods.name|escape:html}">{$goods.short_name|escape:html}  <span class="brief">{$goods.brief}</span></a></p>
+           <!-- {if $goods.promote_price neq ""} -->
+          <font class="shop_s">{$goods.promote_price}</font>
+          <!-- {else}-->
+          <font class="shop_s">{$goods.shop_price}</font>
+          <!--{/if}--> 
+           <del style=" color:#888;">{$goods.market_price}</del>
+      </div>
+      <!--{/foreach}-->
+    </div>
+    
+<div class="f_r">
+          <div class="r_ad">
+            <?php echo get_adv('cat_r1',$GLOBALS['smarty']->_var['goods_cat']['id'])?>
+          </div>
+          <div class="blank5"></div>
+          <div class="r_ad">
+            <?php echo get_adv('cat_r2',$GLOBALS['smarty']->_var['goods_cat']['id'])?>
+          </div>
+          <div class="blank5"></div>
+          <div class="r_ad">
+            <?php echo get_adv('cat_r3',$GLOBALS['smarty']->_var['goods_cat']['id'])?>
+          </div>
+</div>
+    
+    <div style=" clear:both"></div>
+    
+    
+</div>   
+    
+    
+
+ </div>
+<div style="clear:both"></div>
+<div class="blank"></div>
+
+
+
+ <!-- #EndLibraryItem -->
+<!-- #BeginLibraryItem "/library/ad_position.lbi" -->
+
+ 
+{insert name='ads' id=$ads_id num=$ads_num}
+
+ <!-- #EndLibraryItem -->
+<!-- #BeginLibraryItem "/library/cat_goods.lbi" -->
+
+
+<div class="cat_goods block">
+
+
+<div class="tit">
+ <div class="f_l"><a href="{$goods_cat.url}" style="font-size:14px; color:#333;" >{$goods_cat.name|escape:html}</a></div>
+ <div class="ss_class"> 
+  <!--{foreach name=childlist from=$goods_cat.children item=children name=child}-->
+  <a href="category.php?id={$children.cat_id}" target="_blank">
+  {$children.cat_name}
+  </a>
+  <!--{/foreach}-->
+  <a href="{$goods_cat.url}" ><span>进入频道</span></a>
+ </div>
+</div>
+<div class="cat_goods_in">
+
+<div class="blank"></div>
+
+<div class="cat_goods_in_l">
+        <?php echo get_adv('cat_l',$GLOBALS['smarty']->_var['goods_cat']['id'])?>
+</div>
+
+
+    <div class="clearfix goodsBox">
+      <!--{foreach from=$cat_goods item=goods}-->
+      <div class="goodsItem">
+           <a class="goodsimg_a" href="{$goods.url}"><img src="{$goods.thumb}" alt="{$goods.name|escape:html}" class="goodsimg" /></a> 
+           <div class="blank"></div>
+           <p class="name"><a href="{$goods.url}" title="{$goods.name|escape:html}">{$goods.short_name|escape:html}  <span class="brief">{$goods.brief}</span></a></p>
+           <!-- {if $goods.promote_price neq ""} -->
+          <font class="shop_s">{$goods.promote_price}</font>
+          <!-- {else}-->
+          <font class="shop_s">{$goods.shop_price}</font>
+          <!--{/if}--> 
+           <del style=" color:#888;">{$goods.market_price}</del>
+      </div>
+      <!--{/foreach}-->
+    </div>
+    
+<div class="f_r">
+          <div class="r_ad">
+            <?php echo get_adv('cat_r1',$GLOBALS['smarty']->_var['goods_cat']['id'])?>
+          </div>
+          <div class="blank5"></div>
+          <div class="r_ad">
+            <?php echo get_adv('cat_r2',$GLOBALS['smarty']->_var['goods_cat']['id'])?>
+          </div>
+          <div class="blank5"></div>
+          <div class="r_ad">
+            <?php echo get_adv('cat_r3',$GLOBALS['smarty']->_var['goods_cat']['id'])?>
+          </div>
+</div>
+    
+    <div style=" clear:both"></div>
+    
+    
+</div>   
+    
+    
+
+ </div>
+<div style="clear:both"></div>
+<div class="blank"></div>
+
+
+
+ <!-- #EndLibraryItem -->
+<!-- #BeginLibraryItem "/library/cat_goods.lbi" -->
+
+
+<div class="cat_goods block">
+
+
+<div class="tit">
+ <div class="f_l"><a href="{$goods_cat.url}" style="font-size:14px; color:#333;" >{$goods_cat.name|escape:html}</a></div>
+ <div class="ss_class"> 
+  <!--{foreach name=childlist from=$goods_cat.children item=children name=child}-->
+  <a href="category.php?id={$children.cat_id}" target="_blank">
+  {$children.cat_name}
+  </a>
+  <!--{/foreach}-->
+  <a href="{$goods_cat.url}" ><span>进入频道</span></a>
+ </div>
+</div>
+<div class="cat_goods_in">
+
+<div class="blank"></div>
+
+<div class="cat_goods_in_l">
+        <?php echo get_adv('cat_l',$GLOBALS['smarty']->_var['goods_cat']['id'])?>
+</div>
+
+
+    <div class="clearfix goodsBox">
+      <!--{foreach from=$cat_goods item=goods}-->
+      <div class="goodsItem">
+           <a class="goodsimg_a" href="{$goods.url}"><img src="{$goods.thumb}" alt="{$goods.name|escape:html}" class="goodsimg" /></a> 
+           <div class="blank"></div>
+           <p class="name"><a href="{$goods.url}" title="{$goods.name|escape:html}">{$goods.short_name|escape:html}  <span class="brief">{$goods.brief}</span></a></p>
+           <!-- {if $goods.promote_price neq ""} -->
+          <font class="shop_s">{$goods.promote_price}</font>
+          <!-- {else}-->
+          <font class="shop_s">{$goods.shop_price}</font>
+          <!--{/if}--> 
+           <del style=" color:#888;">{$goods.market_price}</del>
+      </div>
+      <!--{/foreach}-->
+    </div>
+    
+<div class="f_r">
+          <div class="r_ad">
+            <?php echo get_adv('cat_r1',$GLOBALS['smarty']->_var['goods_cat']['id'])?>
+          </div>
+          <div class="blank5"></div>
+          <div class="r_ad">
+            <?php echo get_adv('cat_r2',$GLOBALS['smarty']->_var['goods_cat']['id'])?>
+          </div>
+          <div class="blank5"></div>
+          <div class="r_ad">
+            <?php echo get_adv('cat_r3',$GLOBALS['smarty']->_var['goods_cat']['id'])?>
+          </div>
+</div>
+    
+    <div style=" clear:both"></div>
+    
+    
+</div>   
+    
+    
+
+ </div>
+<div style="clear:both"></div>
+<div class="blank"></div>
+
+
+
+ <!-- #EndLibraryItem -->
+<!-- #BeginLibraryItem "/library/ad_position.lbi" -->
+
+ 
+{insert name='ads' id=$ads_id num=$ads_num}
+
+ <!-- #EndLibraryItem -->
+<!-- #BeginLibraryItem "/library/cat_goods.lbi" -->
+
+
+<div class="cat_goods block">
+
+
+<div class="tit">
+ <div class="f_l"><a href="{$goods_cat.url}" style="font-size:14px; color:#333;" >{$goods_cat.name|escape:html}</a></div>
+ <div class="ss_class"> 
+  <!--{foreach name=childlist from=$goods_cat.children item=children name=child}-->
+  <a href="category.php?id={$children.cat_id}" target="_blank">
+  {$children.cat_name}
+  </a>
+  <!--{/foreach}-->
+  <a href="{$goods_cat.url}" ><span>进入频道</span></a>
+ </div>
+</div>
+<div class="cat_goods_in">
+
+<div class="blank"></div>
+
+<div class="cat_goods_in_l">
+        <?php echo get_adv('cat_l',$GLOBALS['smarty']->_var['goods_cat']['id'])?>
+</div>
+
+
+    <div class="clearfix goodsBox">
+      <!--{foreach from=$cat_goods item=goods}-->
+      <div class="goodsItem">
+           <a class="goodsimg_a" href="{$goods.url}"><img src="{$goods.thumb}" alt="{$goods.name|escape:html}" class="goodsimg" /></a> 
+           <div class="blank"></div>
+           <p class="name"><a href="{$goods.url}" title="{$goods.name|escape:html}">{$goods.short_name|escape:html}  <span class="brief">{$goods.brief}</span></a></p>
+           <!-- {if $goods.promote_price neq ""} -->
+          <font class="shop_s">{$goods.promote_price}</font>
+          <!-- {else}-->
+          <font class="shop_s">{$goods.shop_price}</font>
+          <!--{/if}--> 
+           <del style=" color:#888;">{$goods.market_price}</del>
+      </div>
+      <!--{/foreach}-->
+    </div>
+    
+<div class="f_r">
+          <div class="r_ad">
+            <?php echo get_adv('cat_r1',$GLOBALS['smarty']->_var['goods_cat']['id'])?>
+          </div>
+          <div class="blank5"></div>
+          <div class="r_ad">
+            <?php echo get_adv('cat_r2',$GLOBALS['smarty']->_var['goods_cat']['id'])?>
+          </div>
+          <div class="blank5"></div>
+          <div class="r_ad">
+            <?php echo get_adv('cat_r3',$GLOBALS['smarty']->_var['goods_cat']['id'])?>
+          </div>
+</div>
+    
+    <div style=" clear:both"></div>
+    
+    
+</div>   
+    
+    
+
+ </div>
+<div style="clear:both"></div>
+<div class="blank"></div>
+
+
+
+ <!-- #EndLibraryItem -->
+<!-- #BeginLibraryItem "/library/cat_goods.lbi" -->
+
+
+<div class="cat_goods block">
+
+
+<div class="tit">
+ <div class="f_l"><a href="{$goods_cat.url}" style="font-size:14px; color:#333;" >{$goods_cat.name|escape:html}</a></div>
+ <div class="ss_class"> 
+  <!--{foreach name=childlist from=$goods_cat.children item=children name=child}-->
+  <a href="category.php?id={$children.cat_id}" target="_blank">
+  {$children.cat_name}
+  </a>
+  <!--{/foreach}-->
+  <a href="{$goods_cat.url}" ><span>进入频道</span></a>
+ </div>
+</div>
+<div class="cat_goods_in">
+
+<div class="blank"></div>
+
+<div class="cat_goods_in_l">
+        <?php echo get_adv('cat_l',$GLOBALS['smarty']->_var['goods_cat']['id'])?>
+</div>
+
+
+    <div class="clearfix goodsBox">
+      <!--{foreach from=$cat_goods item=goods}-->
+      <div class="goodsItem">
+           <a class="goodsimg_a" href="{$goods.url}"><img src="{$goods.thumb}" alt="{$goods.name|escape:html}" class="goodsimg" /></a> 
+           <div class="blank"></div>
+           <p class="name"><a href="{$goods.url}" title="{$goods.name|escape:html}">{$goods.short_name|escape:html}  <span class="brief">{$goods.brief}</span></a></p>
+           <!-- {if $goods.promote_price neq ""} -->
+          <font class="shop_s">{$goods.promote_price}</font>
+          <!-- {else}-->
+          <font class="shop_s">{$goods.shop_price}</font>
+          <!--{/if}--> 
+           <del style=" color:#888;">{$goods.market_price}</del>
+      </div>
+      <!--{/foreach}-->
+    </div>
+    
+<div class="f_r">
+          <div class="r_ad">
+            <?php echo get_adv('cat_r1',$GLOBALS['smarty']->_var['goods_cat']['id'])?>
+          </div>
+          <div class="blank5"></div>
+          <div class="r_ad">
+            <?php echo get_adv('cat_r2',$GLOBALS['smarty']->_var['goods_cat']['id'])?>
+          </div>
+          <div class="blank5"></div>
+          <div class="r_ad">
+            <?php echo get_adv('cat_r3',$GLOBALS['smarty']->_var['goods_cat']['id'])?>
+          </div>
+</div>
+    
+    <div style=" clear:both"></div>
+    
+    
+</div>   
+    
+    
+
+ </div>
+<div style="clear:both"></div>
+<div class="blank"></div>
+
+
+
+ <!-- #EndLibraryItem -->
+<!-- #BeginLibraryItem "/library/cat_goods.lbi" -->
+
+
+<div class="cat_goods block">
+
+
+<div class="tit">
+ <div class="f_l"><a href="{$goods_cat.url}" style="font-size:14px; color:#333;" >{$goods_cat.name|escape:html}</a></div>
+ <div class="ss_class"> 
+  <!--{foreach name=childlist from=$goods_cat.children item=children name=child}-->
+  <a href="category.php?id={$children.cat_id}" target="_blank">
+  {$children.cat_name}
+  </a>
+  <!--{/foreach}-->
+  <a href="{$goods_cat.url}" ><span>进入频道</span></a>
+ </div>
+</div>
+<div class="cat_goods_in">
+
+<div class="blank"></div>
+
+<div class="cat_goods_in_l">
+        <?php echo get_adv('cat_l',$GLOBALS['smarty']->_var['goods_cat']['id'])?>
+</div>
+
+
+    <div class="clearfix goodsBox">
+      <!--{foreach from=$cat_goods item=goods}-->
+      <div class="goodsItem">
+           <a class="goodsimg_a" href="{$goods.url}"><img src="{$goods.thumb}" alt="{$goods.name|escape:html}" class="goodsimg" /></a> 
+           <div class="blank"></div>
+           <p class="name"><a href="{$goods.url}" title="{$goods.name|escape:html}">{$goods.short_name|escape:html}  <span class="brief">{$goods.brief}</span></a></p>
+           <!-- {if $goods.promote_price neq ""} -->
+          <font class="shop_s">{$goods.promote_price}</font>
+          <!-- {else}-->
+          <font class="shop_s">{$goods.shop_price}</font>
+          <!--{/if}--> 
+           <del style=" color:#888;">{$goods.market_price}</del>
+      </div>
+      <!--{/foreach}-->
+    </div>
+    
+<div class="f_r">
+          <div class="r_ad">
+            <?php echo get_adv('cat_r1',$GLOBALS['smarty']->_var['goods_cat']['id'])?>
+          </div>
+          <div class="blank5"></div>
+          <div class="r_ad">
+            <?php echo get_adv('cat_r2',$GLOBALS['smarty']->_var['goods_cat']['id'])?>
+          </div>
+          <div class="blank5"></div>
+          <div class="r_ad">
+            <?php echo get_adv('cat_r3',$GLOBALS['smarty']->_var['goods_cat']['id'])?>
+          </div>
+</div>
+    
+    <div style=" clear:both"></div>
+    
+    
+</div>   
+    
+    
+
+ </div>
+<div style="clear:both"></div>
+<div class="blank"></div>
+
+
+
+ <!-- #EndLibraryItem -->
+<!-- #BeginLibraryItem "/library/cat_goods.lbi" -->
+
+
+<div class="cat_goods block">
+
+
+<div class="tit">
+ <div class="f_l"><a href="{$goods_cat.url}" style="font-size:14px; color:#333;" >{$goods_cat.name|escape:html}</a></div>
+ <div class="ss_class"> 
+  <!--{foreach name=childlist from=$goods_cat.children item=children name=child}-->
+  <a href="category.php?id={$children.cat_id}" target="_blank">
+  {$children.cat_name}
+  </a>
+  <!--{/foreach}-->
+  <a href="{$goods_cat.url}" ><span>进入频道</span></a>
+ </div>
+</div>
+<div class="cat_goods_in">
+
+<div class="blank"></div>
+
+<div class="cat_goods_in_l">
+        <?php echo get_adv('cat_l',$GLOBALS['smarty']->_var['goods_cat']['id'])?>
+</div>
+
+
+    <div class="clearfix goodsBox">
+      <!--{foreach from=$cat_goods item=goods}-->
+      <div class="goodsItem">
+           <a class="goodsimg_a" href="{$goods.url}"><img src="{$goods.thumb}" alt="{$goods.name|escape:html}" class="goodsimg" /></a> 
+           <div class="blank"></div>
+           <p class="name"><a href="{$goods.url}" title="{$goods.name|escape:html}">{$goods.short_name|escape:html}  <span class="brief">{$goods.brief}</span></a></p>
+           <!-- {if $goods.promote_price neq ""} -->
+          <font class="shop_s">{$goods.promote_price}</font>
+          <!-- {else}-->
+          <font class="shop_s">{$goods.shop_price}</font>
+          <!--{/if}--> 
+           <del style=" color:#888;">{$goods.market_price}</del>
+      </div>
+      <!--{/foreach}-->
+    </div>
+    
+<div class="f_r">
+          <div class="r_ad">
+            <?php echo get_adv('cat_r1',$GLOBALS['smarty']->_var['goods_cat']['id'])?>
+          </div>
+          <div class="blank5"></div>
+          <div class="r_ad">
+            <?php echo get_adv('cat_r2',$GLOBALS['smarty']->_var['goods_cat']['id'])?>
+          </div>
+          <div class="blank5"></div>
+          <div class="r_ad">
+            <?php echo get_adv('cat_r3',$GLOBALS['smarty']->_var['goods_cat']['id'])?>
+          </div>
+</div>
+    
+    <div style=" clear:both"></div>
+    
+    
+</div>   
+    
+    
+
+ </div>
+<div style="clear:both"></div>
+<div class="blank"></div>
+
+
+
+ <!-- #EndLibraryItem -->
+<!-- #BeginLibraryItem "/library/cat_goods.lbi" -->
+
+
+<div class="cat_goods block">
+
+
+<div class="tit">
+ <div class="f_l"><a href="{$goods_cat.url}" style="font-size:14px; color:#333;" >{$goods_cat.name|escape:html}</a></div>
+ <div class="ss_class"> 
+  <!--{foreach name=childlist from=$goods_cat.children item=children name=child}-->
+  <a href="category.php?id={$children.cat_id}" target="_blank">
+  {$children.cat_name}
+  </a>
+  <!--{/foreach}-->
+  <a href="{$goods_cat.url}" ><span>进入频道</span></a>
+ </div>
+</div>
+<div class="cat_goods_in">
+
+<div class="blank"></div>
+
+<div class="cat_goods_in_l">
+        <?php echo get_adv('cat_l',$GLOBALS['smarty']->_var['goods_cat']['id'])?>
+</div>
+
+
+    <div class="clearfix goodsBox">
+      <!--{foreach from=$cat_goods item=goods}-->
+      <div class="goodsItem">
+           <a class="goodsimg_a" href="{$goods.url}"><img src="{$goods.thumb}" alt="{$goods.name|escape:html}" class="goodsimg" /></a> 
+           <div class="blank"></div>
+           <p class="name"><a href="{$goods.url}" title="{$goods.name|escape:html}">{$goods.short_name|escape:html}  <span class="brief">{$goods.brief}</span></a></p>
+           <!-- {if $goods.promote_price neq ""} -->
+          <font class="shop_s">{$goods.promote_price}</font>
+          <!-- {else}-->
+          <font class="shop_s">{$goods.shop_price}</font>
+          <!--{/if}--> 
+           <del style=" color:#888;">{$goods.market_price}</del>
+      </div>
+      <!--{/foreach}-->
+    </div>
+    
+<div class="f_r">
+          <div class="r_ad">
+            <?php echo get_adv('cat_r1',$GLOBALS['smarty']->_var['goods_cat']['id'])?>
+          </div>
+          <div class="blank5"></div>
+          <div class="r_ad">
+            <?php echo get_adv('cat_r2',$GLOBALS['smarty']->_var['goods_cat']['id'])?>
+          </div>
+          <div class="blank5"></div>
+          <div class="r_ad">
+            <?php echo get_adv('cat_r3',$GLOBALS['smarty']->_var['goods_cat']['id'])?>
+          </div>
+</div>
+    
+    <div style=" clear:both"></div>
+    
+    
+</div>   
+    
+    
+
+ </div>
+<div style="clear:both"></div>
+<div class="blank"></div>
+
+
+
+ <!-- #EndLibraryItem -->
+<!-- TemplateEndEditable -->
+</div>
+<div class="blank"></div>
+
+</div>
+
+<!-- #BeginLibraryItem "/library/page_footer.lbi" --><!-- #EndLibraryItem -->
+
+</body>
+</html>

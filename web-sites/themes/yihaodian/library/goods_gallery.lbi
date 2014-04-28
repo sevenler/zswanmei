@@ -1,0 +1,28 @@
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<!-- {if $pictures}-->
+ <div id=spec-n5>
+		<div class=control id=spec-left> 
+		</div>
+		<div id=spec-list>
+			<ul class=list-h>
+		
+             <!-- {foreach from=$pictures item=picture name=no}-->
+             
+ 
+        <li><img src="{$picture.img_url}" alt="{$goods.goods_name}"  /></li> 
+             
+            <!--{/foreach}-->    
+           
+ 			</ul>
+ 		</div>
+ 
+ 
+ 
+ 	<div class=control id=spec-right> 
+	</div>
+		
+    </div>
+<!-- {/if}-->
+<script type="text/javascript">
+	mypicBg();
+</script>

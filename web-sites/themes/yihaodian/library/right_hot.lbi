@@ -1,0 +1,37 @@
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<div class="right_hot_box"> 
+<h3 class="rexiao">本类热销排行</h3>
+
+  <div class="boxCenterList clearfix" style=" padding-bottom:5px; padding-top:5px;">
+  <div class=right_goodslist>
+    <!--{foreach from=$hot_goods item=goods name=no}-->
+     
+       <ul class="clearfix " id=hotb{$smarty.foreach.no.iteration}
+          <!-- {if $smarty.foreach.no.first} -->
+          style="border:none;"
+          <!-- {/if} -->
+       >
+              
+       
+           <li class="goodsimg"><a href="{$goods.url}"><img src="{$goods.thumb}" alt="{$goods.name|escape:html}"  class="" /></a></li>
+          <li>
+           <p> <a href="{$goods.url}" title="{$goods.name|escape:html}">{$goods.short_style_name}</a></p>
+               <div class="blank"></div>
+            <font class="f1">
+           <!-- {if $goods.promote_price neq ""} -->
+          {$goods.promote_price}
+          <!-- {else}-->
+          {$goods.shop_price}
+          <!--{/if}-->
+           </font>
+          </li>
+          </ul>
+    <!-- {/foreach} -->
+ </div>
+      <SCRIPT 
+      type=text/javascript> window.onload = show_goodspic(1,'hot');</SCRIPT>
+   </div>
+</div>
+
+
+<div class="blank"></div>

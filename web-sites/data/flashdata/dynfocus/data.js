@@ -1,0 +1,25 @@
+imgUrl1="data/afficheimg/20130726epqnho.jpg";
+imgtext1="";
+imgLink1=escape("http://116.255.154.183/article.php?id=95");
+imgUrl2="data/afficheimg/20130605lslgcn.png";
+imgtext2="";
+imgLink2=escape("http://116.255.154.183/article.php?id=96");
+imgUrl3="data/afficheimg/20130605qzkryz.png";
+imgtext3="";
+imgLink3=escape("http://116.255.154.183/article.php?id=97");
+imgUrl4="data/afficheimg/20130605kkjxxk.png";
+imgtext4="";
+imgLink4=escape("http://116.255.154.183/goods.php?id=279");
+imgUrl5="data/afficheimg/20130606mceaya.png";
+imgtext5="";
+imgLink5=escape("http://116.255.154.183/goods.php?id=277");
+imgUrl6="data/afficheimg/20130606jyauxe.png";
+imgtext6="";
+imgLink6=escape("http://116.255.154.183/article.php?id=94");
+imgUrl7="data/afficheimg/20130606wklkhy.png";
+imgtext7="";
+imgLink7=escape("http://116.255.154.183/category.php?id=40");
+
+var pics=imgUrl1+"|"+imgUrl2+"|"+imgUrl3+"|"+imgUrl4+"|"+imgUrl5+"|"+imgUrl6+"|"+imgUrl7;
+var links=imgLink1+"|"+imgLink2+"|"+imgLink3+"|"+imgLink4+"|"+imgLink5+"|"+imgLink6+"|"+imgLink7;
+var texts=imgtext1+"|"+imgtext2+"|"+imgtext3+"|"+imgtext4+"|"+imgtext5+"|"+imgtext6+"|"+imgtext7;

@@ -1,0 +1,487 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="Keywords" content="{$keywords}" />
+<meta name="Description" content="{$description}" />
+<!-- TemplateBeginEditable name="doctitle" -->
+<title>{$page_title}</title>
+<!-- TemplateEndEditable --><!-- TemplateBeginEditable name="head" --><!-- TemplateEndEditable -->
+<link rel="shortcut icon" href="favicon.ico" />
+<link rel="icon" href="animated_favicon.gif" type="image/gif" />
+<link href="{$ecs_css_path}" rel="stylesheet" type="text/css" />
+<link href="themes/miqi/group.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript">
+function tuan()
+{
+	var number = document.getElementById('number').value;
+	var group_buy_id = '{$group_buy_id}';
+	window.location.href="group_buy.php?act=buy&number="+number+"&group_buy_id="+group_buy_id;
+	
+}
+</script>
+{* 包含脚本文件 *}
+
+{insert_scripts files='common.js'}
+ 
+<script type="text/javascript">
+  {foreach from=$lang.js_languages item=item key=key}
+    var {$key} = "{$item}";
+  {/foreach}
+</script>
+<script type="text/javascript">
+function $id(element) {
+  return document.getElementById(element);
+}
+//切屏--是按钮，_v是内容平台，_h是内容库
+function reg(str){
+  var bt=$id(str+"_b").getElementsByTagName("h2");
+  for(var i=0;i<bt.length;i++){
+    bt[i].subj=str;
+    bt[i].pai=i;
+    bt[i].style.cursor="pointer";
+    bt[i].onclick=function(){
+      $id(this.subj+"_v").innerHTML=$id(this.subj+"_h").getElementsByTagName("blockquote")[this.pai].innerHTML;
+      for(var j=0;j<$id(this.subj+"_b").getElementsByTagName("h2").length;j++){
+        var _bt=$id(this.subj+"_b").getElementsByTagName("h2")[j];
+        var ison=j==this.pai;
+        _bt.className=(ison?"":"h2bg");
+      }
+    }
+  }
+  $id(str+"_h").className="none";
+  $id(str+"_v").innerHTML=$id(str+"_h").getElementsByTagName("blockquote")[0].innerHTML;
+}
+
+</script>
+<script language='javascript' type='text/javascript' charset='utf-8'>
+ 
+
+
+function noshow(){
+document.getElementById('top').style.display="none";
+}
+
+</script>
+</head>
+<body >
+ 
+
+<!-- #BeginLibraryItem "/library/page_header.lbi" --><!-- #EndLibraryItem --> 
+{insert_scripts files='transport.js'}
+
+<DIV class="block group_buy_list clearfix"  >
+<div><a href="#"><img src="images/group_banner.jpg" width="980" height="160" /></a></div>
+  <div class="blank"></div>
+   <div class="blank"></div>
+   
+   <div class="group_l">
+   
+      <div class="home_deal_list">
+     <DIV class="big_list clearfix">
+	 <div style="border:1px solid #e5e5e5">	
+          <DIV class="share">
+            <H4>分享到：</H4>
+            <UL>
+              <!-- Baidu Button BEGIN -->
+              <div id="bdshare" class="bdshare_t bds_tools get-codes-bdshare"> <a class="bds_qzone"></a><span>QQ空间</span> <a class="bds_tsina"></a><span>新浪微博</span> <a class="bds_tqq"></a><span>腾讯微博</span> <a class="bds_renren"></a><span>人人网</span> <span class="bds_more"> </span> <a class="shareCount"></a> </div>
+              <script type="text/javascript" id="bdshare_js" data="type=tools&amp;uid=2733582" ></script>
+              <script type="text/javascript" id="bdshell_js"></script>
+              <script type="text/javascript">
+	document.getElementById("bdshell_js").src = "http://bdimg.share.baidu.com/static/js/shell_v2.js?cdnversion=" + new Date().getHours();
+</script>
+              <!-- Baidu Button END -->
+            </UL>
+          </DIV>
+	 
+     
+  <form action="javascript:addToCart({$goods.goods_id})" method="post" name="ECS_FORMBUY" id="ECS_FORMBUY" >
+ <div class=tit>
+<font  class="font_tit" >限时特卖:</font><A class=all-p-ml href="{$goods.url}" target=_blank>{$goods.goods_name}</A>{$goods.goods_brief}</div>
+<div class="blank"></div>
+	<div class="blank"></div>
+<div class="deal_info">
+    <div class="ribbon">
+        <div class="bg">&nbsp;</div>
+        <div class="buyit">
+        <strong>{$goods.promote_price}</strong>
+		 <span > <a href="javascript:addToCart({$goods.goods_id})"><img src="images/group/purchase_button.gif" onmouseover="this.src='images/group/purchase_button_hover.jpg'" onmouseout="this.src='images/group/purchase_button.gif'"></a></span>
+        </div>
+    </div>
+    <div class="deal_info_box">
+        <div class="price">
+            <table>
+            <tbody>
+			<tr>
+            <th class="market_price">市场价</th>
+            <th class="discount">折扣</th>
+            <th>为您节省</th>
+            </tr>
+            <tr>
+              <th style="text-decoration: line-through;">{$goods.market_price}</th>
+            <th class="discount"  style="color:#FF4560" >{$goods.zhekou_price}折</th>
+            <th style="color:#FF4560">￥{$goods.sheng_price}</th>
+            </tr>
+            </tbody></table>
+        </div>
+		<div class="blank"></div>
+    <div class="countdown">
+	    
+    <input type="hidden" class="time_left" value="15247">
+	
+    <div  class="timer">
+	<div class="icon" style="float:left">距离团购结束还有</div>
+	<div class="blank"></div>
+   {insert_scripts files='lefttime.js'}
+    <font id="leftTime">{$lang.please_waiting}</font>
+ <input  style=" display:none" name="number" type="text" id="number" value="1" size="4" onblur="changePrice()" style="border:1px solid #ccc; "/>
+ 
+    </div>
+    </div>
+   <div class="blank"></div>
+    <div class="blank"></div>
+    
+    <div class="deal_status ">
+        <div class="purhcase_number">
+        <span class="icon"></span>
+       <b class="pink"><font style="color:#df0404;">{$group_buy.valid_goods}</font>人已购买</b>
+       </div>
+		<div class="progress no_stock_soon"> 数量有限下手要快哦</div>
+        
+    </div>
+    </div>
+</div>
+
+ </form>
+
+<div style=" float:left; width:460px;_width:458px; height:350px; overflow:hidden; padding-left:10px;">
+<IMG  alt="{$goods.goods_name|escape:html}" src="{$goods.goods_img}" width="460" height="350" / >
+</div>
+<div class="blank"></div>
+</div>
+
+ </DIV>
+
+       
+     
+	 <!-- #BeginLibraryItem "/library/goods_fittings.lbi" --><!-- #EndLibraryItem --> 
+	 <div class="blank"></div>
+	 
+	 
+	 
+ 
+  <div style=" border:1px solid #e5e5e5; background:#FFFFFF;   ">
+      <DIV class="product_desc">
+        <DIV class="info_box ">
+          <h3>
+            <div id="com_b" class=" clearfix">
+              <h2>商品属性</h2>
+              <h2 class="h2bg">本单详细</h2>
+			  <h2 class="h2bg">产品实拍</h2>
+              <h2 class="h2bg">买家评论</h2>
+              <h2 class="h2bg">本网优势</h2>
+            </div>
+            <div style="position:absolute; top:6px; right:-4px;"><a href="javascript:addToCart({$goods.goods_id})"><img src="images/lijigoumai.gif"  onmouseover="this.src='images/lijigoumai_hover.gif'" onmouseout="this.src='images/lijigoumai.gif'" /></a> </div>
+          </h3>
+          <div id="com_v"  ></div>
+          <div id="detail_info_box" class="detail_info_box">
+            <div id="com_h">
+			
+              <blockquote>
+			  <div class="inLeft_img">
+                        <ul>
+                            <li>
+                                <b>假一赔三</b>
+                                <p>米奇网承诺所有售出产品皆为正品。支持所有产品专柜验货，并为用户提供假一赔三的消费保证。</p>
+                            </li>
+                            <li>
+                                <b>当日发货</b>
+                                <p>每天下午16:00之前购买的全部订单我们将会当日闪电发出！</p>
+                            </li>
+                            <li>
+                                <b>30天无条件退货</b>
+                                <p>您购买的所有商品均可享受30天无条件退货服务，且返回运费由我们负责。(请在退货前与客服联系。)</p>
+                            </li>
+                            <li class="border_none">
+                                <b>全程保障</b>
+                                <p>米奇网对进货渠道、合作伙伴都经过精心挑选并严格审核，您的利益有我们全程保障。</p>
+                            </li>
+                        </ul>
+                    </div>
+					 <div class="blank"></div>
+					 <div class="inLeft_title">
+                        <img id="shangpsx" src="images/inLeft_titli_12.gif" border="0">
+                    </div>
+						 <div class="blank5"></div>
+                <div class="canshu">
+                  
+                  <table   border="0" cellpadding="5" cellspacing="0" bgcolor="#fff">
+                    <tr>
+                      <td align="left" width="15%" class="td"><b>商品名称：</b></td>
+                      <td bgcolor="#FFFFFF" align="left" width="85%" class="td2">{$goods.goods_style_name}</td>
+                    </tr>
+                    <!-- {foreach from=$properties item=property_group key=key} -->
+                    <!-- {foreach from=$property_group item=property} -->
+                    <tr >
+                      <td  align="left" width="15%" class="td"><b>{$property.name|escape:html}：</b></td>
+                      <td bgcolor="#FFFFFF" align="left" width="85%" class="td2">{$property.value}</td>
+                    </tr>
+                    <!-- {/foreach}-->
+                    <!-- {/foreach}-->
+                  </table>
+                  <img src="{$goods.goods_img}" alt="{$goods.goods_name|escape:html}" class="goodsimg"  /> </div>
+                <div class="blank"></div>
+                <div class="blank"></div>
+                <div class="blank"></div>
+                <!-- #BeginLibraryItem "/library/comments.lbi" --> {insert_scripts files='transport.js,utils.js'}
+                <div id="ECS_COMMENT"> {* ECSHOP 提醒您：动态载入comments_list.lbi，显示评论列表和评论表单 *}{insert name='comments' type=$type id=$id}</div>
+                <!-- #EndLibraryItem --> </blockquote>
+              <blockquote>
+                <div class="inLeft_img">
+                        <ul>
+                            <li>
+                                <b>假一赔三</b>
+                                <p>米奇网承诺所有售出产品皆为正品。支持所有产品专柜验货，并为用户提供假一赔三的消费保证。</p>
+                            </li>
+                            <li>
+                                <b>当日发货</b>
+                                <p>每天下午16:00之前购买的全部订单我们将会当日闪电发出！</p>
+                            </li>
+                            <li>
+                                <b>30天无条件退货</b>
+                                <p>您购买的所有商品均可享受30天无条件退货服务，且返回运费由我们负责。(请在退货前与客服联系。)</p>
+                            </li>
+                            <li class="border_none">
+                                <b>全程保障</b>
+                                <p>米奇网对进货渠道、合作伙伴都经过精心挑选并严格审核，您的利益有我们全程保障。</p>
+                            </li>
+                        </ul>
+                    </div>
+					 <div class="blank"></div>
+                <div class="inLeft_title"><img src="../images/inLeft_titli_03.gif" border="0"></div>
+                <div class="blank"></div>
+                <div  style=" padding-left:10px;line-height:30px; font-size:14px; color:#000000"> {$goods.goods_desc} </div>
+                <div class="blank"></div>
+                <div class="blank"></div>
+                <!-- #BeginLibraryItem "/library/comments.lbi" --> {insert_scripts files='transport.js,utils.js'}
+                <div id="ECS_COMMENT"> {* ECSHOP 提醒您：动态载入comments_list.lbi，显示评论列表和评论表单 *}{insert name='comments' type=$type id=$id}</div>
+                <!-- #EndLibraryItem --> </blockquote>
+              <div class="blank"></div>
+              <div class="blank"></div>
+			  
+			  <blockquote>
+                <div class="inLeft_img">
+                        <ul>
+                            <li>
+                                <b>假一赔三</b>
+                                <p>米奇网承诺所有售出产品皆为正品。支持所有产品专柜验货，并为用户提供假一赔三的消费保证。</p>
+                            </li>
+                            <li>
+                                <b>当日发货</b>
+                                <p>每天下午16:00之前购买的全部订单我们将会当日闪电发出！</p>
+                            </li>
+                            <li>
+                                <b>30天无条件退货</b>
+                                <p>您购买的所有商品均可享受30天无条件退货服务，且返回运费由我们负责。(请在退货前与客服联系。)</p>
+                            </li>
+                            <li class="border_none">
+                                <b>全程保障</b>
+                                <p>米奇网对进货渠道、合作伙伴都经过精心挑选并严格审核，您的利益有我们全程保障。</p>
+                            </li>
+                        </ul>
+                    </div>
+					 <div class="blank"></div>
+                <div class="inLeft_title"><img src="../images/inLeft_titli_25.gif" border="0"></div>
+				<div class="blank"></div>
+				 <div  style="padding-left:15px;"><img  src="../images/shipai_1.jpg" border="0"></div>
+				 <div style="margin-left:45px; width:600px; border-bottom:1px dashed #ccc; margin-bottom:8px;">娇兰GUERLAIN幻彩流星粉球01#，多彩柔和的小粉珠滚落在一起仿佛粉嫩光滑的面纱，散发出无尽迷人的光芒。</div>
+				 </blockquote>
+              <blockquote>
+                <div class="inLeft_img">
+                        <ul>
+                            <li>
+                                <b>假一赔三</b>
+                                <p>米奇网承诺所有售出产品皆为正品。支持所有产品专柜验货，并为用户提供假一赔三的消费保证。</p>
+                            </li>
+                            <li>
+                                <b>当日发货</b>
+                                <p>每天下午16:00之前购买的全部订单我们将会当日闪电发出！</p>
+                            </li>
+                            <li>
+                                <b>30天无条件退货</b>
+                                <p>您购买的所有商品均可享受30天无条件退货服务，且返回运费由我们负责。(请在退货前与客服联系。)</p>
+                            </li>
+                            <li class="border_none">
+                                <b>全程保障</b>
+                                <p>米奇网对进货渠道、合作伙伴都经过精心挑选并严格审核，您的利益有我们全程保障。</p>
+                            </li>
+                        </ul>
+                    </div>
+					 <div class="blank"></div>
+					  <div class="blank"></div>
+                <!-- #BeginLibraryItem "/library/comments.lbi" --> {insert_scripts files='transport.js,utils.js'}
+                <div id="ECS_COMMENT"> {* ECSHOP 提醒您：动态载入comments_list.lbi，显示评论列表和评论表单 *}{insert name='comments' type=$type id=$id}</div>
+                <!-- #EndLibraryItem --> 
+				</blockquote>
+              <blockquote>
+                <div class="inLeft_img">
+                        <ul>
+                            <li>
+                                <b>假一赔三</b>
+                                <p>米奇网承诺所有售出产品皆为正品。支持所有产品专柜验货，并为用户提供假一赔三的消费保证。</p>
+                            </li>
+                            <li>
+                                <b>当日发货</b>
+                                <p>每天下午16:00之前购买的全部订单我们将会当日闪电发出！</p>
+                            </li>
+                            <li>
+                                <b>30天无条件退货</b>
+                                <p>您购买的所有商品均可享受30天无条件退货服务，且返回运费由我们负责。(请在退货前与客服联系。)</p>
+                            </li>
+                            <li class="border_none">
+                                <b>全程保障</b>
+                                <p>米奇网对进货渠道、合作伙伴都经过精心挑选并严格审核，您的利益有我们全程保障。</p>
+                            </li>
+                        </ul>
+                    </div>
+					 <div class="blank"></div>
+                <div class="inLeft_title"><img src="../images/inLeft_titli_08.gif" border="0"></div>
+                <div class="blank"></div>
+                <div class="inLeft_tab">
+                  <ul>
+                    <li><img src="../images/advantage_btn_new01.jpg" border="0"></li>
+                    <li><img src="../images/advantage_btn_new02.jpg" border="0"></li>
+                    <li><img src="../images/advantage_btn_new03.jpg" border="0"></li>
+                    <li><img src="../images/advantage_btn_new04.jpg" border="0"></li>
+                    <li><img src="../images/advantage_btn_new05.jpg" border="0"></li>
+                    <li><img src="../images/advantage_btn_new06.jpg" border="0"></li>
+                    <li><img src="../images/advantage_btn_new07.jpg" border="0"></li>
+                    <li><img src="../images/advantage_btn_new08.jpg" border="0"></li>
+                  </ul>
+                  <div style="padding-left:15px;">
+                    <div><img src="../images/tab_new01.jpg" border="0"></div>
+                    <div><img src="../images/tab_new_01.jpg" border="0"></div>
+                    <div><img src="../images/tab_new02.jpg" border="0"></div>
+                    <div><img src="../images/tab_new_02.jpg" border="0"></div>
+                    <div><img src="../images/tab_new03.jpg" border="0"></div>
+                    <div><img src="../images/tab_new04.jpg" border="0"></div>
+                    <div><img src="../images/tab_new_04.jpg" border="0"></div>
+                    <div><img src="../images/tab_new05.jpg" border="0"></div>
+                    <div><img src="../images/tab_new06.jpg" border="0"></div>
+                  </div>
+                </div>
+              </blockquote>
+            </div>
+            <script type="text/javascript">
+    <!--
+    reg("com");
+    //-->
+    </script>
+          </DIV>
+        </div>
+      </div>
+      <div class="blank"></div>
+    </div>
+      
+   </div>
+   </div>
+   
+   <script>
+
+Tday[{$key}] = new Date("{$goods.promote_end_date}");
+
+window.setInterval(function()     
+
+{clock({$key});}, 1000);     
+
+</script>
+<script type="text/javascript">
+
+$(function(){
+    $(".info_titles").hover(function(){
+        $(this).next("div").show();
+        $(this).parent().siblings().children(".info_titles").not(this).next("div").hide();
+    });
+});
+//Ranking height
+$(".wrap_right").height($(".wrap").height());
+</script>
+<script type="text/javascript">
+
+    $(document).ready(function(){
+        var obj = $('#sidebar_comment_container');
+        var per_move =81;
+        
+        var num = obj.find('.comment_content').length;
+        var i = 1;
+        obj.everyTime(5000,'sidebar_comments',function(){
+            obj.animate({top: '-'+per_move*i},'fast');
+            if( i == (num-3) ){
+                i = 1;
+            }else{
+                i++;
+            }
+        });
+    });
+
+</script>
+   <div class="group_r">
+ <!-- #BeginLibraryItem "/library/group_r.lbi" --><!-- #EndLibraryItem -->
+ <div class="blank"></div>
+<div class="blank"></div>
+
+ <!-- #BeginLibraryItem "/library/email_list.lbi" --><!-- #EndLibraryItem -->
+ </div>
+ </div>
+<div class="blank"></div>
+<!-- #BeginLibraryItem "/library/page_footer.lbi" --><!-- #EndLibraryItem -->
+</body>
+<script type="text/javascript">
+var goods_id = {$goods_id};
+var goodsattr_style = {$cfg.goodsattr_style|default:1};
+var gmt_end_time = {$promote_end_time|default:0};
+{foreach from=$lang.goods_js item=item key=key}
+var {$key} = "{$item}";
+{/foreach}
+var goodsId = {$goods_id};
+var now_time = {$now_time};
+
+<!-- {literal} -->
+onload = function(){
+  changePrice();
+  fixpng();
+  try { onload_leftTime(); }
+  catch (e) {}
+}
+
+/**
+ * 点选可选属性或改变数量时修改商品价格的函数
+ */
+function changePrice()
+{
+  var attr = getSelectedAttributes(document.forms['ECS_FORMBUY']);
+  var qty = document.forms['ECS_FORMBUY'].elements['number'].value;
+
+  Ajax.call('goods.php', 'act=price&id=' + goodsId + '&attr=' + attr + '&number=' + qty, changePriceResponse, 'GET', 'JSON');
+}
+
+/**
+ * 接收返回的信息
+ */
+function changePriceResponse(res)
+{
+  if (res.err_msg.length > 0)
+  {
+    alert(res.err_msg);
+  }
+  else
+  {
+    document.forms['ECS_FORMBUY'].elements['number'].value = res.qty;
+
+    if (document.getElementById('ECS_GOODS_AMOUNT'))
+      document.getElementById('ECS_GOODS_AMOUNT').innerHTML = res.result;
+  }
+}
+<!-- {/literal} -->
+</script>
+</html>

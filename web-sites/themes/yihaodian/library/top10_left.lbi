@@ -1,0 +1,46 @@
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<div class="xiaoliang">
+<h3>一周销量排行榜</h3>
+  <div class="left_goodslist">
+  
+  <!--{foreach from=$top_goods item=goods name=no}-->
+         <!-- {if $smarty.foreach.no.iteration<6}-->
+      <ul class="clearfix ul_list" id=tops{$smarty.foreach.no.iteration} onMouseOver="show_goodspic({$smarty.foreach.no.iteration},'top')">
+       <img class="l_t" src="../images/top{$smarty.foreach.no.iteration}.gif" />
+       <a href="{$goods.url}"><img src="{$goods.thumb}" alt="{$goods.name|escape:html}" class="img1" /></a>
+       <div style="float:left; width:110px; padding-left:5px;">
+         <p class="name"><a href="{$goods.url}" title="{$goods.name|escape:html}">{$goods.short_name}</a></p>
+         <div class="blank5"></div>
+         <font class="f1">{$goods.price}</font> 
+         <font style="text-decoration:line-through; font-size:10px;">{$goods.market_price}</font>
+       </div>
+
+      </ul>
+       <ul class="clearfix" id=topb{$smarty.foreach.no.iteration} style="DISPLAY: none">
+       <img class="l_t2" src="../images/top{$smarty.foreach.no.iteration}.gif" />
+           <li class="goodsimg"><a href="{$goods.url}"><img src="{$goods.thumb}" alt="{$goods.name|escape:html}"  class="B_blue" /></a></li>
+           <div class="blank5"></div>
+           <li style="height:20px; line-height:20px; overflow:hidden;">
+           <a href="{$goods.url}" title="{$goods.name|escape:html}">{$goods.short_name}</a>
+           </li>
+           <div class="blank5"></div>
+          <li>
+            <font class="f1">
+           <!-- {if $goods.promote_price neq ""} -->
+          {$goods.promote_price}
+          <!-- {else}-->
+          {$goods.price}
+          <!--{/if}-->
+           </font>
+          <font style="text-decoration:line-through; font-size:10px;">{$goods.market_price}</font>
+          </li>
+          </ul>
+           <!--{/if}-->
+    <!-- {/foreach} -->
+ </div>
+      <SCRIPT 
+      type=text/javascript> window.onload = show_goodspic(1,'top');</SCRIPT>
+</div>
+
+
+<div class="blank"></div>

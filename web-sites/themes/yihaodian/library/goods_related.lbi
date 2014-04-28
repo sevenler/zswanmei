@@ -1,0 +1,57 @@
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+
+<!-- {if $related_goods} -->
+
+<div class="box" >
+<h3 class="h3_tit">相关产品</h3>
+<div class="box_2" style=" border-top:none;">
+<div class="boxCenterList clearfix"  style="padding:0;">
+
+<!--{foreach from=$related_goods item=releated_goods_data}-->
+<ul class="clearfix">
+<li class="goodsimg"><a href="{$releated_goods_data.url}" target="_blank">
+<img src="{$releated_goods_data.goods_thumb}" alt="{$releated_goods_data.goods_name}" class="B_blue"></a>
+</li>
+<li>
+ 
+
+<a  class="name" href="{$releated_goods_data.url}" title="{$releated_goods_data.goods_name}">{$releated_goods_data.short_name}</a>
+<font class="ff1">
+
+  <!-- {if $releated_goods_data.promote_price neq 0} -->
+        {$releated_goods_data.formated_promote_price} 
+        <!-- {else} -->
+        {$releated_goods_data.shop_price} 
+        <!-- {/if} -->
+ 
+
+</font>
+<br>
+</li>
+</ul>
+<!--{/foreach}-->
+
+
+    
+    
+</div>
+ </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+<!-- {/if} -->

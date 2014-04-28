@@ -1,0 +1,381 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="Keywords" content="{$keywords}" />
+<meta name="Description" content="{$description}" />
+<!-- TemplateBeginEditable name="doctitle" -->
+<title>{$page_title}</title>
+<!-- TemplateEndEditable --><!-- TemplateBeginEditable name="head" --><!-- TemplateEndEditable -->
+<link rel="shortcut icon" href="favicon.ico" />
+<link rel="icon" href="animated_favicon.gif" type="image/gif" />
+<link href="{$ecs_css_path}" rel="stylesheet" type="text/css" />
+<!-- {if $cat_style} -->
+<link href="{$cat_style}" rel="stylesheet" type="text/css" />
+<!-- {/if} -->
+<link href="themes/miqi/group.css" rel="stylesheet" type="text/css" />
+{* 包含脚本文件 *}
+{insert_scripts files='common.js,compare.js'}
+</head>
+<body>
+<script >
+
+var Tday = new Array();
+
+var daysms = 24 * 60 * 60 * 1000
+
+var hoursms = 60 * 60 * 1000
+
+var Secondms = 60 * 1000
+
+var microsecond = 1000
+
+var DifferHour = -1
+
+var DifferMinute = -1
+
+var DifferSecond = -1
+
+function clock(key)
+
+  {
+
+   var time = new Date()
+
+   var hour = time.getHours()
+
+   var minute = time.getMinutes()
+
+   var second = time.getSeconds()
+
+   var timevalue = ""+((hour > 12) ? hour-12:hour)
+
+   timevalue +=((minute < 10) ? ":0":":")+minute
+
+   timevalue +=((second < 10) ? ":0":":")+second
+
+   timevalue +=((hour >12 ) ? " PM":" AM")
+
+   var convertHour = DifferHour
+
+   var convertMinute = DifferMinute
+
+   var convertSecond = DifferSecond
+
+   var Diffms = Tday[key].getTime() - time.getTime()
+
+   DifferHour = Math.floor(Diffms / daysms)
+
+   Diffms -= DifferHour * daysms
+
+   DifferMinute = Math.floor(Diffms / hoursms)
+
+   Diffms -= DifferMinute * hoursms
+
+   DifferSecond = Math.floor(Diffms / Secondms)
+
+   Diffms -= DifferSecond * Secondms
+
+   var dSecs = Math.floor(Diffms / microsecond)
+
+   
+
+   if(convertHour != DifferHour) a=DifferHour+"<em>天</em>";
+
+   if(convertMinute != DifferMinute) b=DifferMinute+"<em>时</em>";
+
+   if(convertSecond != DifferSecond) c=DifferSecond+"<em>分</em>"
+
+     d=dSecs+"<em>秒</em>"
+
+     if (DifferHour>0) {a=a} 
+
+     else {a=''}
+
+   document.getElementById("leftTime"+key).innerHTML = a + b + c + d; //显示倒计时信息
+
+  
+
+  }
+
+</script>
+<script language='javascript' type='text/javascript' charset='utf-8'>
+ 
+
+
+function noshow(){
+document.getElementById('top').style.display="none";
+}
+
+</script>
+<!-- #BeginLibraryItem "/library/page_header.lbi" --><!-- #EndLibraryItem -->
+ 
+<DIV class="block group_buy_list clearfix"  >
+ <div><a href="#"><img src="images/group_banner.jpg" width="980" height="160" /></a></div>
+  <div class="blank"></div>
+   <div class="blank"></div>
+<div class="group_l">
+  <div class="home_deal_list">
+
+ 
+    <!--{foreach name=goods_list from=$goods_list item=goods key=key name=name}-->
+   <!-- {if $smarty.foreach.name.iteration==1}-->
+   <DIV class="big_list clearfix">
+	<div style="border:1px solid #e5e5e5">	
+          <DIV class="share">
+            <H4>分享到：</H4>
+            <UL>
+              <!-- Baidu Button BEGIN -->
+              <div id="bdshare" class="bdshare_t bds_tools get-codes-bdshare"> <a class="bds_qzone"></a><span>QQ空间</span> <a class="bds_tsina"></a><span>新浪微博</span> <a class="bds_tqq"></a><span>腾讯微博</span> <a class="bds_renren"></a><span>人人网</span> <span class="bds_more"> </span> <a class="shareCount"></a> </div>
+              <script type="text/javascript" id="bdshare_js" data="type=tools&amp;uid=2733582" ></script>
+              <script type="text/javascript" id="bdshell_js"></script>
+              <script type="text/javascript">
+	document.getElementById("bdshell_js").src = "http://bdimg.share.baidu.com/static/js/shell_v2.js?cdnversion=" + new Date().getHours();
+</script>
+              <!-- Baidu Button END -->
+            </UL>
+          </DIV>
+ <div class=tit>
+<font  class="font_tit" >限时特卖: </font><A class=all-p-ml href="{$goods.url}" target=_blank>{$goods.goods_name}</A>{$goods.goods_brief}
+</div>
+    <div class="blank"></div>
+	<div class="blank"></div>
+<div class="deal_info">
+    <div class="ribbon">
+        <div class="bg">&nbsp;</div>
+        <div class="buyit">
+        <strong>{$goods.promote_price}</strong>
+        <span > <a href="{$goods.url}" target="_blank"><img src="images/group/see_big.jpg" onmouseover="this.src='images/group/see_big_hover.jpg'" onmouseout="this.src='images/group/see_big.jpg'" /></a></span>
+        </div>
+    </div>
+	<div class="deal_info_box"> 
+        <div class="price">
+            <table>
+            <tbody>
+			<tr>
+            <th class="market_price">市场价</th>
+            <th class="discount">折扣</th>
+            <th>为您节省</th>
+            </tr>
+            <tr>
+            <th style="text-decoration: line-through;">{$goods.market_price}</th>
+            <th class="discount"  style="color:#FF4560" >{$goods.zhekou}</th>
+            <th style="color:#FF4560" >{$group_buy.jiesheng}</th>
+            </tr>
+            </tbody></table>
+        </div>
+		<div class="blank"></div>
+		<div class="countdown">
+    <input type="hidden" class="time_left" value="15247">
+    <div  class="timer" >
+    <div class="icon" style="float:left">距离团购结束还有</div>
+		<div class="blank"></div>
+    <font id="leftTime{$key}" ></font>
+    </div>
+    </div>
+   <div class="blank"></div>
+    <div class="blank"></div>
+	
+                 	                                                                   
+                                      
+    <div class="deal_status ">
+        <div class="purhcase_number">
+        <b class="pink"><font style="color:#df0404;">{$group_buy.valid_goods}</font>人已购买</b>
+        </div>
+		<div class="progress no_stock_soon"> 数量有限下手要快哦</div>
+		 </div>
+    </div>
+</div>
+
+<div style=" float:left; width:460px;_width:458px; height:350px; overflow:hidden; padding-left:10px;">
+<A 
+href="{$goods.url}"
+target=_blank><IMG alt="{$goods.goods_name}" src="{$goods.goods_img}"  width="460" height="350" / > </A>
+</div>
+<div class="blank"></div>
+</div>
+ 
+ </DIV>
+ <!-- #BeginLibraryItem "/library/group_banner.lbi" -->
+<!-- #EndLibraryItem -->
+<div class="blank"></div>
+     <!-- {else} -->
+	 
+	 
+	   <!-- {if $goods.goods_name}-->
+	   <div style="float:left;">
+      
+ <div id="toady_deal_list" >
+<div class="deal_box">
+    <div class="img_box">
+	<a href="{$goods.url}" target="_blank">
+            <img original="{$goods.goods_thumb}" alt="{$goods.goods_name}" src="{$goods.goods_thumb}">
+        </a>
+   </div>
+   
+   <div class="title_box">
+<a  href="{$goods.url}" target="_blank">{$goods.goods_name}</a>{$goods.goods_brief}
+	  </div>
+    <div class="price_box">
+	
+	<table>
+                <tbody>
+				  <tr>
+                    <td>市场价</td>
+                    <td>折扣</td>
+                    <td>为您节省</td>
+                  </tr>
+                  <tr>
+                    <td style="text-decoration:line-through;font-size:15px;color:#999;">{$goods.market_price}</td>
+                    <td class="pcred">{$goods.zhekou}</td>
+                    <td class="pcred">{$group_buy.jiesheng}</td>
+                  </tr>
+                </tbody>
+		      </table>
+	
+       
+        <a class="multi_btn" href="{$goods.url}" target="_blank"></a>
+		 <div class="p">{$goods.promote_price}</div>
+        
+    </div>
+	<div style="width:375px; float:right">
+    <div class="time_box" diff="47561">
+	<font id="leftTime{$key}"></font>
+                
+	</div>
+    <div class="num_box">
+            <span>{$group_buy.valid_goods}</span>人已经购买  </div>
+			</div>
+</div>
+
+
+ 
+    </div>  
+	<div class="mult_shade clear"></div>
+	</div>
+	
+     <!-- {/if} -->      
+     <!-- {/if} -->  
+	     
+	 <script>
+
+Tday[{$key}] = new Date("{$goods.promote_end_date}");
+
+window.setInterval(function()     
+
+{clock({$key});}, 1000);     
+
+</script>
+<!--dqy add end 2011-8-26-->
+    <!--{/foreach}-->
+  <div class="blank"></div>    
+<!-- #BeginLibraryItem "/library/pages.lbi" -->
+<!-- #EndLibraryItem -->
+   <div class="blank"></div> 
+   </DIV>
+  
+</DIV>
+
+
+
+
+
+
+<script type="text/javascript">
+
+$(function(){
+    $(".info_titles").hover(function(){
+        $(this).next("div").show();
+        $(this).parent().siblings().children(".info_titles").not(this).next("div").hide();
+    });
+});
+//Ranking height
+$(".wrap_right").height($(".wrap").height());
+</script>
+
+
+ 
+
+ 
+<script type="text/javascript">
+
+    $(document).ready(function(){
+        var obj = $('#sidebar_comment_container');
+        var per_move =81;
+        
+        var num = obj.find('.comment_content').length;
+        var i = 1;
+        obj.everyTime(5000,'sidebar_comments',function(){
+            obj.animate({top: '-'+per_move*i},'fast');
+            if( i == (num-3) ){
+                i = 1;
+            }else{
+                i++;
+            }
+        });
+    });
+
+</script>
+<div class="group_r">
+ <!-- #BeginLibraryItem "/library/group_r.lbi" --><!-- #EndLibraryItem -->
+ <div class="blank"></div>
+<div class="blank"></div>
+
+ <!-- #BeginLibraryItem "/library/email_list.lbi" --><!-- #EndLibraryItem -->
+ </div>
+ 
+
+
+
+
+<script type="Text/Javascript" language="JavaScript">
+<!--
+{literal}
+function selectPage(sel)
+{
+  sel.form.submit();
+}
+{/literal}
+//-->
+</script>
+<script type="text/javascript">
+window.onload = function()
+{
+  Compare.init();
+  fixpng();
+}
+{foreach from=$lang.compare_js item=item key=key}
+{if $key neq 'button_compare'}
+var {$key} = "{$item}";
+{else}
+var button_compare = '';
+{/if}
+{/foreach}
+var compare_no_goods = "{$lang.compare_no_goods}";
+var btn_buy = "{$lang.btn_buy}";
+var is_cancel = "{$lang.is_cancel}";
+var select_spe = "{$lang.select_spe}";
+</script>
+
+ <div class="blank"></div>
+
+<script type="text/javascript">
+$(document).ready(function () {
+            Jumei.Core.init();
+            Jumei.Deal.init();
+        for(var i in Jumei.Core.afterInitFunctions)
+        Jumei.Core.afterInitFunctions[i].call();
+    if(Math.abs(RM_CLIENT_TIME-RM_SERVER_TIME)>=86400) {
+            var serverDate = new Date(RM_SERVER_TIME * 1000);
+            var clientDate = new Date(RM_CLIENT_TIME * 1000);
+            
+    }
+});
+</script>
+
+
+</div>
+
+<!-- #BeginLibraryItem "/library/page_footer.lbi" --><!-- #EndLibraryItem -->
+</body>
+</html>
